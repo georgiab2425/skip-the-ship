@@ -1441,78 +1441,120 @@ const PORT_DATA = {
 };
 
 // ─── Sail date schedules ──────────────────────────────────────
-// Each ship has its own departure day(s) of the week and frequency.
-// We generate real upcoming dates based on actual sailing patterns.
+// JS day numbers: 0=Sun, 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri, 6=Sat
 const SAIL_SCHEDULES = {
   // Royal Caribbean
-  royal_wonder:    { days: [6], interval: 7,  count: 10, note: "Every Saturday from Miami" },
-  royal_icon:      { days: [6], interval: 7,  count: 10, note: "Every Saturday from Miami" },
-  royal_symphony:  { days: [6], interval: 7,  count: 8,  note: "Every Saturday from Barcelona" },
-  royal_navigator: { days: [0], interval: 7,  count: 10, note: "Every Sunday from Galveston" },
-  royal_oasis:     { days: [6], interval: 7,  count: 8,  note: "Every Saturday from Miami" },
-  royal_allure:    { days: [6], interval: 7,  count: 8,  note: "Every Saturday from Port Canaveral" },
-  royal_harmony:   { days: [6], interval: 7,  count: 8,  note: "Every Saturday from Barcelona" },
-  royal_mariner:   { days: [0], interval: 7,  count: 8,  note: "Every Sunday from Los Angeles" },
+  royal_wonder:    { days: [6], count: 16, note: "Every Saturday from Miami" },
+  royal_icon:      { days: [6], count: 16, note: "Every Saturday from Miami" },
+  royal_symphony:  { days: [6], count: 12, note: "Every Saturday from Barcelona" },
+  royal_navigator: { days: [0], count: 16, note: "Every Sunday from Galveston" },
+  royal_oasis:     { days: [6], count: 16, note: "Every Saturday from Miami" },
+  royal_allure:    { days: [6], count: 16, note: "Every Saturday from Port Canaveral" },
+  royal_harmony:   { days: [6], count: 12, note: "Every Saturday from Barcelona" },
+  royal_mariner:   { days: [0], count: 16, note: "Every Sunday from Los Angeles" },
   // Carnival
-  carnival_mardi_gras:  { days: [6], interval: 7, count: 10, note: "Every Saturday from Port Canaveral" },
-  carnival_celebration: { days: [6], interval: 7, count: 10, note: "Every Saturday from Miami" },
-  carnival_jubilee:     { days: [6], interval: 7, count: 8,  note: "Every Saturday from Galveston" },
-  carnival_venezia:     { days: [0], interval: 7, count: 8,  note: "Every Sunday from New York" },
-  carnival_horizon:     { days: [0], interval: 7, count: 10, note: "Every Sunday from Miami" },
-  carnival_vista:       { days: [6], interval: 7, count: 8,  note: "Every Saturday from Galveston" },
-  carnival_breeze:      { days: [6], interval: 7, count: 8,  note: "Every Saturday from Miami" },
-  carnival_sunshine:    { days: [0], interval: 7, count: 8,  note: "Every Sunday from Charleston" },
-  carnival_miracle:     { days: [6], interval: 7, count: 8,  note: "Every Saturday from Seattle (Alaska season)" },
-  carnival_spirit:      { days: [6], interval: 7, count: 8,  note: "Every Saturday from Seattle (Alaska season)" },
-  carnival_splendor:    { days: [0], interval: 7, count: 8,  note: "Every Sunday from Long Beach" },
-  carnival_radiance:    { days: [6], interval: 7, count: 8,  note: "Every Saturday from Baltimore" },
+  carnival_mardi_gras:  { days: [6], count: 16, note: "Every Saturday from Port Canaveral" },
+  carnival_celebration: { days: [6], count: 16, note: "Every Saturday from Miami" },
+  carnival_jubilee:     { days: [6], count: 16, note: "Every Saturday from Galveston" },
+  carnival_venezia:     { days: [0], count: 16, note: "Every Sunday from New York" },
+  carnival_horizon:     { days: [0], count: 16, note: "Every Sunday from Miami" },
+  carnival_vista:       { days: [6], count: 16, note: "Every Saturday from Galveston" },
+  carnival_breeze:      { days: [6], count: 16, note: "Every Saturday from Miami" },
+  carnival_sunshine:    { days: [0], count: 16, note: "Every Sunday from Charleston" },
+  carnival_miracle:     { days: [4, 6], count: 30, note: "Thursdays & Saturdays from Seattle (Alaska season)" },
+  carnival_spirit:      { days: [4, 6], count: 30, note: "Thursdays & Saturdays from Seattle (Alaska season)" },
+  carnival_splendor:    { days: [0], count: 16, note: "Every Sunday from Long Beach" },
+  carnival_radiance:    { days: [6], count: 16, note: "Every Saturday from Baltimore" },
   // Norwegian
-  ncl_bliss:    { days: [0], interval: 7,  count: 8,  note: "Every Sunday from Seattle (Alaska season)" },
-  ncl_prima:    { days: [6], interval: 7,  count: 8,  note: "Every Saturday from New York" },
-  ncl_viva:     { days: [6], interval: 7,  count: 8,  note: "Every Saturday from Miami" },
-  ncl_encore:   { days: [0], interval: 7,  count: 8,  note: "Every Sunday from Seattle" },
-  ncl_joy:      { days: [6], interval: 7,  count: 8,  note: "Every Saturday from New York" },
-  ncl_escape:   { days: [0], interval: 7,  count: 10, note: "Every Sunday from New York" },
-  ncl_getaway:  { days: [6], interval: 7,  count: 8,  note: "Every Saturday from Miami" },
+  ncl_bliss:    { days: [0], count: 12, note: "Every Sunday from Seattle (Alaska season)" },
+  ncl_prima:    { days: [6], count: 16, note: "Every Saturday from New York" },
+  ncl_viva:     { days: [6], count: 16, note: "Every Saturday from Miami" },
+  ncl_encore:   { days: [0], count: 12, note: "Every Sunday from Seattle" },
+  ncl_joy:      { days: [6], count: 16, note: "Every Saturday from New York" },
+  ncl_escape:   { days: [0], count: 16, note: "Every Sunday from New York" },
+  ncl_getaway:  { days: [6], count: 16, note: "Every Saturday from Miami" },
   // Disney
-  disney_wish:     { days: [0,3], interval: 3, count: 12, note: "3 & 4 night sailings from Port Canaveral" },
-  disney_treasure: { days: [0,4], interval: 3, count: 10, note: "3 & 4 night sailings from Port Canaveral" },
-  disney_fantasy:  { days: [6],   interval: 7, count: 8,  note: "Every Saturday from Port Canaveral" },
-  disney_dream:    { days: [0,3], interval: 3, count: 12, note: "3 & 4 night sailings from Port Canaveral" },
-  disney_magic:    { days: [6],   interval: 7, count: 8,  note: "Every Saturday from various ports" },
-  disney_wonder_d: { days: [0],   interval: 7, count: 8,  note: "Every Sunday from various ports" },
+  disney_wish:     { days: [0, 4], count: 16, note: "3 & 4 night sailings from Port Canaveral" },
+  disney_treasure: { days: [0, 4], count: 16, note: "3 & 4 night sailings from Port Canaveral" },
+  disney_fantasy:  { days: [6],    count: 16, note: "Every Saturday from Port Canaveral" },
+  disney_dream:    { days: [0, 4], count: 16, note: "3 & 4 night sailings from Port Canaveral" },
+  disney_magic:    { days: [6],    count: 16, note: "Every Saturday from various ports" },
+  disney_wonder_d: { days: [0],    count: 16, note: "Every Sunday from various ports" },
   // Celebrity
-  celebrity_beyond:    { days: [0], interval: 7, count: 8, note: "Every Sunday from Fort Lauderdale" },
-  celebrity_ascent:    { days: [6], interval: 7, count: 8, note: "Every Saturday from Fort Lauderdale" },
-  celebrity_edge:      { days: [6], interval: 7, count: 8, note: "Every Saturday from Barcelona" },
-  celebrity_apex:      { days: [6], interval: 7, count: 8, note: "Every Saturday from Southampton" },
-  celebrity_equinox:   { days: [0], interval: 7, count: 8, note: "Every Sunday from Fort Lauderdale" },
-  celebrity_silhouette:{ days: [6], interval: 7, count: 8, note: "Every Saturday from Fort Lauderdale" },
+  celebrity_beyond:     { days: [0], count: 16, note: "Every Sunday from Fort Lauderdale" },
+  celebrity_ascent:     { days: [6], count: 16, note: "Every Saturday from Fort Lauderdale" },
+  celebrity_edge:       { days: [6], count: 12, note: "Every Saturday from Barcelona" },
+  celebrity_apex:       { days: [6], count: 12, note: "Every Saturday from Southampton" },
+  celebrity_equinox:    { days: [0], count: 16, note: "Every Sunday from Fort Lauderdale" },
+  celebrity_silhouette: { days: [6], count: 16, note: "Every Saturday from Fort Lauderdale" },
   // Princess
-  princess_sun:       { days: [6], interval: 7, count: 8, note: "Every Saturday from Fort Lauderdale" },
-  princess_sphere:    { days: [6], interval: 7, count: 8, note: "Every Saturday from Fort Lauderdale" },
-  princess_enchanted: { days: [6], interval: 7, count: 8, note: "Every Saturday from Fort Lauderdale" },
-  princess_discovery: { days: [6], interval: 7, count: 8, note: "Every Saturday from Los Angeles" },
-  princess_royal_p:   { days: [0], interval: 7, count: 8, note: "Every Sunday from Southampton" },
-  princess_majestic:  { days: [6], interval: 7, count: 8, note: "Every Saturday from Barcelona" },
+  princess_sun:       { days: [6], count: 16, note: "Every Saturday from Fort Lauderdale" },
+  princess_sphere:    { days: [6], count: 16, note: "Every Saturday from Fort Lauderdale" },
+  princess_enchanted: { days: [6], count: 16, note: "Every Saturday from Fort Lauderdale" },
+  princess_discovery: { days: [6], count: 16, note: "Every Saturday from Los Angeles" },
+  princess_royal_p:   { days: [0], count: 12, note: "Every Sunday from Southampton" },
+  princess_majestic:  { days: [6], count: 12, note: "Every Saturday from Barcelona" },
   // Holland America
-  holland_rotterdam:       { days: [6], interval: 7, count: 8, note: "Every Saturday from Seattle (Alaska)" },
-  holland_nieuw_statendam: { days: [0], interval: 7, count: 8, note: "Every Sunday from Fort Lauderdale" },
-  holland_koningsdam:      { days: [6], interval: 7, count: 8, note: "Every Saturday from Seattle" },
-  holland_eurodam:         { days: [0], interval: 7, count: 8, note: "Every Sunday from Amsterdam" },
-  holland_nieuw_amsterdam: { days: [6], interval: 7, count: 8, note: "Every Saturday from Fort Lauderdale" },
-  holland_westerdam:       { days: [0], interval: 7, count: 8, note: "Every Sunday from Seattle" },
+  holland_rotterdam:        { days: [6], count: 12, note: "Every Saturday from Seattle (Alaska)" },
+  holland_nieuw_statendam:  { days: [0], count: 16, note: "Every Sunday from Fort Lauderdale" },
+  holland_koningsdam:       { days: [6], count: 12, note: "Every Saturday from Seattle" },
+  holland_eurodam:          { days: [0], count: 12, note: "Every Sunday from Amsterdam" },
+  holland_nieuw_amsterdam:  { days: [6], count: 16, note: "Every Saturday from Fort Lauderdale" },
+  holland_westerdam:        { days: [0], count: 12, note: "Every Sunday from Seattle" },
   // MSC
-  msc_world:      { days: [6], interval: 7, count: 8, note: "Every Saturday from Miami" },
-  msc_seascape:   { days: [6], interval: 7, count: 8, note: "Every Saturday from Miami" },
-  msc_seashore:   { days: [6], interval: 7, count: 8, note: "Every Saturday from Miami" },
-  msc_virtuosa:   { days: [6], interval: 7, count: 8, note: "Every Saturday from Southampton" },
-  msc_grandiosa:  { days: [6], interval: 7, count: 8, note: "Every Saturday from Genoa" },
-  msc_bellissima: { days: [0], interval: 7, count: 8, note: "Every Sunday from Marseille" },
+  msc_world:      { days: [6], count: 16, note: "Every Saturday from Miami" },
+  msc_seascape:   { days: [6], count: 16, note: "Every Saturday from Miami" },
+  msc_seashore:   { days: [6], count: 16, note: "Every Saturday from Miami" },
+  msc_virtuosa:   { days: [6], count: 12, note: "Every Saturday from Southampton" },
+  msc_grandiosa:  { days: [6], count: 12, note: "Every Saturday from Genoa" },
+  msc_bellissima: { days: [0], count: 12, note: "Every Sunday from Marseille" },
 };
 
 // ─── Helpers ──────────────────────────────────────────────────
 function getSailDates(lineId, shipId) {
+  const key = `${lineId}_${shipId}`;
+  const schedule = SAIL_SCHEDULES[key];
+
+  const fmt = (d) => d.toLocaleDateString("en-US", {
+    weekday: "short", month: "short", day: "numeric", year: "numeric"
+  });
+
+  if (!schedule) {
+    // Fallback: next 16 Saturdays
+    const dates = [];
+    const d = new Date();
+    d.setHours(0,0,0,0);
+    d.setDate(d.getDate() + 1);
+    while (d.getDay() !== 6) d.setDate(d.getDate() + 1);
+    for (let i = 0; i < 16; i++) {
+      dates.push(fmt(new Date(d)));
+      d.setDate(d.getDate() + 7);
+    }
+    return { dates, note: "" };
+  }
+
+  const { days, count, note } = schedule;
+  const dates = [];
+
+  // Start from tomorrow, look up to 18 months ahead
+  const d = new Date();
+  d.setHours(0,0,0,0);
+  d.setDate(d.getDate() + 1);
+
+  const limit = new Date();
+  limit.setMonth(limit.getMonth() + 18);
+
+  while (dates.length < count && d <= limit) {
+    if (days.includes(d.getDay())) {
+      dates.push(fmt(new Date(d)));
+    }
+    d.setDate(d.getDate() + 1);
+  }
+
+  return { dates, note };
+}
+
+(lineId, shipId) {
   const key = `${lineId}_${shipId}`;
   const schedule = SAIL_SCHEDULES[key];
 
