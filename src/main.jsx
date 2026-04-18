@@ -1554,48 +1554,6 @@ function getSailDates(lineId, shipId) {
   return { dates, note };
 }
 
-(lineId, shipId) {
-  const key = `${lineId}_${shipId}`;
-  const schedule = SAIL_SCHEDULES[key];
-
-  const fmt = (d) => d.toLocaleDateString("en-US", {
-    weekday: "short", month: "short", day: "numeric", year: "numeric"
-  });
-
-  if (!schedule) {
-    // Fallback: next 8 Saturdays
-    const dates = [];
-    const d = new Date();
-    d.setDate(d.getDate() + 7);
-    while (d.getDay() !== 6) d.setDate(d.getDate() + 1);
-    for (let i = 0; i < 8; i++) {
-      dates.push(fmt(new Date(d)));
-      d.setDate(d.getDate() + 7);
-    }
-    return { dates, note: "" };
-  }
-
-  const { days, count, note } = schedule;
-  const dates = [];
-  const today = new Date();
-  today.setHours(0,0,0,0);
-
-  // Find next occurrence of each departure day
-  const d = new Date(today);
-  d.setDate(d.getDate() + 3); // minimum 3 days from today
-
-  // Collect upcoming dates that match the schedule days
-  let attempts = 0;
-  while (dates.length < count && attempts < 365) {
-    if (days.includes(d.getDay())) {
-      dates.push(fmt(new Date(d)));
-    }
-    d.setDate(d.getDate() + 1);
-    attempts++;
-  }
-
-  return { dates, note };
-}
 
 function parseTime(str) {
   if (!str || str === "Embarkation" || str === "Disembarkation") return null;
