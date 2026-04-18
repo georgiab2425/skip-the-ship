@@ -745,6 +745,339 @@ const ITINERARIES = {
     { port: "At Sea",              date: "Day 6", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
     { port: "Miami, FL",           date: "Day 7", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
   ],
+  // ── Royal Caribbean (missing ships) ──────────────────────────
+  royal_oasis: [
+    { port: "Miami, FL",           date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Labadee, Haiti",      date: "Day 3", arrival: "7:00 AM",      departure: "3:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "Falmouth, Jamaica",   date: "Day 4", arrival: "8:00 AM",      departure: "4:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "George Town, Cayman", date: "Day 5", arrival: "7:00 AM",      departure: "3:30 PM",        tender: true,  sea_day: false, timezone: "ET" },
+    { port: "Cozumel, Mexico",     date: "Day 6", arrival: "10:00 AM",     departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "At Sea",              date: "Day 7", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Miami, FL",           date: "Day 8", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  royal_allure: [
+    { port: "Port Canaveral, FL",  date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Nassau, Bahamas",     date: "Day 3", arrival: "7:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "Perfect Day at CocoCay", date: "Day 4", arrival: "7:00 AM",  departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 5", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "At Sea",              date: "Day 6", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Port Canaveral, FL",  date: "Day 7", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  royal_harmony: [
+    { port: "Barcelona, Spain",    date: "Day 1", arrival: "Embarkation", departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Provence, France",    date: "Day 2", arrival: "8:00 AM",      departure: "6:00 PM",        tender: true,  sea_day: false, timezone: "CET" },
+    { port: "Florence/Pisa",       date: "Day 3", arrival: "7:00 AM",      departure: "7:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Rome, Italy",         date: "Day 4", arrival: "7:00 AM",      departure: "7:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Naples, Italy",       date: "Day 5", arrival: "7:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Palma, Mallorca",     date: "Day 6", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "At Sea",              date: "Day 7", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "CET" },
+    { port: "Barcelona, Spain",    date: "Day 8", arrival: "6:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "CET" },
+  ],
+  royal_mariner: [
+    { port: "Los Angeles, CA",     date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "PT" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "PT" },
+    { port: "Ensenada, Mexico",    date: "Day 3", arrival: "8:00 AM",      departure: "10:00 PM",       tender: false, sea_day: false, timezone: "PT" },
+    { port: "At Sea",              date: "Day 4", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "PT" },
+    { port: "Los Angeles, CA",     date: "Day 5", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "PT" },
+  ],
+
+  // ── Carnival (missing ships) ──────────────────────────────────
+  carnival_celebration: [
+    { port: "Miami, FL",           date: "Day 1", arrival: "Embarkation", departure: "4:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Nassau, Bahamas",     date: "Day 3", arrival: "7:00 AM",      departure: "4:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "Freeport, Bahamas",   date: "Day 4", arrival: "8:00 AM",      departure: "4:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 5", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Miami, FL",           date: "Day 6", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  carnival_jubilee: [
+    { port: "Galveston, TX",       date: "Day 1", arrival: "Embarkation", departure: "4:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "CT" },
+    { port: "Mahogany Bay, Roatán",date: "Day 3", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "Belize City, Belize", date: "Day 4", arrival: "8:00 AM",      departure: "5:00 PM",        tender: true,  sea_day: false, timezone: "CT" },
+    { port: "Cozumel, Mexico",     date: "Day 5", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "At Sea",              date: "Day 6", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "CT" },
+    { port: "Galveston, TX",       date: "Day 7", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "CT" },
+  ],
+  carnival_venezia: [
+    { port: "New York, NY",        date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Nassau, Bahamas",     date: "Day 3", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "Grand Turk",          date: "Day 4", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 5", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "At Sea",              date: "Day 6", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "New York, NY",        date: "Day 7", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  carnival_vista: [
+    { port: "Galveston, TX",       date: "Day 1", arrival: "Embarkation", departure: "4:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "CT" },
+    { port: "Costa Maya, Mexico",  date: "Day 3", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "Belize City, Belize", date: "Day 4", arrival: "8:00 AM",      departure: "5:00 PM",        tender: true,  sea_day: false, timezone: "CT" },
+    { port: "Cozumel, Mexico",     date: "Day 5", arrival: "9:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "At Sea",              date: "Day 6", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "CT" },
+    { port: "Galveston, TX",       date: "Day 7", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "CT" },
+  ],
+  carnival_breeze: [
+    { port: "Miami, FL",           date: "Day 1", arrival: "Embarkation", departure: "4:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Ocho Rios, Jamaica",  date: "Day 3", arrival: "8:00 AM",      departure: "4:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "George Town, Cayman", date: "Day 4", arrival: "7:00 AM",      departure: "3:30 PM",        tender: true,  sea_day: false, timezone: "ET" },
+    { port: "Cozumel, Mexico",     date: "Day 5", arrival: "9:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "At Sea",              date: "Day 6", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Miami, FL",           date: "Day 7", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  carnival_sunshine: [
+    { port: "Charleston, SC",      date: "Day 1", arrival: "Embarkation", departure: "4:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Nassau, Bahamas",     date: "Day 3", arrival: "8:00 AM",      departure: "4:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 4", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Charleston, SC",      date: "Day 5", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+
+  // ── Norwegian (missing ships) ─────────────────────────────────
+  ncl_prima: [
+    { port: "New York, NY",        date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "San Juan, Puerto Rico",date:"Day 3", arrival: "2:00 PM",      departure: "11:00 PM",       tender: false, sea_day: false, timezone: "AT" },
+    { port: "St. Thomas, USVI",    date: "Day 4", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "AT" },
+    { port: "Great Stirrup Cay",   date: "Day 5", arrival: "8:00 AM",      departure: "5:00 PM",        tender: true,  sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 6", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "New York, NY",        date: "Day 7", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  ncl_viva: [
+    { port: "Miami, FL",           date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Cozumel, Mexico",     date: "Day 3", arrival: "9:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "Costa Maya, Mexico",  date: "Day 4", arrival: "7:00 AM",      departure: "4:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "Roatán, Honduras",    date: "Day 5", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "At Sea",              date: "Day 6", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Miami, FL",           date: "Day 7", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  ncl_encore: [
+    { port: "Seattle, WA",         date: "Day 1", arrival: "Embarkation", departure: "4:00 PM",        tender: false, sea_day: false, timezone: "PT"  },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "PT"  },
+    { port: "Juneau, AK",          date: "Day 3", arrival: "7:00 AM",      departure: "9:00 PM",        tender: false, sea_day: false, timezone: "AKT" },
+    { port: "Skagway, AK",         date: "Day 4", arrival: "7:00 AM",      departure: "8:30 PM",        tender: false, sea_day: false, timezone: "AKT" },
+    { port: "Glacier Bay, AK",     date: "Day 5", arrival: "7:00 AM",      departure: "4:00 PM",        tender: false, sea_day: false, timezone: "AKT" },
+    { port: "Ketchikan, AK",       date: "Day 6", arrival: "7:30 AM",      departure: "4:30 PM",        tender: false, sea_day: false, timezone: "AKT" },
+    { port: "Victoria, BC",        date: "Day 7", arrival: "6:00 PM",      departure: "11:00 PM",       tender: false, sea_day: false, timezone: "PT"  },
+    { port: "Seattle, WA",         date: "Day 8", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "PT"  },
+  ],
+  ncl_joy: [
+    { port: "New York, NY",        date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Nassau, Bahamas",     date: "Day 3", arrival: "9:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "Great Stirrup Cay",   date: "Day 4", arrival: "8:00 AM",      departure: "5:00 PM",        tender: true,  sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 5", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "New York, NY",        date: "Day 6", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  ncl_getaway: [
+    { port: "Miami, FL",           date: "Day 1", arrival: "Embarkation", departure: "4:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Roatán, Honduras",    date: "Day 3", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "Belize City, Belize", date: "Day 4", arrival: "8:00 AM",      departure: "5:00 PM",        tender: true,  sea_day: false, timezone: "CT" },
+    { port: "Cozumel, Mexico",     date: "Day 5", arrival: "9:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "At Sea",              date: "Day 6", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Miami, FL",           date: "Day 7", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+
+  // ── Disney (missing ships) ────────────────────────────────────
+  disney_treasure: [
+    { port: "Port Canaveral, FL",  date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "Nassau, Bahamas",     date: "Day 2", arrival: "9:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "Castaway Cay",        date: "Day 3", arrival: "9:00 AM",      departure: "5:30 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "Port Canaveral, FL",  date: "Day 4", arrival: "7:30 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  disney_dream: [
+    { port: "Port Canaveral, FL",  date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "Nassau, Bahamas",     date: "Day 2", arrival: "9:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "Castaway Cay",        date: "Day 3", arrival: "9:00 AM",      departure: "5:30 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "Port Canaveral, FL",  date: "Day 4", arrival: "7:30 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  disney_magic: [
+    { port: "New York, NY",        date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Nassau, Bahamas",     date: "Day 3", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "Castaway Cay",        date: "Day 4", arrival: "9:00 AM",      departure: "5:30 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 5", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "New York, NY",        date: "Day 6", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  disney_wonder_d: [
+    { port: "Los Angeles, CA",     date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "PT" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "PT" },
+    { port: "Ensenada, Mexico",    date: "Day 3", arrival: "8:00 AM",      departure: "10:00 PM",       tender: false, sea_day: false, timezone: "PT" },
+    { port: "At Sea",              date: "Day 4", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "PT" },
+    { port: "Los Angeles, CA",     date: "Day 5", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "PT" },
+  ],
+
+  // ── Celebrity (missing ships) ─────────────────────────────────
+  celebrity_ascent: [
+    { port: "Fort Lauderdale, FL", date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "San Juan, Puerto Rico",date:"Day 3", arrival: "2:00 PM",      departure: "11:00 PM",       tender: false, sea_day: false, timezone: "AT" },
+    { port: "St. Kitts",           date: "Day 4", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "AT" },
+    { port: "Antigua",             date: "Day 5", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "AT" },
+    { port: "St. Maarten",         date: "Day 6", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "AT" },
+    { port: "At Sea",              date: "Day 7", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Fort Lauderdale, FL", date: "Day 8", arrival: "6:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  celebrity_apex: [
+    { port: "Southampton, UK",     date: "Day 1", arrival: "Embarkation", departure: "6:00 PM",        tender: false, sea_day: false, timezone: "BST" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "BST" },
+    { port: "Lisbon, Portugal",    date: "Day 3", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "WET" },
+    { port: "Vigo, Spain",         date: "Day 4", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "At Sea",              date: "Day 5", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "BST" },
+    { port: "Southampton, UK",     date: "Day 6", arrival: "6:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "BST" },
+  ],
+  celebrity_equinox: [
+    { port: "Fort Lauderdale, FL", date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Nassau, Bahamas",     date: "Day 3", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "St. Thomas, USVI",    date: "Day 4", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "AT" },
+    { port: "San Juan, Puerto Rico",date:"Day 5", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "AT" },
+    { port: "At Sea",              date: "Day 6", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Fort Lauderdale, FL", date: "Day 7", arrival: "6:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  celebrity_silhouette: [
+    { port: "Fort Lauderdale, FL", date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Cozumel, Mexico",     date: "Day 3", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "Costa Maya, Mexico",  date: "Day 4", arrival: "7:00 AM",      departure: "4:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "Roatán, Honduras",    date: "Day 5", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "At Sea",              date: "Day 6", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Fort Lauderdale, FL", date: "Day 7", arrival: "6:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+
+  // ── Princess (missing ships) ──────────────────────────────────
+  princess_sun: [
+    { port: "Fort Lauderdale, FL", date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Princess Cays",       date: "Day 3", arrival: "8:00 AM",      departure: "4:30 PM",        tender: true,  sea_day: false, timezone: "ET" },
+    { port: "Nassau, Bahamas",     date: "Day 4", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 5", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Fort Lauderdale, FL", date: "Day 6", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  princess_sphere: [
+    { port: "Fort Lauderdale, FL", date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Amber Cove, DR",      date: "Day 3", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "AT" },
+    { port: "San Juan, Puerto Rico",date:"Day 4", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "AT" },
+    { port: "St. Thomas, USVI",    date: "Day 5", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "AT" },
+    { port: "At Sea",              date: "Day 6", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Fort Lauderdale, FL", date: "Day 7", arrival: "6:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  princess_royal_p: [
+    { port: "Southampton, UK",     date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "BST" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "BST" },
+    { port: "Vigo, Spain",         date: "Day 3", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "WET" },
+    { port: "Lisbon, Portugal",    date: "Day 4", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "WET" },
+    { port: "At Sea",              date: "Day 5", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "BST" },
+    { port: "Southampton, UK",     date: "Day 6", arrival: "6:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "BST" },
+  ],
+  princess_majestic: [
+    { port: "Barcelona, Spain",    date: "Day 1", arrival: "Embarkation", departure: "7:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Provence, France",    date: "Day 2", arrival: "8:00 AM",      departure: "6:00 PM",        tender: true,  sea_day: false, timezone: "CET" },
+    { port: "Florence/Pisa",       date: "Day 3", arrival: "7:00 AM",      departure: "7:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Rome, Italy",         date: "Day 4", arrival: "7:00 AM",      departure: "7:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Naples, Italy",       date: "Day 5", arrival: "7:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "At Sea",              date: "Day 6", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "CET" },
+    { port: "Barcelona, Spain",    date: "Day 7", arrival: "6:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "CET" },
+  ],
+
+  // ── Holland America (missing ships) ──────────────────────────
+  holland_nieuw_statendam: [
+    { port: "Fort Lauderdale, FL", date: "Day 1", arrival: "Embarkation", departure: "4:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Nassau, Bahamas",     date: "Day 3", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "Grand Turk",          date: "Day 4", arrival: "9:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "Amber Cove, DR",      date: "Day 5", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "AT" },
+    { port: "At Sea",              date: "Day 6", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Fort Lauderdale, FL", date: "Day 7", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  holland_koningsdam: [
+    { port: "Seattle, WA",         date: "Day 1", arrival: "Embarkation", departure: "4:00 PM",        tender: false, sea_day: false, timezone: "PT"  },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "PT"  },
+    { port: "Juneau, AK",          date: "Day 3", arrival: "8:00 AM",      departure: "8:00 PM",        tender: false, sea_day: false, timezone: "AKT" },
+    { port: "Skagway, AK",         date: "Day 4", arrival: "7:00 AM",      departure: "8:30 PM",        tender: false, sea_day: false, timezone: "AKT" },
+    { port: "Glacier Bay, AK",     date: "Day 5", arrival: "7:00 AM",      departure: "4:00 PM",        tender: false, sea_day: false, timezone: "AKT" },
+    { port: "Ketchikan, AK",       date: "Day 6", arrival: "7:00 AM",      departure: "3:00 PM",        tender: false, sea_day: false, timezone: "AKT" },
+    { port: "Victoria, BC",        date: "Day 7", arrival: "6:00 PM",      departure: "11:30 PM",       tender: false, sea_day: false, timezone: "PT"  },
+    { port: "Seattle, WA",         date: "Day 8", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "PT"  },
+  ],
+  holland_eurodam: [
+    { port: "Amsterdam, Netherlands",date:"Day 1", arrival: "Embarkation", departure: "5:00 PM",       tender: false, sea_day: false, timezone: "CET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "CET" },
+    { port: "Bergen, Norway",      date: "Day 3", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Flam, Norway",        date: "Day 4", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Geiranger, Norway",   date: "Day 5", arrival: "7:00 AM",      departure: "5:00 PM",        tender: true,  sea_day: false, timezone: "CET" },
+    { port: "At Sea",              date: "Day 6", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "CET" },
+    { port: "Amsterdam, Netherlands",date:"Day 7", arrival: "6:00 AM",    departure: "Disembarkation",  tender: false, sea_day: false, timezone: "CET" },
+  ],
+  holland_nieuw_amsterdam: [
+    { port: "Fort Lauderdale, FL", date: "Day 1", arrival: "Embarkation", departure: "4:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Half Moon Cay",       date: "Day 3", arrival: "8:00 AM",      departure: "5:00 PM",        tender: true,  sea_day: false, timezone: "ET" },
+    { port: "Nassau, Bahamas",     date: "Day 4", arrival: "8:00 AM",      departure: "4:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 5", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Fort Lauderdale, FL", date: "Day 6", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  holland_westerdam: [
+    { port: "Seattle, WA",         date: "Day 1", arrival: "Embarkation", departure: "4:00 PM",        tender: false, sea_day: false, timezone: "PT"  },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "PT"  },
+    { port: "Juneau, AK",          date: "Day 3", arrival: "8:00 AM",      departure: "8:00 PM",        tender: false, sea_day: false, timezone: "AKT" },
+    { port: "Sitka, AK",           date: "Day 4", arrival: "8:00 AM",      departure: "5:00 PM",        tender: true,  sea_day: false, timezone: "AKT" },
+    { port: "Ketchikan, AK",       date: "Day 5", arrival: "7:30 AM",      departure: "4:30 PM",        tender: false, sea_day: false, timezone: "AKT" },
+    { port: "Victoria, BC",        date: "Day 6", arrival: "6:00 PM",      departure: "11:30 PM",       tender: false, sea_day: false, timezone: "PT"  },
+    { port: "Seattle, WA",         date: "Day 7", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "PT"  },
+  ],
+
+  // ── MSC (missing ships) ───────────────────────────────────────
+  msc_world: [
+    { port: "Miami, FL",           date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Nassau, Bahamas",     date: "Day 3", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "Ocean Cay MSC Marine Reserve",date:"Day 4",arrival:"8:00 AM",departure: "11:00 PM",       tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 5", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Miami, FL",           date: "Day 6", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  msc_seashore: [
+    { port: "Miami, FL",           date: "Day 1", arrival: "Embarkation", departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Ocho Rios, Jamaica",  date: "Day 3", arrival: "8:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "ET" },
+    { port: "George Town, Cayman", date: "Day 4", arrival: "7:00 AM",      departure: "3:30 PM",        tender: true,  sea_day: false, timezone: "ET" },
+    { port: "Cozumel, Mexico",     date: "Day 5", arrival: "9:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CT" },
+    { port: "At Sea",              date: "Day 6", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "ET" },
+    { port: "Miami, FL",           date: "Day 7", arrival: "7:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "ET" },
+  ],
+  msc_virtuosa: [
+    { port: "Southampton, UK",     date: "Day 1", arrival: "Embarkation", departure: "6:00 PM",        tender: false, sea_day: false, timezone: "BST" },
+    { port: "At Sea",              date: "Day 2", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "BST" },
+    { port: "Vigo, Spain",         date: "Day 3", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "WET" },
+    { port: "Lisbon, Portugal",    date: "Day 4", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "WET" },
+    { port: "At Sea",              date: "Day 5", arrival: null,           departure: null,              tender: false, sea_day: true,  timezone: "BST" },
+    { port: "Southampton, UK",     date: "Day 6", arrival: "6:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "BST" },
+  ],
+  msc_grandiosa: [
+    { port: "Genoa, Italy",        date: "Day 1", arrival: "Embarkation", departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Naples, Italy",       date: "Day 2", arrival: "9:00 AM",      departure: "7:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Palermo, Sicily",     date: "Day 3", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Valletta, Malta",     date: "Day 4", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Barcelona, Spain",    date: "Day 5", arrival: "9:00 AM",      departure: "7:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Marseille, France",   date: "Day 6", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Genoa, Italy",        date: "Day 7", arrival: "6:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "CET" },
+  ],
+  msc_bellissima: [
+    { port: "Marseille, France",   date: "Day 1", arrival: "Embarkation", departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Barcelona, Spain",    date: "Day 2", arrival: "9:00 AM",      departure: "7:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Palma, Mallorca",     date: "Day 3", arrival: "8:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Rome, Italy",         date: "Day 4", arrival: "7:00 AM",      departure: "7:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Naples, Italy",       date: "Day 5", arrival: "7:00 AM",      departure: "6:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Genoa, Italy",        date: "Day 6", arrival: "7:00 AM",      departure: "5:00 PM",        tender: false, sea_day: false, timezone: "CET" },
+    { port: "Marseille, France",   date: "Day 7", arrival: "6:00 AM",      departure: "Disembarkation", tender: false, sea_day: false, timezone: "CET" },
+  ],
+
 };
 
 
@@ -1066,16 +1399,115 @@ const PORT_DATA = {
   },
 };
 
+// ─── Sail date schedules ──────────────────────────────────────
+// Each ship has its own departure day(s) of the week and frequency.
+// We generate real upcoming dates based on actual sailing patterns.
+const SAIL_SCHEDULES = {
+  // Royal Caribbean
+  royal_wonder:    { days: [6], interval: 7,  count: 10, note: "Every Saturday from Miami" },
+  royal_icon:      { days: [6], interval: 7,  count: 10, note: "Every Saturday from Miami" },
+  royal_symphony:  { days: [6], interval: 7,  count: 8,  note: "Every Saturday from Barcelona" },
+  royal_navigator: { days: [0], interval: 7,  count: 10, note: "Every Sunday from Galveston" },
+  royal_oasis:     { days: [6], interval: 7,  count: 8,  note: "Every Saturday from Miami" },
+  royal_allure:    { days: [6], interval: 7,  count: 8,  note: "Every Saturday from Port Canaveral" },
+  royal_harmony:   { days: [6], interval: 7,  count: 8,  note: "Every Saturday from Barcelona" },
+  royal_mariner:   { days: [0], interval: 7,  count: 8,  note: "Every Sunday from Los Angeles" },
+  // Carnival
+  carnival_mardi_gras:  { days: [6], interval: 7, count: 10, note: "Every Saturday from Port Canaveral" },
+  carnival_celebration: { days: [6], interval: 7, count: 10, note: "Every Saturday from Miami" },
+  carnival_jubilee:     { days: [6], interval: 7, count: 8,  note: "Every Saturday from Galveston" },
+  carnival_venezia:     { days: [0], interval: 7, count: 8,  note: "Every Sunday from New York" },
+  carnival_horizon:     { days: [0], interval: 7, count: 10, note: "Every Sunday from Miami" },
+  carnival_vista:       { days: [6], interval: 7, count: 8,  note: "Every Saturday from Galveston" },
+  carnival_breeze:      { days: [6], interval: 7, count: 8,  note: "Every Saturday from Miami" },
+  carnival_sunshine:    { days: [0], interval: 7, count: 8,  note: "Every Sunday from Charleston" },
+  // Norwegian
+  ncl_bliss:    { days: [0], interval: 7,  count: 8,  note: "Every Sunday from Seattle (Alaska season)" },
+  ncl_prima:    { days: [6], interval: 7,  count: 8,  note: "Every Saturday from New York" },
+  ncl_viva:     { days: [6], interval: 7,  count: 8,  note: "Every Saturday from Miami" },
+  ncl_encore:   { days: [0], interval: 7,  count: 8,  note: "Every Sunday from Seattle" },
+  ncl_joy:      { days: [6], interval: 7,  count: 8,  note: "Every Saturday from New York" },
+  ncl_escape:   { days: [0], interval: 7,  count: 10, note: "Every Sunday from New York" },
+  ncl_getaway:  { days: [6], interval: 7,  count: 8,  note: "Every Saturday from Miami" },
+  // Disney
+  disney_wish:     { days: [0,3], interval: 3, count: 12, note: "3 & 4 night sailings from Port Canaveral" },
+  disney_treasure: { days: [0,4], interval: 3, count: 10, note: "3 & 4 night sailings from Port Canaveral" },
+  disney_fantasy:  { days: [6],   interval: 7, count: 8,  note: "Every Saturday from Port Canaveral" },
+  disney_dream:    { days: [0,3], interval: 3, count: 12, note: "3 & 4 night sailings from Port Canaveral" },
+  disney_magic:    { days: [6],   interval: 7, count: 8,  note: "Every Saturday from various ports" },
+  disney_wonder_d: { days: [0],   interval: 7, count: 8,  note: "Every Sunday from various ports" },
+  // Celebrity
+  celebrity_beyond:    { days: [0], interval: 7, count: 8, note: "Every Sunday from Fort Lauderdale" },
+  celebrity_ascent:    { days: [6], interval: 7, count: 8, note: "Every Saturday from Fort Lauderdale" },
+  celebrity_edge:      { days: [6], interval: 7, count: 8, note: "Every Saturday from Barcelona" },
+  celebrity_apex:      { days: [6], interval: 7, count: 8, note: "Every Saturday from Southampton" },
+  celebrity_equinox:   { days: [0], interval: 7, count: 8, note: "Every Sunday from Fort Lauderdale" },
+  celebrity_silhouette:{ days: [6], interval: 7, count: 8, note: "Every Saturday from Fort Lauderdale" },
+  // Princess
+  princess_sun:       { days: [6], interval: 7, count: 8, note: "Every Saturday from Fort Lauderdale" },
+  princess_sphere:    { days: [6], interval: 7, count: 8, note: "Every Saturday from Fort Lauderdale" },
+  princess_enchanted: { days: [6], interval: 7, count: 8, note: "Every Saturday from Fort Lauderdale" },
+  princess_discovery: { days: [6], interval: 7, count: 8, note: "Every Saturday from Los Angeles" },
+  princess_royal_p:   { days: [0], interval: 7, count: 8, note: "Every Sunday from Southampton" },
+  princess_majestic:  { days: [6], interval: 7, count: 8, note: "Every Saturday from Barcelona" },
+  // Holland America
+  holland_rotterdam:       { days: [6], interval: 7, count: 8, note: "Every Saturday from Seattle (Alaska)" },
+  holland_nieuw_statendam: { days: [0], interval: 7, count: 8, note: "Every Sunday from Fort Lauderdale" },
+  holland_koningsdam:      { days: [6], interval: 7, count: 8, note: "Every Saturday from Seattle" },
+  holland_eurodam:         { days: [0], interval: 7, count: 8, note: "Every Sunday from Amsterdam" },
+  holland_nieuw_amsterdam: { days: [6], interval: 7, count: 8, note: "Every Saturday from Fort Lauderdale" },
+  holland_westerdam:       { days: [0], interval: 7, count: 8, note: "Every Sunday from Seattle" },
+  // MSC
+  msc_world:      { days: [6], interval: 7, count: 8, note: "Every Saturday from Miami" },
+  msc_seascape:   { days: [6], interval: 7, count: 8, note: "Every Saturday from Miami" },
+  msc_seashore:   { days: [6], interval: 7, count: 8, note: "Every Saturday from Miami" },
+  msc_virtuosa:   { days: [6], interval: 7, count: 8, note: "Every Saturday from Southampton" },
+  msc_grandiosa:  { days: [6], interval: 7, count: 8, note: "Every Saturday from Genoa" },
+  msc_bellissima: { days: [0], interval: 7, count: 8, note: "Every Sunday from Marseille" },
+};
+
 // ─── Helpers ──────────────────────────────────────────────────
-function getSailDates() {
-  const dates = [];
-  const d = new Date();
-  d.setDate(d.getDate() + 7);
-  for (let i = 0; i < 8; i++) {
-    dates.push(d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric" }));
+function getSailDates(lineId, shipId) {
+  const key = `${lineId}_${shipId}`;
+  const schedule = SAIL_SCHEDULES[key];
+
+  const fmt = (d) => d.toLocaleDateString("en-US", {
+    weekday: "short", month: "short", day: "numeric", year: "numeric"
+  });
+
+  if (!schedule) {
+    // Fallback: next 8 Saturdays
+    const dates = [];
+    const d = new Date();
     d.setDate(d.getDate() + 7);
+    while (d.getDay() !== 6) d.setDate(d.getDate() + 1);
+    for (let i = 0; i < 8; i++) {
+      dates.push(fmt(new Date(d)));
+      d.setDate(d.getDate() + 7);
+    }
+    return { dates, note: "" };
   }
-  return dates;
+
+  const { days, count, note } = schedule;
+  const dates = [];
+  const today = new Date();
+  today.setHours(0,0,0,0);
+
+  // Find next occurrence of each departure day
+  const d = new Date(today);
+  d.setDate(d.getDate() + 3); // minimum 3 days from today
+
+  // Collect upcoming dates that match the schedule days
+  let attempts = 0;
+  while (dates.length < count && attempts < 365) {
+    if (days.includes(d.getDay())) {
+      dates.push(fmt(new Date(d)));
+    }
+    d.setDate(d.getDate() + 1);
+    attempts++;
+  }
+
+  return { dates, note };
 }
 
 function parseTime(str) {
@@ -1247,6 +1679,7 @@ function HomeScreen({ appState, updateAppState, navigate }) {
   const [error, setError] = useState("");
 
   const ships = line ? (SHIPS[line] || []) : [];
+  const { dates: sailDates, note: sailNote } = (line && ship) ? getSailDates(line, ship) : { dates: [], note: "" };
   const canLoad = line && ship && date;
 
   const handleLoad = () => {
@@ -1313,10 +1746,15 @@ function HomeScreen({ appState, updateAppState, navigate }) {
             <div style={{ paddingTop:28 }}>{dot(3, !!ship && !date, !!date)}</div>
             <div style={{ flex:1 }}>
               <label className="formlabel">Sail Date</label>
-              <select className="formselect" value={date} onChange={e => setDate(e.target.value)} disabled={!ship} style={{ marginBottom:0 }}>
+              <select className="formselect" value={date} onChange={e => setDate(e.target.value)} disabled={!ship} style={{ marginBottom: sailNote ? 6 : 0 }}>
                 <option value="">{ship ? "Select your sail date" : "Select a ship first"}</option>
-                {getSailDates().map(d => <option key={d} value={d}>{d}</option>)}
+                {sailDates.map(d => <option key={d} value={d}>{d}</option>)}
               </select>
+              {sailNote && (
+                <div style={{ fontSize:11, color:"#64748b", marginBottom:0, display:"flex", alignItems:"center", gap:4 }}>
+                  <span>🗓️</span> {sailNote}
+                </div>
+              )}
             </div>
           </div>
 
