@@ -1,0 +1,379 @@
+/* ─── Design Tokens ─────────────────────────────────────────── */
+:root {
+  --color-primary:       #0f766e;   /* teal-700 */
+  --color-primary-light: #ccfbf1;   /* teal-100 */
+  --color-primary-dark:  #134e4a;   /* teal-900 */
+  --color-accent:        #f59e0b;   /* amber-400 — ratings */
+
+  --color-bg:            #f8fafc;
+  --color-surface:       #ffffff;
+  --color-surface-2:     #f1f5f9;
+  --color-border:        #e2e8f0;
+  --color-border-strong: #cbd5e1;
+
+  --color-text-primary:  #0f172a;
+  --color-text-secondary:#475569;
+  --color-text-muted:    #94a3b8;
+
+  --color-success:       #059669;
+  --color-warning:       #d97706;
+  --color-danger:        #dc2626;
+
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   14px;
+  --radius-xl:   20px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 2px 8px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-lg: 0 4px 16px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06);
+
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'DM Sans', system-ui, sans-serif;
+
+  --panel-width:  260px;
+  --nav-height:   64px;
+  --header-height:56px;
+
+  --transition: 200ms ease;
+}
+
+/* ─── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  min-height: 100dvh;
+  overscroll-behavior: none;
+}
+
+img { display: block; max-width: 100%; }
+button { cursor: pointer; border: none; background: none; font: inherit; }
+input, select { font: inherit; }
+a { color: inherit; text-decoration: none; }
+
+/* ─── App Shell ──────────────────────────────────────────────── */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+/* Side panel hidden on mobile, shown on desktop */
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  height: calc(100dvh - var(--nav-height));
+}
+
+.side-panel {
+  width: var(--panel-width);
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  height: 100%;
+  overflow-y: auto;
+  flex-shrink: 0;
+
+  /* Hidden on mobile */
+  display: none;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
+  padding-bottom: 1rem;
+}
+
+/* ─── Bottom Nav (mobile) ────────────────────────────────────── */
+.bottom-nav {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  height: var(--nav-height);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 100;
+  padding: 0 0.5rem;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  font-size: 11px;
+  font-weight: 500;
+  transition: color var(--transition), background var(--transition);
+  min-width: 64px;
+}
+
+.nav-item.active {
+  color: var(--color-primary);
+}
+
+.nav-item svg {
+  width: 22px; height: 22px;
+}
+
+/* ─── Screen Header ──────────────────────────────────────────── */
+.screen-header {
+  position: sticky;
+  top: 0;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 1rem;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 50;
+}
+
+.screen-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-primary);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 0;
+  min-height: 44px;
+}
+
+/* ─── Cards ──────────────────────────────────────────────────── */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 1rem 1.25rem;
+}
+
+/* ─── Buttons ────────────────────────────────────────────────── */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  width: 100%;
+  min-height: 52px;
+  border-radius: var(--radius-lg);
+  font-size: 16px;
+}
+
+.btn-primary:active { transform: scale(0.98); opacity: 0.9; }
+.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-primary);
+  width: 100%;
+}
+
+.btn-outline:active { background: var(--color-primary-light); }
+
+/* ─── Form Elements ──────────────────────────────────────────── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.form-select, .form-input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 1rem;
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border-color var(--transition);
+}
+
+.form-select:focus, .form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+/* ─── Checkbox & Radio ───────────────────────────────────────── */
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.check-row input[type="checkbox"],
+.check-row input[type="radio"] {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.check-label {
+  font-size: 15px;
+  color: var(--color-text-primary);
+  flex: 1;
+}
+
+/* ─── Sliders ────────────────────────────────────────────────── */
+input[type="range"] {
+  width: 100%;
+  height: 4px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* ─── Badges & Pills ─────────────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-teal   { background: var(--color-primary-light); color: var(--color-primary-dark); }
+.badge-amber  { background: #fef3c7; color: #92400e; }
+.badge-gray   { background: var(--color-surface-2); color: var(--color-text-secondary); }
+
+/* ─── Section Labels ─────────────────────────────────────────── */
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
+}
+
+/* ─── Utility ────────────────────────────────────────────────── */
+.stack { display: flex; flex-direction: column; }
+.stack-sm  { gap: 0.5rem; }
+.stack-md  { gap: 1rem; }
+.stack-lg  { gap: 1.5rem; }
+
+.screen-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: calc(var(--nav-height) + 1rem);
+}
+
+.text-muted    { color: var(--color-text-muted); }
+.text-secondary{ color: var(--color-text-secondary); }
+.text-sm       { font-size: 13px; }
+.text-xs       { font-size: 11px; }
+.font-medium   { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+
+/* ─── Responsive: Tablet & Desktop ──────────────────────────── */
+@media (min-width: 640px) {
+  .side-panel { display: flex; flex-direction: column; }
+
+  .app-body { height: calc(100dvh - 0px); }
+
+  .bottom-nav { display: none; }
+
+  .screen-body { padding: 1.5rem; }
+
+  .checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .screen-body { padding: 2rem; max-width: 800px; }
+}
+
+/* ─── Side Panel Overlay (mobile) ───────────────────────────── */
+.panel-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 200;
+}
+
+.side-panel-mobile {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: min(var(--panel-width), 85vw);
+  background: var(--color-surface);
+  z-index: 201;
+  transform: translateX(-100%);
+  transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-panel-mobile.open {
+  transform: translateX(0);
+}
+
+.panel-overlay.open { display: block; }
+
+@media (min-width: 640px) {
+  .side-panel-mobile { display: none; }
+  .panel-overlay     { display: none !important; }
+}
