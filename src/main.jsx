@@ -1287,10 +1287,11 @@ const PORT_DATA = {
   "Juneau, AK": {
     excursions: [
       { id:"jux1", url:"https://www.alaskaexcursions.com/glacier-walk", title:"Mendenhall Glacier & Ice Walk", desc:"Walk on the face of the stunning Mendenhall Glacier with a certified guide. An extraordinary Alaska experience.", duration:4, price:3, rating:4.9, reviews:1876, distance:"15 min shuttle", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure","Scenic"], emoji:"🧊" , maxGroupSize:12 },
-      { id:"jux2", url:"https://www.viator.com/searchResults/all?text=juneau+whale+watching+wildlife", title:"Whale Watching & Wildlife Tour", desc:"Spot humpback whales, orcas, sea lions, and eagles on a naturalist-guided whale watching cruise.", duration:3, price:2, rating:4.9, reviews:2341, distance:"10 min walk", fitness:"Low", transport:["boat"], family:true, accessibility:true, types:["Wildlife","Scenic"], emoji:"🐋" , maxGroupSize:50 },
+      { id:"jux2", url:"https://www.viator.com/searchResults/all?text=juneau+whale+watching+wildlife", title:"Whale Watching & Wildlife Tour", desc:"Spot humpback whales, orcas, sea lions, and eagles on a naturalist-guided whale watching cruise.", duration:3, price:2, rating:4.9, reviews:2341, distance:"10 min walk", fitness:"Low", transport:["boat"], family:true, accessibility:true, types:["Wildlife","Scenic"], emoji:"🐋" , maxGroupSize:12 },
       { id:"jux3", url:"https://www.northstartreks.com/dog-sledding-on-glacier", title:"Helicopter & Glacier Dog Sled", desc:"Fly by helicopter to a remote glacier and mush your own dog sled team across the ice. Unforgettable.", duration:3, price:3, rating:4.9, reviews:987, distance:"5 min drive", fitness:"Low", transport:["shuttle"], family:true, accessibility:false, types:["Adventure","Wildlife"], emoji:"🚁" , maxGroupSize:6 },
       { id:"jux4", url:"https://www.alaskacanoopy.com", title:"Juneau Rainforest Zipline", desc:"Soar through the Tongass National Forest — America's largest rainforest — on 9 exciting zip lines.", duration:3, price:2, rating:4.8, reviews:876, distance:"15 min drive", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure","Scenic"], emoji:"🌲" , maxGroupSize:12 },
       { id:"jux5", url:"https://www.goldcreeksalmonbake.com", title:"Salmon Bake & Mendenhall Visit", desc:"Alaska's most popular shore excursion — visit the glacier then feast on fresh wild salmon at Gold Creek.", duration:4, price:2, rating:4.7, reviews:3241, distance:"15 min drive", fitness:"Low", transport:["shuttle"], family:true, accessibility:true, types:["Food & Drink","Scenic"], emoji:"🐟" , maxGroupSize:12 },
+      { id:"jux6", url:"https://www.juneautours.com", title:"Mendenhall Glacier & Whale Watching Combo — Juneau Tours", desc:"Alaska-owned Juneau Tours combines a naturalist-guided whale watch with a glacier shuttle to Mendenhall in a single 5-hour excursion. Heated cabin, two viewing decks, snacks, and binoculars included. $199 per adult. Departs downtown, a short walk from the pier.", duration:5, price:3, rating:4.9, reviews:9457, distance:"5 min walk from pier", fitness:"Low", transport:["walking"], family:true, accessibility:true, types:["Wildlife","Scenic","Adventure","Water Activities"], emoji:"🐋", maxGroupSize:12 },
     ],
     dining: [
       { id:"jud1", url:"https://www.kingcrabshack.com", title:"Tracy's King Crab Shack", desc:"World-famous outdoor crab shack serving the freshest Alaskan king crab legs right off the dock. A must.", cuisine:"Alaskan Seafood", price:2, rating:4.8, reviews:4321, distance:"5 min walk", kidFriendly:true, hours:"10:00 AM – 6:00 PM", emoji:"🦀" },
@@ -1311,6 +1312,7 @@ const PORT_DATA = {
       { id:"kex2", url:"https://www.viator.com/searchResults/all?text=ketchikan+rainforest+zip+line", title:"Rainforest Canopy & Zip Line", desc:"Soar through the ancient temperate rainforest canopy on a thrilling zip line adventure above the treetops.", duration:3, price:2, rating:4.8, reviews:1234, distance:"15 min drive", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure"], emoji:"🌲" , maxGroupSize:12 },
       { id:"kex3", url:"https://www.viator.com/searchResults/all?text=saxman+village+totem+poles+ketchikan", title:"Totem Poles & Saxman Village", desc:"Visit the world's largest collection of standing totem poles and learn about the Tlingit and Haida cultures.", duration:2, price:1, rating:4.7, reviews:1543, distance:"10 min taxi", fitness:"Low", transport:["shuttle"], family:true, accessibility:true, types:["Cultural","Historical"], emoji:"🗿" , maxGroupSize:12 },
       { id:"kex4", url:"https://www.viator.com/searchResults/all?text=ketchikan+salmon+fishing+charter", title:"Salmon Fishing Charter", desc:"Go sport fishing for wild Alaskan salmon with an experienced guide. Gear and license provided.", duration:4, price:3, rating:4.8, reviews:654, distance:"15 min drive", fitness:"Low", transport:["shuttle","boat"], family:false, accessibility:false, types:["Wildlife","Adventure"], emoji:"🎣" , maxGroupSize:6 },
+      { id:"kex5", url:"https://www.kayakketchikan.com", title:"Orca Cove Fast Boat & Sea Kayaking", desc:"Southeast Sea Kayaks ferries you by fast boat to the sheltered waters of Orca Cove, then you paddle through kelp forests past sea lions, eagles, and marine life. Max 6 guests per trip; snacks and smoked salmon included. One of Ketchikan's most distinctive small-group water experiences.", duration:3, price:2, rating:4.9, reviews:689, distance:"5 min walk from pier", fitness:"Moderate", transport:["walking"], family:true, accessibility:false, types:["Adventure","Water Activities","Wildlife"], emoji:"🚣", maxGroupSize:6 },
     ],
     dining: [
       { id:"ked1", url:"https://www.capefoxlodge.com/dining", title:"Cape Fox Lodge Restaurant", desc:"Stunning hilltop lodge restaurant with panoramic views and the best wild salmon chowder in Southeast Alaska.", cuisine:"Alaskan", price:2, rating:4.7, reviews:543, distance:"10 min walk+tram", kidFriendly:true, hours:"11:00 AM – 9:00 PM", emoji:"🌲" },
@@ -1423,6 +1425,39 @@ const PORT_DATA = {
       { id:"cca1", url:"https://www.royalcaribbean.com/cruise-ships/perfect-day-cococay", title:"South Beach & Floating Bar", desc:"Relax on CocoCay's beautiful South Beach with the famous floating swim-up bar in the warm Bahamian waters.", duration:4, price:0, rating:4.8, reviews:6543, distance:"5 min walk", fitness:"Low", family:true, accessibility:true, types:["Beach Day","Relaxation"], emoji:"🍹" },
       { id:"cca2", url:"https://www.royalcaribbean.com/cruise-ships/perfect-day-cococay", title:"Snorkeling at Snorkel Lagoon", desc:"Explore a purpose-built snorkel lagoon teeming with tropical fish and vibrant coral. All gear included.", duration:2, price:1, rating:4.7, reviews:3241, distance:"10 min walk", fitness:"Low", family:true, accessibility:false, types:["Water Activities"], emoji:"🐠" },
     ],
+    resorts: [],
+  },
+
+  "Skagway, AK": {
+    excursions: [
+      { id:"skx1", url:"https://www.wpyr.com", title:"White Pass & Yukon Route Railway", desc:"Ride the historic narrow-gauge railway through dramatic mountain scenery on the same route as the 1898 Klondike Gold Rush stampeders. The most iconic excursion in Skagway.", duration:3, price:2, rating:4.9, reviews:3241, distance:"2 min walk", fitness:"Low", transport:["walking"], family:true, accessibility:true, types:["Scenic","Historical"], emoji:"🚂", maxGroupSize:12 },
+      { id:"skx2", url:"https://www.viator.com/searchResults/all?text=chilkat+bald+eagle+preserve+float+skagway", title:"Chilkat Bald Eagle Preserve Float", desc:"Float the Chilkat River through the world's largest congregation of bald eagles with a naturalist guide. Spectacular wildlife and mountain scenery.", duration:4, price:2, rating:4.8, reviews:876, distance:"45 min drive", fitness:"Low", transport:["shuttle","boat"], family:true, accessibility:false, types:["Wildlife","Scenic"], emoji:"🦅", maxGroupSize:12 },
+      { id:"skx3", url:"https://www.viator.com/searchResults/all?text=glacier+dog+sledding+helicopter+skagway", title:"Helicopter & Glacier Dog Sledding", desc:"Fly by helicopter to a remote glacier camp and mush your own dog sled team across the ice with an Iditarod-experienced musher.", duration:3, price:3, rating:4.9, reviews:654, distance:"5 min drive", fitness:"Low", transport:["shuttle"], family:true, accessibility:false, types:["Adventure","Wildlife"], emoji:"🐕", maxGroupSize:6 },
+      { id:"skx4", url:"https://www.viator.com/searchResults/all?text=skagway+mountain+biking+klondike+trail", title:"Klondike Trail Mountain Bike Adventure", desc:"Pedal the historic Klondike Gold Rush trail through old-growth forest and alpine meadows with stunning fjord views below.", duration:3, price:2, rating:4.7, reviews:432, distance:"5 min drive", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure","Scenic"], emoji:"🚵", maxGroupSize:12 },
+      { id:"skx5", url:"https://www.viator.com/searchResults/all?text=skagway+kayak+taiya+inlet", title:"Taiya Inlet Sea Kayaking", desc:"Paddle the glassy waters of Taiya Inlet surrounded by snow-capped peaks and towering glaciers with a certified guide.", duration:4, price:2, rating:4.8, reviews:543, distance:"10 min drive", fitness:"Moderate", transport:["shuttle"], family:false, accessibility:false, types:["Water Activities","Adventure","Scenic"], emoji:"🛶", maxGroupSize:12 },
+    ],
+    dining: [
+      { id:"skd1", url:"https://www.skagwaybrewing.com", title:"Skagway Brewing Company", desc:"Beloved local brewery in a restored 1897 building, serving craft beers and hearty comfort food. A Skagway institution.", cuisine:"American Pub", price:1, rating:4.7, reviews:1543, distance:"5 min walk", kidFriendly:true, hours:"11:00 AM – 9:00 PM", emoji:"🍺" },
+      { id:"skd2", url:"https://www.tripadvisor.com/Restaurant_Review-g60893-d436696-Reviews-Starfire-Skagway_Alaska.html", title:"Starfire Thai Restaurant", desc:"A legendary surprise in Alaska — authentic Thai cuisine that locals and cruise passengers rave about year after year.", cuisine:"Thai", price:1, rating:4.8, reviews:876, distance:"8 min walk", kidFriendly:true, hours:"11:00 AM – 8:00 PM", emoji:"🍜" },
+      { id:"skd3", url:"https://www.skagwayinn.com/dining", title:"Olivia's at the Historic Skagway Inn", desc:"Charming bistro inside a restored Victorian inn, serving fresh Alaskan salmon, chowder, and homemade desserts.", cuisine:"Contemporary Alaskan", price:2, rating:4.6, reviews:432, distance:"6 min walk", kidFriendly:true, hours:"7:00 AM – 8:00 PM", emoji:"🏡" },
+    ],
+    activities: [
+      { id:"ska1", url:"https://www.nps.gov/klgo/index.htm", title:"Klondike Gold Rush National Historical Park", desc:"Free visitor center and ranger-led tours exploring the 1898 Gold Rush that put Skagway on the map. Fascinating history.", duration:2, price:0, rating:4.7, reviews:2341, distance:"3 min walk", fitness:"Low", family:true, accessibility:true, types:["Historical","Cultural"], emoji:"⛏️" },
+      { id:"ska2", url:"https://www.viator.com/searchResults/all?text=gold+rush+cemetery+skagway+soapy+smith", title:"Gold Rush Cemetery Walk", desc:"A short walk to the historic cemetery where infamous outlaw Soapy Smith is buried alongside his nemesis Frank Reid. Wild West history.", duration:1, price:0, rating:4.5, reviews:1234, distance:"20 min walk", fitness:"Low", family:true, accessibility:false, types:["Historical","Scenic"], emoji:"🪦" },
+      { id:"ska3", url:"https://www.viator.com/searchResults/all?text=skagway+broadway+shopping", title:"Broadway Street & Local Shopping", desc:"Stroll Skagway's colorful main street, lined with restored Gold Rush-era storefronts, galleries, and jewelry shops.", duration:2, price:0, rating:4.4, reviews:1876, distance:"2 min walk", fitness:"Low", family:true, accessibility:true, types:["Shopping","Historical"], emoji:"🛍️" },
+    ],
+    resorts: [],
+  },
+
+  "Victoria, BC": {
+    excursions: [
+      { id:"vicx1", url:"https://www.discoverthepast.com", title:"Ghostly Walks Route 1 — Old Town Tour", desc:"Discover the Past guides you through Victoria's historic Old Town after dark, uncovering tales of hangings, hauntings, and eccentric characters at eight atmospheric locations. Victoria's most beloved evening walking experience — rain or shine. Departs nightly at 9 PM from the Visitor Centre at 812 Wharf Street.", duration:1, price:1, rating:4.7, reviews:989, distance:"20 min walk from pier", fitness:"Low", transport:["walking"], family:true, accessibility:false, types:["Cultural","Historical","Scenic"], emoji:"👻", maxGroupSize:12 },
+      { id:"vicx2", url:"https://www.tallyhotours.com", title:"Tally-Ho Horse-Drawn Carriage Tour", desc:"Victoria's iconic lantern-lit carriage rides through the historic Inner Harbour depart from beside the BC Legislature — a 10-min walk from Ogden Point. Private carriages seat up to 6 guests. The 45-min Salish Sea route is the best evening option. Operates until 8 PM — ideal for ships arriving by 6 PM.", duration:1, price:2, rating:4.7, reviews:417, distance:"10 min walk from pier", fitness:"Low", transport:["walking"], family:true, accessibility:true, types:["Cultural","Historical","Scenic"], emoji:"🐴", maxGroupSize:6 },
+      { id:"vicx3", url:"https://www.butchartgardens.com", title:"Butchart Gardens — Night Illuminations", desc:"One of the world's great gardens, transformed after dusk by 3,000+ lights. Open Wednesday–Sunday evenings until 10 PM (viewing until 11 PM); Saturday nights in July–August include a fireworks show included with admission. Adult admission $44.25 CAD. 22 km from Ogden Point — a 25-min taxi ride. Best for ships arriving by 6 PM.", duration:2, price:2, rating:4.7, reviews:11810, distance:"25 min drive from pier", fitness:"Low", transport:["taxi"], family:true, accessibility:true, types:["Scenic","Cultural","Historical"], emoji:"🌺", maxGroupSize:null },
+      { id:"vicx4", url:"https://www.victoriakayak.com", title:"Victoria Kayak — Sunset Harbour Paddle", desc:"Paddle the Inner Harbour as the sun sets, gliding past the Empress Hotel and BC Legislature on one of Victoria's most iconic waterways. Women-owned and operated since 1996; max 6 guests per tour. Located at 1006 Wharf Street, a 20-min walk from the pier. Summer hours 9 AM–8 PM — last tours depart around 6 PM, making this ideal for ships arriving by 6 PM.", duration:2, price:2, rating:4.9, reviews:283, distance:"20 min walk or short taxi from pier", fitness:"Moderate", transport:["walking","taxi"], family:true, accessibility:false, types:["Water Activities","Scenic","Wildlife"], emoji:"🚣", maxGroupSize:6 },
+    ],
+    dining: [],
+    activities: [],
     resorts: [],
   },
 
@@ -2105,6 +2140,7 @@ function PreferencesScreen({ appState, updateAppState, navigate }) {
   const [accessibility, setAccessibility] = useState(prefs.accessibility_flags || []);
   const [fitnessLevel,  setFitnessLevel]  = useState(prefs.fitness_level || "");
   const [groupSize,     setGroupSize]     = useState(prefs.group_size || "");
+  const [privateGroupOptions, setPrivateGroupOptions] = useState(prefs.private_group_options || []);
   const [priceRange,    setPriceRange]    = useState(prefs.price_range ?? 2);
   const [minDuration,   setMinDuration]   = useState(prefs.duration_hours?.[0] ?? 1);
   const [maxDuration,   setMaxDuration]   = useState(prefs.duration_hours?.[1] ?? 6);
@@ -2116,7 +2152,7 @@ function PreferencesScreen({ appState, updateAppState, navigate }) {
   const handleSave = () => {
     updateAppState({
       preferencesSaved: true,
-      userPreferences: { activity_types: activityTypes, accessibility_flags: accessibility, fitness_level: fitnessLevel, group_size: groupSize, price_range: priceRange, duration_hours: [minDuration, maxDuration], transportation: transport },
+      userPreferences: { activity_types: activityTypes, accessibility_flags: accessibility, fitness_level: fitnessLevel, group_size: groupSize, private_group_options: privateGroupOptions, price_range: priceRange, duration_hours: [minDuration, maxDuration], transportation: transport },
     });
     navigate("ports");
   };
@@ -2178,10 +2214,36 @@ function PreferencesScreen({ appState, updateAppState, navigate }) {
         <div className="section-header"><span>👥</span><span className="section-title">Group Size</span></div>
         <div className="section-body">
           <div className="pill-group">
-            {["Small Group","Private Only","Avoid Large Groups"].map(size => (
-              <button key={size} className={`pill ${groupSize===size?"selected":""}`} onClick={() => setGroupSize(groupSize===size?"":size)}>{size}</button>
-            ))}
+            <button
+              className={`pill ${groupSize === "Private Group" ? "selected" : ""}`}
+              onClick={() => {
+                if (groupSize === "Private Group") {
+                  setGroupSize("");
+                  setPrivateGroupOptions([]);
+                } else {
+                  setGroupSize("Private Group");
+                }
+              }}
+            >
+              🔒 Private Group
+            </button>
           </div>
+          {groupSize === "Private Group" && (
+            <div className="pill-group" style={{ marginTop: 10, paddingLeft: 12, borderLeft: "2px solid #C9A84C" }}>
+              {[
+                { id: "exclusive", label: "Exclusive to my travel party" },
+                { id: "charter",   label: "Bookable private charter (may cost more)" },
+              ].map(({ id, label }) => (
+                <button
+                  key={id}
+                  className={`pill ${privateGroupOptions.includes(id) ? "selected" : ""}`}
+                  onClick={() => toggleItem(privateGroupOptions, setPrivateGroupOptions, id)}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
@@ -2310,6 +2372,13 @@ function PortDayScreen({ appState, navigate }) {
 function ResultsScreen({ appState, updateAppState, navigate }) {
   const { selectedPort, userPreferences = {}, plan = [] } = appState;
   const [activeTab, setActiveTab] = useState("excursions");
+  const [showManualForm, setShowManualForm] = useState(false);
+  const [manualTitle, setManualTitle]       = useState("");
+  const [manualPort, setManualPort]         = useState("");
+  const [manualDate, setManualDate]         = useState("");
+  const [manualOperator, setManualOperator] = useState("");
+  const [manualConf, setManualConf]         = useState("");
+  const [manualNotes, setManualNotes]       = useState("");
 
   if (!selectedPort) {
     return (
@@ -2348,6 +2417,27 @@ function ResultsScreen({ appState, updateAppState, navigate }) {
       p.id === item.id ? { ...p, booked: true, confirmationNumber } : p
     );
     updateAppState({ plan: newPlan });
+  };
+
+  const handleAddManual = () => {
+    if (!manualTitle.trim()) return;
+    const newItem = {
+      id: `manual_${Date.now()}`,
+      title: manualTitle.trim(),
+      port: manualPort.trim() || selectedPort?.port || "",
+      date: manualDate.trim(),
+      operator: manualOperator.trim(),
+      confirmationNumber: manualConf.trim(),
+      notes: manualNotes.trim(),
+      emoji: "📌",
+      category: "excursions",
+      isManual: true,
+      booked: true,
+    };
+    updateAppState({ plan: [...plan, newItem] });
+    setManualTitle(""); setManualPort(""); setManualDate("");
+    setManualOperator(""); setManualConf(""); setManualNotes("");
+    setShowManualForm(false);
   };
 
   const currentItems = tabData[activeTab] || [];
@@ -2391,6 +2481,49 @@ function ResultsScreen({ appState, updateAppState, navigate }) {
             bookedInfo={plan.find(p => p.id === item.id && p.booked)}
           />
         ))
+      )}
+
+      {/* Add My Own Excursion — button */}
+      {activeTab === "excursions" && !showManualForm && (
+        <button
+          className="btn btn-outline"
+          style={{ width:"100%", marginTop:"1rem", marginBottom:"0.5rem" }}
+          onClick={() => { setManualPort(selectedPort?.port || ""); setShowManualForm(true); }}
+        >
+          + Add My Own Excursion
+        </button>
+      )}
+
+      {/* Add My Own Excursion — inline form */}
+      {activeTab === "excursions" && showManualForm && (
+        <div className="section-card" style={{ marginTop:"1rem", marginBottom:"0.5rem" }}>
+          <div className="section-header"><span>📌</span><span className="section-title">Add Excursion Manually</span></div>
+          <div style={{ padding:"0.75rem 1.25rem", display:"flex", flexDirection:"column", gap:10 }}>
+            <input type="text" placeholder="Excursion name *" value={manualTitle}
+              onChange={e => setManualTitle(e.target.value)}
+              style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14 }} />
+            <input type="text" placeholder="Port / destination" value={manualPort}
+              onChange={e => setManualPort(e.target.value)}
+              style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14 }} />
+            <input type="text" placeholder="Date (e.g. Aug 3)" value={manualDate}
+              onChange={e => setManualDate(e.target.value)}
+              style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14 }} />
+            <input type="text" placeholder="Operator / company" value={manualOperator}
+              onChange={e => setManualOperator(e.target.value)}
+              style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14 }} />
+            <input type="text" placeholder="Confirmation number" value={manualConf}
+              onChange={e => setManualConf(e.target.value)}
+              style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14 }} />
+            <textarea placeholder="Notes" value={manualNotes}
+              onChange={e => setManualNotes(e.target.value)}
+              rows={3}
+              style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14, resize:"vertical" }} />
+            <div style={{ display:"flex", gap:8 }}>
+              <button className="btn btn-primary" style={{ flex:2 }} onClick={handleAddManual}>Save Excursion</button>
+              <button className="btn btn-outline" style={{ flex:1 }} onClick={() => setShowManualForm(false)}>Cancel</button>
+            </div>
+          </div>
+        </div>
       )}
 
       {/* Go to plan button */}
@@ -2527,6 +2660,8 @@ const SAFETY_TIPS = {
   "Port Canaveral, FL":        ["Very safe US port — standard US precautions apply","Cocoa Beach is a short taxi ride away","Kennedy Space Center is an excellent excursion option","US currency and credit cards accepted everywhere","Emergency: dial 911"],
   "San Juan, Puerto Rico":     ["Old San Juan is very safe for tourists during the day","Puerto Rico uses US dollars — no currency exchange needed","Uber works well throughout San Juan","Avoid walking alone late at night in non-tourist areas","Emergency: dial 911 — US laws and protections apply"],
   "St. Thomas, USVI":          ["St. Thomas is a US territory — very safe for tourists","US dollars accepted everywhere — no currency exchange needed","Taxis are metered — agree on fare for non-metered rides","Downtown can get very crowded on cruise days","Emergency: dial 911"],
+  "Victoria, BC":              ["Victoria is one of Canada's safest and most walkable cities","The cruise terminal (Ogden Point) is a 20-min walk or short taxi from the Inner Harbour","Evening port calls are short — ships typically depart by 11:30 PM, so watch the time","Canadian currency accepted everywhere; USD also widely accepted but at unfavorable rates","Emergency: dial 911 — Canadian laws and healthcare apply"],
+  "Skagway, AK":               ["Skagway is one of Alaska's safest and most walkable ports","Weather changes fast — always bring a rain jacket or light layer","Book the White Pass Railway well in advance — it sells out quickly","Stay on marked trails outside town — bear activity is common in the area","Broadway is compact and easy to explore on foot from the pier"],
   "Juneau, AK":                ["Weather can change quickly — bring a rain jacket","Wildlife viewing: never approach bears or eagles","Only eat at established restaurants — avoid unlicensed sellers","Book glacier and whale watching tours in advance","Trails can be slippery — wear sturdy shoes"],
   "Ketchikan, AK":             ["Ketchikan is one of Alaska's safest ports","Creek Street boardwalk has uneven surfaces — watch your step","Rain is common — bring waterproof layers","Wildlife: don't approach or feed bald eagles or bears","Book excursions early — floatplane tours sell out fast"],
   "Barcelona, Spain":          ["Barcelona is generally safe but pickpocketing is common on Las Ramblas","Keep bags in front of you in crowded areas","Use licensed taxis or the metro — very safe and efficient","Emergency: dial 112 (European emergency number)","Carry a photocopy of your passport — leave original on ship"],
