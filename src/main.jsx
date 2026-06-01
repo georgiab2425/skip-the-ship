@@ -1,5 +1,34 @@
-﻿import React, { StrictMode, useEffect, useState } from "react";
+﻿import React, { StrictMode, useCallback, useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, doc, setDoc, getDocs, deleteDoc, serverTimestamp } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyALW4StEhvwDrLLo7Iph_vjUtJnHBMRqIY",
+  authDomain: "skip-the-ship.firebaseapp.com",
+  projectId: "skip-the-ship",
+  storageBucket: "skip-the-ship.firebasestorage.app",
+  messagingSenderId: "476040151274",
+  appId: "1:476040151274:web:11a3f9db41cee15b96d793",
+};
+const firebaseApp = initializeApp(firebaseConfig);
+const db = getFirestore(firebaseApp);
+
+async function fsListPlans() {
+  const snap = await getDocs(collection(db, "plans"));
+  return snap.docs
+    .map(d => ({ id: d.id, ...d.data() }))
+    .sort((a, b) => (b.savedAt?.seconds || 0) - (a.savedAt?.seconds || 0));
+}
+async function fsSavePlan(id, name, state) {
+  await setDoc(doc(db, "plans", id), { name, savedAt: serverTimestamp(), state });
+}
+async function fsDeletePlan(id) {
+  await deleteDoc(doc(db, "plans", id));
+}
+function makePlanId(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") + "-" + Date.now().toString().slice(-5);
+}
 
 const css = `
   /* ── Reset & Base ─────────────────────────────────────────── */
@@ -2863,7 +2892,7 @@ function getSafetyTips(portName) {
 }
 
 // ─── Screen: Plan ─────────────────────────────────────────────
-function PlanScreen({ appState, updateAppState, navigate }) {
+function PlanScreen({ appState, updateAppState, navigate, activePlanId, activePlanName, saveStatus, onSaveNew }) {
   const { plan = [], selectedPort, cruise, itinerary = [] } = appState;
   const [viewMode, setViewMode] = useState("port");
   const [shared, setShared] = useState(false);
@@ -2994,7 +3023,16 @@ function PlanScreen({ appState, updateAppState, navigate }) {
     <div>
       {/* Header */}
       <div style={{ marginBottom:"1rem" }}>
-        <h2 style={{ fontSize:20, fontWeight:700, marginBottom:2 }}>{viewMode === "cruise" ? "Full Cruise Plan" : "My Port Day Plan"}</h2>
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start" }}>
+          <h2 style={{ fontSize:20, fontWeight:700, marginBottom:2 }}>{viewMode === "cruise" ? "Full Cruise Plan" : "My Port Day Plan"}</h2>
+          {!activePlanId ? (
+            <button className="btn btn-primary" style={{ fontSize:12, padding:"6px 14px", minHeight:34 }} onClick={onSaveNew}>💾 Save Plan</button>
+          ) : (
+            <span style={{ fontSize:11, color: saveStatus === "saving" ? "#f59e0b" : "#22c55e", fontWeight:700, paddingTop:4 }}>
+              {saveStatus === "saving" ? "⏳ Saving…" : saveStatus === "saved" ? "✓ Saved" : `💾 ${activePlanName}`}
+            </span>
+          )}
+        </div>
         {viewMode === "port" && activePort && <p style={{ fontSize:13, color:"#334155" }}>{activePort.port} · {activePort.date}</p>}
         {cruise?.ship && <p style={{ fontSize:12, color:"#94a3b8" }}>{cruise.ship} · {cruise.sail_date}</p>}
       </div>
@@ -3416,6 +3454,93 @@ const NAV = [
 const SCREEN_TITLES = { home:"Skip the Ship", prefs:"My Preferences", ports:"My Itinerary", portday:"Port Day", results:"Top Options", plan:"My Plan" };
 const BACK_TARGETS  = { prefs:"home", ports:"prefs", portday:"ports", results:"portday", plan:"results" };
 
+// ─── Plans modal ──────────────────────────────────────────────
+function PlansModal({ onClose, onLoad, onNew }) {
+  const [plans, setPlans] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [deleting, setDeleting] = useState(null);
+
+  useEffect(() => {
+    fsListPlans().then(p => { setPlans(p); setLoading(false); });
+  }, []);
+
+  const handleDelete = async (id) => {
+    if (!window.confirm("Delete this plan? This cannot be undone.")) return;
+    setDeleting(id);
+    await fsDeletePlan(id);
+    setPlans(prev => prev.filter(p => p.id !== id));
+    setDeleting(null);
+  };
+
+  const fmt = (sec) => sec ? new Date(sec * 1000).toLocaleDateString("en-US", { month:"short", day:"numeric", year:"numeric" }) : "";
+
+  return (
+    <div style={{ position:"fixed", inset:0, background:"rgba(13,27,42,0.8)", zIndex:600, display:"flex", alignItems:"flex-end", justifyContent:"center" }}>
+      <div style={{ background:"#fff", borderRadius:"20px 20px 0 0", width:"100%", maxWidth:480, maxHeight:"80dvh", display:"flex", flexDirection:"column" }}>
+        <div style={{ padding:"1.25rem 1.25rem 0.75rem", borderBottom:"1px solid #e2e8f0", display:"flex", justifyContent:"space-between", alignItems:"center" }}>
+          <div style={{ fontSize:17, fontWeight:800 }}>📁 My Saved Plans</div>
+          <button onClick={onClose} style={{ background:"none", border:"none", fontSize:22, cursor:"pointer", color:"#64748b" }}>✕</button>
+        </div>
+        <div style={{ overflowY:"auto", flex:1, padding:"0.75rem 1.25rem" }}>
+          {loading ? (
+            <div style={{ textAlign:"center", padding:"2rem", color:"#94a3b8" }}>Loading…</div>
+          ) : plans.length === 0 ? (
+            <div style={{ textAlign:"center", padding:"2rem", color:"#94a3b8" }}>No saved plans yet.</div>
+          ) : (
+            plans.map(p => (
+              <div key={p.id} style={{ display:"flex", alignItems:"center", gap:10, padding:"0.75rem 0", borderBottom:"1px solid #f1f5f9" }}>
+                <div style={{ flex:1 }}>
+                  <div style={{ fontSize:14, fontWeight:700 }}>{p.name}</div>
+                  <div style={{ fontSize:12, color:"#94a3b8" }}>Saved {fmt(p.savedAt?.seconds)}</div>
+                  <div style={{ fontSize:12, color:"#64748b" }}>{p.state?.plan?.length || 0} items · {p.state?.cruise?.ship || "No ship set"}</div>
+                </div>
+                <button className="btn btn-primary" style={{ fontSize:12, padding:"6px 14px", minHeight:34 }} onClick={() => onLoad(p)}>Load</button>
+                <button
+                  className="btn btn-outline"
+                  style={{ fontSize:12, padding:"6px 10px", minHeight:34, color:"#dc2626", borderColor:"#fecaca" }}
+                  onClick={() => handleDelete(p.id)}
+                  disabled={deleting === p.id}
+                >
+                  🗑️
+                </button>
+              </div>
+            ))
+          )}
+        </div>
+        <div style={{ padding:"0.75rem 1.25rem 1.25rem", borderTop:"1px solid #e2e8f0" }}>
+          <button className="btn btn-primary" style={{ width:"100%" }} onClick={onNew}>+ Start New Plan</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── Save plan dialog ──────────────────────────────────────────
+function SavePlanDialog({ defaultName, onSave, onCancel }) {
+  const [name, setName] = useState(defaultName || "");
+  return (
+    <div style={{ position:"fixed", inset:0, background:"rgba(13,27,42,0.7)", zIndex:700, display:"flex", alignItems:"center", justifyContent:"center", padding:"1.5rem" }}>
+      <div style={{ background:"#fff", borderRadius:20, padding:"1.5rem", width:"100%", maxWidth:340, display:"flex", flexDirection:"column", gap:12 }}>
+        <div style={{ fontSize:17, fontWeight:800 }}>💾 Save This Plan</div>
+        <p style={{ fontSize:13, color:"#64748b", margin:0 }}>Give this cruise a name so you can find it later.</p>
+        <input
+          autoFocus
+          type="text"
+          placeholder='e.g. "Alaska 2025"'
+          value={name}
+          onChange={e => setName(e.target.value)}
+          onKeyDown={e => e.key === "Enter" && name.trim() && onSave(name.trim())}
+          style={{ padding:"12px 14px", borderRadius:12, border:"1.5px solid #e2e8f0", fontSize:15 }}
+        />
+        <div style={{ display:"flex", gap:8 }}>
+          <button className="btn btn-primary" style={{ flex:2 }} onClick={() => name.trim() && onSave(name.trim())} disabled={!name.trim()}>Save Plan</button>
+          <button className="btn btn-outline" style={{ flex:1 }} onClick={onCancel}>Cancel</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── Change this to set your app password ─────────────────────
 const APP_PASSWORD = "SkipTheShipGB";
 const AUTH_KEY = "sts_auth";
@@ -3470,17 +3595,58 @@ function LoginScreen({ onLogin }) {
   );
 }
 
+const EMPTY_STATE = { cruise:{ line:"", ship:"", sail_date:"" }, itinerary:[], selectedPort:null, userPreferences:{}, plan:[], plannedPorts:[] };
+
 function App() {
   const [authed, setAuthed] = useState(() => localStorage.getItem(AUTH_KEY) === "true");
   const [screen, setScreen] = useState("home");
-  const [appState, setAppState] = useState({
-    cruise: { line:"", ship:"", sail_date:"" },
-    itinerary: [],
-    selectedPort: null,
-    userPreferences: {},
-    plan: [],
-    plannedPorts: [],
-  });
+  const [appState, setAppState] = useState(EMPTY_STATE);
+
+  // Plan persistence state
+  const [activePlanId, setActivePlanId]     = useState(null);
+  const [activePlanName, setActivePlanName] = useState("");
+  const [saveStatus, setSaveStatus]         = useState("idle"); // "idle"|"saving"|"saved"
+  const [showPlansModal, setShowPlansModal] = useState(false);
+  const [showSaveDialog, setShowSaveDialog] = useState(false);
+  const saveTimer = useRef(null);
+
+  // Auto-save whenever appState changes (if a plan is active)
+  useEffect(() => {
+    if (!activePlanId) return;
+    setSaveStatus("saving");
+    clearTimeout(saveTimer.current);
+    saveTimer.current = setTimeout(async () => {
+      await fsSavePlan(activePlanId, activePlanName, appState);
+      setSaveStatus("saved");
+      setTimeout(() => setSaveStatus("idle"), 2500);
+    }, 1500);
+  }, [appState]);
+
+  const handleSaveNew = async (name) => {
+    const id = makePlanId(name);
+    setActivePlanId(id);
+    setActivePlanName(name);
+    setShowSaveDialog(false);
+    await fsSavePlan(id, name, appState);
+    setSaveStatus("saved");
+    setTimeout(() => setSaveStatus("idle"), 2500);
+  };
+
+  const handleLoadPlan = (p) => {
+    setAppState(p.state || EMPTY_STATE);
+    setActivePlanId(p.id);
+    setActivePlanName(p.name);
+    setShowPlansModal(false);
+    setScreen("home");
+  };
+
+  const handleNewPlan = () => {
+    setAppState(EMPTY_STATE);
+    setActivePlanId(null);
+    setActivePlanName("");
+    setShowPlansModal(false);
+    setScreen("home");
+  };
 
   const navigate = (s) => setScreen(s);
   const updateAppState = (updates) => setAppState(prev => ({ ...prev, ...updates }));
@@ -3492,7 +3658,7 @@ function App() {
     ports:   <PortListScreen     appState={appState} updateAppState={updateAppState} navigate={navigate} />,
     portday: <PortDayScreen      appState={appState} updateAppState={updateAppState} navigate={navigate} />,
     results: <ResultsScreen      appState={appState} updateAppState={updateAppState} navigate={navigate} />,
-    plan:    <PlanScreen         appState={appState} updateAppState={updateAppState} navigate={navigate} />,
+    plan:    <PlanScreen         appState={appState} updateAppState={updateAppState} navigate={navigate} activePlanId={activePlanId} activePlanName={activePlanName} saveStatus={saveStatus} onSaveNew={() => setShowSaveDialog(true)} />,
   };
 
   if (!authed) return <LoginScreen onLogin={() => setAuthed(true)} />;
@@ -3500,6 +3666,21 @@ function App() {
   return (
     <div className="app">
       <style>{css}</style>
+
+      {showPlansModal && (
+        <PlansModal
+          onClose={() => setShowPlansModal(false)}
+          onLoad={handleLoadPlan}
+          onNew={handleNewPlan}
+        />
+      )}
+      {showSaveDialog && (
+        <SavePlanDialog
+          defaultName={activePlanName}
+          onSave={handleSaveNew}
+          onCancel={() => setShowSaveDialog(false)}
+        />
+      )}
 
       {/* Top bar */}
       <div className="topbar">
@@ -3509,13 +3690,33 @@ function App() {
               ‹ Back
             </button>
           ) : (
-            <div style={{ width:44 }} />
+            <button
+              onClick={() => setShowPlansModal(true)}
+              style={{ background:"none", border:"none", fontSize:11, fontWeight:700, color:"#C9A84C", cursor:"pointer", padding:"4px 6px" }}
+            >
+              📁 Plans
+            </button>
           )}
         </div>
-        <span className="topbar-title" style={{ fontSize:16, fontWeight:800, letterSpacing:"-0.3px" }}>
-          {SCREEN_TITLES[screen]}
-        </span>
-        <div style={{ width:72, display:"flex", justifyContent:"flex-end", alignItems:"center" }}>
+        <div style={{ display:"flex", flexDirection:"column", alignItems:"center" }}>
+          <span className="topbar-title" style={{ fontSize:16, fontWeight:800, letterSpacing:"-0.3px" }}>
+            {SCREEN_TITLES[screen]}
+          </span>
+          {activePlanName ? (
+            <span style={{ fontSize:10, color:"#C9A84C", fontWeight:600 }}>
+              {saveStatus === "saving" ? "⏳ Saving…" : saveStatus === "saved" ? "✓ Saved" : activePlanName}
+            </span>
+          ) : null}
+        </div>
+        <div style={{ width:72, display:"flex", justifyContent:"flex-end", alignItems:"center", gap:4 }}>
+          {!activePlanId && appState.plan.length > 0 && (
+            <button
+              onClick={() => setShowSaveDialog(true)}
+              style={{ background:"#0D1B2A", color:"#fff", borderRadius:999, fontSize:10, fontWeight:800, padding:"4px 8px", border:"none", cursor:"pointer" }}
+            >
+              💾 Save
+            </button>
+          )}
           {appState.plan.length > 0 && screen !== "plan" && (
             <button
               onClick={() => navigate("plan")}
