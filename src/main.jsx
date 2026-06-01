@@ -1156,18 +1156,18 @@ const ITINERARIES = {
 const PORT_DATA = {
   "Cozumel, Mexico": {
     excursions: [
-      { id:"cx1", url:"https://www.viator.com/searchResults/all?text=tulum+ruins+cenote+cozumel", title:"Tulum Ruins & Cenote Swim", desc:"Explore the breathtaking Mayan ruins of Tulum perched above the sea, then cool off in a stunning natural cenote.", duration:6, price:2, rating:4.9, reviews:1842, distance:"45 min drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Historical","Cultural","Water Activities"], emoji:"🏛️" , maxGroupSize:12 },
-      { id:"cx2", url:"https://www.viator.com/searchResults/all?text=cozumel+snorkel+palancar+reef+beach+club", title:"Cozumel Snorkel & Beach Club", desc:"Snorkel the famous Palancar Reef, one of the world's top dive sites, then relax at an all-inclusive beach club.", duration:5, price:2, rating:4.8, reviews:2341, distance:"20 min boat", fitness:"Low", transport:["boat"], family:true, accessibility:false, types:["Water Activities","Beach Day"], emoji:"🐠" , maxGroupSize:12 },
-      { id:"cx3", url:"https://www.viator.com/searchResults/all?text=cozumel+atv+zip+line", title:"ATV & Zip Line Adventure", desc:"Race through the jungle on ATVs then soar above the treetops on thrilling zip lines across the Cozumel interior.", duration:4, price:2, rating:4.7, reviews:987, distance:"15 min drive", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure"], emoji:"🏍️" , maxGroupSize:12 },
-      { id:"cx4", url:"https://www.viator.com/searchResults/all?text=san+gervasio+mayan+ruins+cozumel", title:"San Gervasio Mayan Ruins", desc:"Self-guided tour of the sacred Mayan site dedicated to Ixchel. Less crowded than Tulum, more authentic.", duration:3, price:1, rating:4.6, reviews:654, distance:"20 min drive", fitness:"Low", transport:["shuttle","walking"], family:true, accessibility:true, types:["Historical","Cultural","Scenic"], emoji:"🗿" , maxGroupSize:12 },
-      { id:"cx5", url:"https://www.fury-cozumel.com", title:"Fury Catamaran Snorkel Sail", desc:"Sail on a luxury catamaran to two snorkel sites with open bar and all gear included. Perfect for all ages.", duration:4, price:2, rating:4.8, reviews:1523, distance:"10 min walk", fitness:"Low", transport:["walking","boat"], family:true, accessibility:false, types:["Water Activities","Beach Day","Relaxation"], emoji:"⛵" , maxGroupSize:40 },
+      { id:"cx1", url:"https://www.viator.com/searchResults/all?text=tulum+ruins+cenote+cozumel", title:"Tulum Ruins & Cenote Swim", desc:"Explore the breathtaking Mayan ruins of Tulum perched above the sea, then cool off in a stunning natural cenote.", duration:6, price:2, rating:4.9, reviews:1842, distance:"45 min drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Historical","Cultural","Water Activities"], emoji:"🏛️", maxGroupSize:12, meetingPoint:"International Pier exit — look for your tour operator's sign near the taxi stand", meetingTime:"Arrive 15 min before shuttle; ruins are 45 min each way so departures are early morning", whatToBring:["Comfortable walking shoes","Swimsuit & towel for cenote","Reef-safe sunscreen","Water & snacks","Insect repellent","Cash for tips & entrance fees","Camera"] },
+      { id:"cx2", url:"https://www.viator.com/searchResults/all?text=cozumel+snorkel+palancar+reef+beach+club", title:"Cozumel Snorkel & Beach Club", desc:"Snorkel the famous Palancar Reef, one of the world's top dive sites, then relax at an all-inclusive beach club.", duration:5, price:2, rating:4.8, reviews:2341, distance:"20 min boat", fitness:"Low", transport:["boat"], family:true, accessibility:false, types:["Water Activities","Beach Day"], emoji:"🐠", maxGroupSize:12, meetingPoint:"Main cruise pier dock — boat departs from the International Pier docking area; confirm slip number on booking", meetingTime:"Check in 20 min before boat departure", whatToBring:["Swimsuit & rash guard","Reef-safe sunscreen","Towel","Snorkel gear (usually provided)","Cash for tips & bar extras","Water shoes","Underwater camera"] },
+      { id:"cx3", url:"https://www.viator.com/searchResults/all?text=cozumel+atv+zip+line", title:"ATV & Zip Line Adventure", desc:"Race through the jungle on ATVs then soar above the treetops on thrilling zip lines across the Cozumel interior.", duration:4, price:2, rating:4.7, reviews:987, distance:"15 min drive", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure"], emoji:"🏍️", maxGroupSize:12, meetingPoint:"Shuttle pickup at International Pier main exit — look for operator sign with your tour name", meetingTime:"Arrive 15 min before shuttle departure", whatToBring:["Closed-toe shoes (required for ATVs)","Old clothes or change of clothes (you will get dirty)","Sunscreen","Camera (secured)","Cash for tips","Bug spray"] },
+      { id:"cx4", url:"https://www.viator.com/searchResults/all?text=san+gervasio+mayan+ruins+cozumel", title:"San Gervasio Mayan Ruins", desc:"Self-guided tour of the sacred Mayan site dedicated to Ixchel. Less crowded than Tulum, more authentic.", duration:3, price:1, rating:4.6, reviews:654, distance:"20 min drive", fitness:"Low", transport:["shuttle","walking"], family:true, accessibility:true, types:["Historical","Cultural","Scenic"], emoji:"🗿", maxGroupSize:12, meetingPoint:"Taxi from International Pier — negotiate round-trip fare before departing (approx. USD $20 round trip)", meetingTime:"Go early to beat the midday heat; site opens at 8 AM", whatToBring:["Comfortable walking shoes","Sunscreen","Water bottle","Insect repellent","Camera","Cash for entrance fee (~USD $11) and tips"] },
+      { id:"cx5", url:"https://www.fury-cozumel.com", title:"Fury Catamaran Snorkel Sail", desc:"Sail on a luxury catamaran to two snorkel sites with open bar and all gear included. Perfect for all ages.", duration:4, price:2, rating:4.8, reviews:1523, distance:"10 min walk", fitness:"Low", transport:["walking","boat"], family:true, accessibility:false, types:["Water Activities","Beach Day","Relaxation"], emoji:"⛵", maxGroupSize:40, meetingPoint:"Fury dock at the International Pier area — approximately 10 min walk from the main pier entrance along the waterfront", meetingTime:"Check in 30 min before sail time; boarding closes 15 min before departure", whatToBring:["Swimsuit","Towel","Reef-safe sunscreen","Sunglasses","Waterproof camera","Cash for tips"] },
     ],
     dining: [
-      { id:"cd1", url:"https://www.tripadvisor.com/Restaurant_Review-g150812-d1535098-Reviews-Kondesa-Cozumel_Cozumel_Island_Quintana_Roo.html", title:"Kondesa", desc:"Upscale Mexican cuisine in a beautifully restored colonial building. Famous for fresh ceviche and local mezcal.", cuisine:"Mexican Fine Dining", price:3, rating:4.8, reviews:892, distance:"5 min walk", kidFriendly:false, hours:"12:00 PM – 11:00 PM", emoji:"🍽️" },
-      { id:"cd2", url:"https://www.kintarestaurant.com", title:"Kinta Mexican Bistro", desc:"Modern Mexican bistro with creative cocktails and the best fish tacos on the island.", cuisine:"Modern Mexican", price:2, rating:4.7, reviews:1243, distance:"8 min walk", kidFriendly:true, hours:"11:00 AM – 10:00 PM", emoji:"🌮" },
-      { id:"cd3", url:"https://www.guidoscozumel.com", title:"Guido's Restaurant", desc:"Beloved Italian spot serving wood-fired pizza and homemade pasta steps from the waterfront since 1975.", cuisine:"Italian", price:2, rating:4.6, reviews:765, distance:"10 min walk", kidFriendly:true, hours:"11:00 AM – 10:30 PM", emoji:"🍕" },
-      { id:"cd4", url:"https://www.tripadvisor.com/Restaurant_Review-g150812-d1002819-Reviews-Casa_Mission-Cozumel_Cozumel_Island_Quintana_Roo.html", title:"Casa Mission", desc:"Sprawling hacienda restaurant serving traditional Yucatan specialties in a stunning courtyard setting.", cuisine:"Yucatan Traditional", price:2, rating:4.7, reviews:543, distance:"12 min walk", kidFriendly:true, hours:"12:00 PM – 9:00 PM", emoji:"🏡" },
-      { id:"cd5", url:"https://www.tripadvisor.com/Restaurant_Review-g150812-d1549832-Reviews-La_Cocay-Cozumel_Cozumel_Island_Quintana_Roo.html", title:"La Cocay", desc:"Caribbean-inspired fusion cuisine with an eclectic menu of fresh seafood and international plates.", cuisine:"Caribbean Fusion", price:2, rating:4.5, reviews:421, distance:"7 min walk", kidFriendly:false, hours:"5:00 PM – 10:30 PM", emoji:"🦞" },
+      { id:"cd1", url:"https://www.tripadvisor.com/Restaurant_Review-g150812-d1535098-Reviews-Kondesa-Cozumel_Cozumel_Island_Quintana_Roo.html", title:"Kondesa", desc:"Upscale Mexican cuisine in a beautifully restored colonial building. Famous for fresh ceviche and local mezcal.", cuisine:"Mexican Fine Dining", price:3, rating:4.8, reviews:892, distance:"5 min walk", kidFriendly:false, hours:"12:00 PM – 11:00 PM", emoji:"🍽️", address:"Calle 5 Norte s/n, San Miguel de Cozumel, Q.R., Mexico" },
+      { id:"cd2", url:"https://www.kintarestaurant.com", title:"Kinta Mexican Bistro", desc:"Modern Mexican bistro with creative cocktails and the best fish tacos on the island.", cuisine:"Modern Mexican", price:2, rating:4.7, reviews:1243, distance:"8 min walk", kidFriendly:true, hours:"11:00 AM – 10:00 PM", emoji:"🌮", address:"Av. 5 Norte #224, San Miguel de Cozumel, Q.R., Mexico" },
+      { id:"cd3", url:"https://www.guidoscozumel.com", title:"Guido's Restaurant", desc:"Beloved Italian spot serving wood-fired pizza and homemade pasta steps from the waterfront since 1975.", cuisine:"Italian", price:2, rating:4.6, reviews:765, distance:"10 min walk", kidFriendly:true, hours:"11:00 AM – 10:30 PM", emoji:"🍕", address:"Av. Rafael Melgar 23, San Miguel de Cozumel, Q.R., Mexico" },
+      { id:"cd4", url:"https://www.tripadvisor.com/Restaurant_Review-g150812-d1002819-Reviews-Casa_Mission-Cozumel_Cozumel_Island_Quintana_Roo.html", title:"Casa Mission", desc:"Sprawling hacienda restaurant serving traditional Yucatan specialties in a stunning courtyard setting.", cuisine:"Yucatan Traditional", price:2, rating:4.7, reviews:543, distance:"12 min walk", kidFriendly:true, hours:"12:00 PM – 9:00 PM", emoji:"🏡", address:"Av. Juárez 312, San Miguel de Cozumel, Q.R., Mexico" },
+      { id:"cd5", url:"https://www.tripadvisor.com/Restaurant_Review-g150812-d1549832-Reviews-La_Cocay-Cozumel_Cozumel_Island_Quintana_Roo.html", title:"La Cocay", desc:"Caribbean-inspired fusion cuisine with an eclectic menu of fresh seafood and international plates.", cuisine:"Caribbean Fusion", price:2, rating:4.5, reviews:421, distance:"7 min walk", kidFriendly:false, hours:"5:00 PM – 10:30 PM", emoji:"🦞", address:"Calle 8 Norte #208, San Miguel de Cozumel, Q.R., Mexico" },
     ],
     activities: [
       { id:"ca1", url:"https://www.viator.com/searchResults/all?text=cozumel+malecon+waterfront", title:"Cozumel Waterfront Malecon Walk", desc:"Stroll the scenic oceanfront promenade lined with local shops, street art, and stunning Caribbean views.", duration:2, price:0, rating:4.7, reviews:2103, distance:"2 min walk", fitness:"Low", family:true, accessibility:true, types:["Scenic","Shopping"], emoji:"🚶" },
@@ -1183,16 +1183,16 @@ const PORT_DATA = {
 
   "Roatán, Honduras": {
     excursions: [
-      { id:"rx1", url:"https://www.viator.com/searchResults/all?text=west+bay+beach+snorkel+roatan", title:"West Bay Beach & Snorkel", desc:"Visit one of the Caribbean's most beautiful beaches and snorkel the Mesoamerican Barrier Reef just offshore.", duration:5, price:1, rating:4.9, reviews:1654, distance:"30 min drive", fitness:"Low", transport:["shuttle"], family:true, accessibility:false, types:["Beach Day","Water Activities"], emoji:"🏖️" , maxGroupSize:12 },
-      { id:"rx2", url:"https://gumbalimba.com", title:"Gumbalimba Park Wildlife", desc:"Meet Honduran wildlife including monkeys, macaws, and sloths in a lush tropical jungle setting.", duration:4, price:2, rating:4.7, reviews:987, distance:"20 min drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Wildlife","Adventure"], emoji:"🐒" , maxGroupSize:12 },
-      { id:"rx3", url:"https://www.viator.com/searchResults/all?text=roatan+zip+line+canopy", title:"Roatán Zip Line Canopy Tour", desc:"14 platforms soaring through the jungle canopy with spectacular views of the Caribbean coast below.", duration:3, price:2, rating:4.8, reviews:756, distance:"25 min drive", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure"], emoji:"🌿" , maxGroupSize:12 },
-      { id:"rx4", url:"https://www.viator.com/searchResults/all?text=roatan+scuba+diving+barrier+reef", title:"Scuba Diving — Barrier Reef", desc:"Dive the second-largest barrier reef in the world with certified instructors. All skill levels welcome.", duration:4, price:3, rating:4.9, reviews:543, distance:"15 min boat", fitness:"Moderate", transport:["boat"], family:false, accessibility:false, types:["Water Activities","Adventure"], emoji:"🤿" , maxGroupSize:12 },
-      { id:"rx5", url:"https://www.viator.com/searchResults/all?text=roatan+butterfly+garden+garifuna", title:"Village & Butterfly Garden Tour", desc:"Explore colorful Punta Gorda, visit the butterfly garden and learn about Garífuna culture.", duration:3, price:1, rating:4.5, reviews:432, distance:"35 min drive", fitness:"Low", transport:["shuttle"], family:true, accessibility:true, types:["Cultural","Wildlife"], emoji:"🦋" , maxGroupSize:12 },
+      { id:"rx1", url:"https://www.viator.com/searchResults/all?text=west+bay+beach+snorkel+roatan", title:"West Bay Beach & Snorkel", desc:"Visit one of the Caribbean's most beautiful beaches and snorkel the Mesoamerican Barrier Reef just offshore.", duration:5, price:1, rating:4.9, reviews:1654, distance:"30 min drive", fitness:"Low", transport:["shuttle"], family:true, accessibility:false, types:["Beach Day","Water Activities"], emoji:"🏖️", maxGroupSize:12, meetingPoint:"Mahogany Bay cruise pier exit — shared shuttle to West Bay departs from designated shuttle area just outside the gate", meetingTime:"Arrive at pier exit 15 min before departure; shuttles run continuously", whatToBring:["Swimsuit & towel","Reef-safe sunscreen","Water shoes","Cash (USD accepted everywhere)","Camera","Insect repellent","Light cover-up"] },
+      { id:"rx2", url:"https://gumbalimba.com", title:"Gumbalimba Park Wildlife", desc:"Meet Honduran wildlife including monkeys, macaws, and sloths in a lush tropical jungle setting.", duration:4, price:2, rating:4.7, reviews:987, distance:"20 min drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Wildlife","Adventure"], emoji:"🐒", maxGroupSize:12, meetingPoint:"Taxi from Mahogany Bay pier exit (~20 min, ~USD $10 each way); Gumbalimba Park is near Dixon Cove", meetingTime:"Head out early — animals are most active in the morning", whatToBring:["Closed-toe shoes or sandals with straps","Insect repellent","Camera","Cash for tips & gift shop","Light layers","Water bottle"] },
+      { id:"rx3", url:"https://www.viator.com/searchResults/all?text=roatan+zip+line+canopy", title:"Roatán Zip Line Canopy Tour", desc:"14 platforms soaring through the jungle canopy with spectacular views of the Caribbean coast below.", duration:3, price:2, rating:4.8, reviews:756, distance:"25 min drive", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure"], emoji:"🌿", maxGroupSize:12, meetingPoint:"Shuttle pickup at cruise pier exit — look for canopy tour operator sign at Mahogany Bay gate", meetingTime:"Arrive 15 min before departure", whatToBring:["Closed-toe shoes (required)","Shorts or athletic wear","Sunscreen","Camera with secure strap","Cash for tips","Bug spray","Hair tie if needed"] },
+      { id:"rx4", url:"https://www.viator.com/searchResults/all?text=roatan+scuba+diving+barrier+reef", title:"Scuba Diving — Barrier Reef", desc:"Dive the second-largest barrier reef in the world with certified instructors. All skill levels welcome.", duration:4, price:3, rating:4.9, reviews:543, distance:"15 min boat", fitness:"Moderate", transport:["boat"], family:false, accessibility:false, types:["Water Activities","Adventure"], emoji:"🤿", maxGroupSize:12, meetingPoint:"Dive operator boat at the dock near the cruise pier — confirm exact slip/dock location in your booking confirmation", meetingTime:"Arrive 30 min before dive for gear fitting and safety briefing", whatToBring:["Swimsuit","Towel","Reef-safe sunscreen","Dive certification card (if certified)","Cash for tips","Seasickness medication if prone","Water & snacks"] },
+      { id:"rx5", url:"https://www.viator.com/searchResults/all?text=roatan+butterfly+garden+garifuna", title:"Village & Butterfly Garden Tour", desc:"Explore colorful Punta Gorda, visit the butterfly garden and learn about Garífuna culture.", duration:3, price:1, rating:4.5, reviews:432, distance:"35 min drive", fitness:"Low", transport:["shuttle"], family:true, accessibility:true, types:["Cultural","Wildlife"], emoji:"🦋", maxGroupSize:12, meetingPoint:"Shuttle at Mahogany Bay pier exit — look for Garífuna Cultural Tour sign", meetingTime:"Arrive 15 min before departure", whatToBring:["Camera","Insect repellent","Cash for souvenirs & tips","Water bottle","Comfortable walking shoes"] },
     ],
     dining: [
-      { id:"rd1", url:"https://www.tripadvisor.com/Restaurant_Review-g291953-d1185543-Reviews-Sundowners-Roatan_Bay_Islands.html", title:"Sundowners Bar & Grill", desc:"Iconic beachside bar and grill with the best sunset views on the island and fresh-caught seafood daily.", cuisine:"Seafood & Grill", price:2, rating:4.7, reviews:654, distance:"25 min drive", kidFriendly:true, hours:"10:00 AM – 9:00 PM", emoji:"🌅" },
-      { id:"rd2", url:"https://www.tripadvisor.com/Restaurant_Review-g291953-d6899523-Reviews-Roatan_Oasis-Roatan_Bay_Islands.html", title:"Roatán Oasis", desc:"Waterfront restaurant serving authentic Honduran cuisine with a focus on fresh seafood and local flavors.", cuisine:"Honduran", price:1, rating:4.6, reviews:432, distance:"10 min walk", kidFriendly:true, hours:"8:00 AM – 8:00 PM", emoji:"🐟" },
-      { id:"rd3", url:"https://www.tripadvisor.com/Restaurant_Review-g291953-d12375641-Reviews-The_Canopy_Restaurant-Roatan_Bay_Islands.html", title:"The Canopy Restaurant", desc:"Elevated dining in a jungle setting with creative fusion cuisine and spectacular canopy views.", cuisine:"Fusion", price:2, rating:4.5, reviews:321, distance:"20 min drive", kidFriendly:false, hours:"11:00 AM – 9:00 PM", emoji:"🌳" },
+      { id:"rd1", url:"https://www.tripadvisor.com/Restaurant_Review-g291953-d1185543-Reviews-Sundowners-Roatan_Bay_Islands.html", title:"Sundowners Bar & Grill", desc:"Iconic beachside bar and grill with the best sunset views on the island and fresh-caught seafood daily.", cuisine:"Seafood & Grill", price:2, rating:4.7, reviews:654, distance:"25 min drive", kidFriendly:true, hours:"10:00 AM – 9:00 PM", emoji:"🌅", address:"West Bay Beach, Roatán, Bay Islands, Honduras" },
+      { id:"rd2", url:"https://www.tripadvisor.com/Restaurant_Review-g291953-d6899523-Reviews-Roatan_Oasis-Roatan_Bay_Islands.html", title:"Roatán Oasis", desc:"Waterfront restaurant serving authentic Honduran cuisine with a focus on fresh seafood and local flavors.", cuisine:"Honduran", price:1, rating:4.6, reviews:432, distance:"10 min walk", kidFriendly:true, hours:"8:00 AM – 8:00 PM", emoji:"🐟", address:"West End Village, Roatán, Bay Islands, Honduras" },
+      { id:"rd3", url:"https://www.tripadvisor.com/Restaurant_Review-g291953-d12375641-Reviews-The_Canopy_Restaurant-Roatan_Bay_Islands.html", title:"The Canopy Restaurant", desc:"Elevated dining in a jungle setting with creative fusion cuisine and spectacular canopy views.", cuisine:"Fusion", price:2, rating:4.5, reviews:321, distance:"20 min drive", kidFriendly:false, hours:"11:00 AM – 9:00 PM", emoji:"🌳", address:"Above West End, Roatán, Bay Islands, Honduras" },
     ],
     activities: [
       { id:"ra1", url:"https://www.carnivalcorp.com/mahogany-bay", title:"Mahogany Bay Beach", desc:"The cruise port's own beach with calm warm water, beach chairs, and a scenic chair lift ride down.", duration:3, price:0, rating:4.5, reviews:2341, distance:"5 min walk", fitness:"Low", family:true, accessibility:true, types:["Beach Day","Relaxation"], emoji:"🏖️" },
@@ -1206,16 +1206,16 @@ const PORT_DATA = {
 
   "Belize City, Belize": {
     excursions: [
-      { id:"bx1", url:"https://www.viator.com/searchResults/all?text=great+blue+hole+belize+snorkel", title:"Great Blue Hole Snorkel Tour", desc:"Snorkel the world-famous Great Blue Hole and Lighthouse Reef Atoll — a UNESCO World Heritage site.", duration:7, price:3, rating:4.9, reviews:1243, distance:"1 hr boat", fitness:"Moderate", transport:["boat"], family:false, accessibility:false, types:["Water Activities","Adventure","Scenic"], emoji:"🔵" , maxGroupSize:12 },
-      { id:"bx2", url:"https://www.viator.com/searchResults/all?text=lamanai+ruins+boat+belize", title:"Lamanai Mayan Ruins by Boat", desc:"Journey by riverboat through the jungle to the ancient Mayan city of Lamanai, spotting wildlife en route.", duration:8, price:3, rating:4.9, reviews:987, distance:"2 hr boat+drive", fitness:"Moderate", transport:["boat","shuttle"], family:true, accessibility:false, types:["Historical","Wildlife","Cultural"], emoji:"🏛️" , maxGroupSize:12 },
-      { id:"bx3", url:"https://www.viator.com/searchResults/all?text=cave+tubing+zip+line+belize", title:"Cave Tubing & Zip Line", desc:"Float through ancient Mayan ceremonial caves on inner tubes then zip through the jungle canopy.", duration:6, price:2, rating:4.8, reviews:1876, distance:"1 hr drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Adventure","Water Activities"], emoji:"🕳️" , maxGroupSize:12 },
-      { id:"bx4", url:"https://www.viator.com/searchResults/all?text=shark+ray+alley+snorkel+belize", title:"Shark Ray Alley Snorkel", desc:"Snorkel alongside nurse sharks and stingrays in the shallow turquoise waters of Hol Chan Marine Reserve.", duration:4, price:2, rating:4.8, reviews:1543, distance:"45 min boat", fitness:"Low", transport:["boat"], family:true, accessibility:false, types:["Water Activities","Wildlife"], emoji:"🦈" , maxGroupSize:12 },
-      { id:"bx5", url:"https://www.viator.com/searchResults/all?text=altun+ha+ruins+belize", title:"Altun Ha Ruins & River Wallace", desc:"Visit the iconic jade head temple of Altun Ha then cruise the Belize River spotting crocodiles and birds.", duration:5, price:2, rating:4.7, reviews:765, distance:"1 hr drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Historical","Wildlife"], emoji:"🗿" , maxGroupSize:12 },
+      { id:"bx1", url:"https://www.viator.com/searchResults/all?text=great+blue+hole+belize+snorkel", title:"Great Blue Hole Snorkel Tour", desc:"Snorkel the world-famous Great Blue Hole and Lighthouse Reef Atoll — a UNESCO World Heritage site.", duration:7, price:3, rating:4.9, reviews:1243, distance:"1 hr boat", fitness:"Moderate", transport:["boat"], family:false, accessibility:false, types:["Water Activities","Adventure","Scenic"], emoji:"🔵", maxGroupSize:12, meetingPoint:"Fort Street Tourism Village dock after tendering ashore — operator meets you dockside with sign", meetingTime:"Departs very early (6–7 AM); allow 30 extra min for tender to shore", whatToBring:["Swimsuit & rash guard","Reef-safe sunscreen","Motion sickness medication (long boat ride)","Underwater camera","Towel","Light breakfast/snacks","Cash for tips"] },
+      { id:"bx2", url:"https://www.viator.com/searchResults/all?text=lamanai+ruins+boat+belize", title:"Lamanai Mayan Ruins by Boat", desc:"Journey by riverboat through the jungle to the ancient Mayan city of Lamanai, spotting wildlife en route.", duration:8, price:3, rating:4.9, reviews:987, distance:"2 hr boat+drive", fitness:"Moderate", transport:["boat","shuttle"], family:true, accessibility:false, types:["Historical","Wildlife","Cultural"], emoji:"🏛️", maxGroupSize:12, meetingPoint:"Fort Street Tourism Village dock — look for your operator's sign after you tender ashore", meetingTime:"Early morning departure (typically 7–8 AM); allow 30 min for tender", whatToBring:["Sturdy walking shoes","Bug spray (essential in the jungle)","Sunscreen","Rain jacket","Water bottle","Camera","Cash for tips & snacks"] },
+      { id:"bx3", url:"https://www.viator.com/searchResults/all?text=cave+tubing+zip+line+belize", title:"Cave Tubing & Zip Line", desc:"Float through ancient Mayan ceremonial caves on inner tubes then zip through the jungle canopy.", duration:6, price:2, rating:4.8, reviews:1876, distance:"1 hr drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Adventure","Water Activities"], emoji:"🕳️", maxGroupSize:12, meetingPoint:"Fort Street Tourism Village after tendering — shuttle departs from dock area; look for operator sign", meetingTime:"Arrive 15 min before shuttle; add 30 min for tender from ship", whatToBring:["Water shoes (required in caves)","Change of dry clothes","Bug spray","Sunscreen","Waterproof bag for valuables","Cash for tips","Snacks"] },
+      { id:"bx4", url:"https://www.viator.com/searchResults/all?text=shark+ray+alley+snorkel+belize", title:"Shark Ray Alley Snorkel", desc:"Snorkel alongside nurse sharks and stingrays in the shallow turquoise waters of Hol Chan Marine Reserve.", duration:4, price:2, rating:4.8, reviews:1543, distance:"45 min boat", fitness:"Low", transport:["boat"], family:true, accessibility:false, types:["Water Activities","Wildlife"], emoji:"🦈", maxGroupSize:12, meetingPoint:"Fort Street Tourism Village boat dock after tendering in — confirm with operator for exact slip", meetingTime:"Arrive at dock 15 min before boat departure; allow 30 min for tender", whatToBring:["Swimsuit","Reef-safe sunscreen","Snorkel gear (usually provided)","Towel","Cash for tips","Underwater camera"] },
+      { id:"bx5", url:"https://www.viator.com/searchResults/all?text=altun+ha+ruins+belize", title:"Altun Ha Ruins & River Wallace", desc:"Visit the iconic jade head temple of Altun Ha then cruise the Belize River spotting crocodiles and birds.", duration:5, price:2, rating:4.7, reviews:765, distance:"1 hr drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Historical","Wildlife"], emoji:"🗿", maxGroupSize:12, meetingPoint:"Fort Street Tourism Village after tender — shuttle at dock area; look for operator sign", meetingTime:"15 min before departure; allow 30 min for tender", whatToBring:["Sturdy shoes","Bug spray","Sunscreen","Camera","Water bottle","Cash for tips"] },
     ],
     dining: [
-      { id:"bd1", url:"https://www.tripadvisor.com/Restaurant_Review-g291952-d956503-Reviews-Elvi_s_Kitchen-San_Pedro_Ambergris_Caye_Belize.html", title:"Elvi's Kitchen", desc:"Beloved Belizean institution serving authentic local cuisine for over 40 years. A must-try on the island.", cuisine:"Belizean", price:1, rating:4.8, reviews:1243, distance:"15 min tender+walk", kidFriendly:true, hours:"11:00 AM – 9:30 PM", emoji:"🍲" },
-      { id:"bd2", url:"https://www.tripadvisor.com/Restaurant_Review-g291952-d1550342-Reviews-Wet_Lizard-San_Pedro_Ambergris_Caye_Belize.html", title:"Wet Lizard Restaurant", desc:"Casual waterfront spot serving fresh seafood, local rice and beans, and refreshing tropical cocktails.", cuisine:"Seafood & Local", price:1, rating:4.5, reviews:765, distance:"10 min tender+walk", kidFriendly:true, hours:"7:00 AM – 9:00 PM", emoji:"🦎" },
-      { id:"bd3", url:"https://www.tripadvisor.com/Restaurant_Review-g291952-d10087432-Reviews-Palmilla-San_Pedro_Ambergris_Caye_Belize.html", title:"Palmilla Restaurant", desc:"Fine dining on the water with creative Caribbean fusion cuisine and an extensive rum and cocktail menu.", cuisine:"Caribbean Fusion", price:3, rating:4.7, reviews:432, distance:"20 min tender+walk", kidFriendly:false, hours:"12:00 PM – 10:00 PM", emoji:"🌴" },
+      { id:"bd1", url:"https://www.tripadvisor.com/Restaurant_Review-g291952-d956503-Reviews-Elvi_s_Kitchen-San_Pedro_Ambergris_Caye_Belize.html", title:"Elvi's Kitchen", desc:"Beloved Belizean institution serving authentic local cuisine for over 40 years. A must-try on the island.", cuisine:"Belizean", price:1, rating:4.8, reviews:1243, distance:"15 min tender+walk", kidFriendly:true, hours:"11:00 AM – 9:30 PM", emoji:"🍲", address:"Pescador Drive, San Pedro, Ambergris Caye, Belize" },
+      { id:"bd2", url:"https://www.tripadvisor.com/Restaurant_Review-g291952-d1550342-Reviews-Wet_Lizard-San_Pedro_Ambergris_Caye_Belize.html", title:"Wet Lizard Restaurant", desc:"Casual waterfront spot serving fresh seafood, local rice and beans, and refreshing tropical cocktails.", cuisine:"Seafood & Local", price:1, rating:4.5, reviews:765, distance:"10 min tender+walk", kidFriendly:true, hours:"7:00 AM – 9:00 PM", emoji:"🦎", address:"Barrier Reef Drive, San Pedro, Ambergris Caye, Belize" },
+      { id:"bd3", url:"https://www.tripadvisor.com/Restaurant_Review-g291952-d10087432-Reviews-Palmilla-San_Pedro_Ambergris_Caye_Belize.html", title:"Palmilla Restaurant", desc:"Fine dining on the water with creative Caribbean fusion cuisine and an extensive rum and cocktail menu.", cuisine:"Caribbean Fusion", price:3, rating:4.7, reviews:432, distance:"20 min tender+walk", kidFriendly:false, hours:"12:00 PM – 10:00 PM", emoji:"🌴", address:"Grand Caribe Resort, San Pedro, Ambergris Caye, Belize" },
     ],
     activities: [
       { id:"ba1", url:"https://www.viator.com/searchResults/all?text=san+pedro+belize+town+stroll", title:"San Pedro Town Stroll", desc:"Wander the colorful streets of San Pedro town, browse local shops, and soak up authentic Belizean culture.", duration:2, price:0, rating:4.5, reviews:1087, distance:"15 min tender+walk", fitness:"Low", family:true, accessibility:true, types:["Cultural","Shopping"], emoji:"🚶" },
@@ -1229,15 +1229,15 @@ const PORT_DATA = {
 
   "Costa Maya, Mexico": {
     excursions: [
-      { id:"mx1", url:"https://www.viator.com/searchResults/all?text=chacchoben+mayan+ruins+costa+maya", title:"Chacchoben Mayan Ruins", desc:"One of the most impressive and least-visited Mayan sites in Mexico, set deep in the lush jungle.", duration:4, price:2, rating:4.9, reviews:1543, distance:"1 hr drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Historical","Cultural"], emoji:"🏛️" , maxGroupSize:12 },
-      { id:"mx2", url:"https://www.viator.com/searchResults/all?text=bacalar+lagoon+boat+tour", title:"Bacalar Lagoon Boat Tour", desc:"Cruise the stunning Lake of Seven Colors — a freshwater lagoon with impossibly clear turquoise waters.", duration:5, price:2, rating:4.8, reviews:987, distance:"1.5 hr drive", fitness:"Low", transport:["shuttle","boat"], family:true, accessibility:true, types:["Scenic","Water Activities","Relaxation"], emoji:"💎" , maxGroupSize:12 },
-      { id:"mx3", url:"https://www.viator.com/searchResults/all?text=costa+maya+snorkel+beach", title:"Snorkel & Beach Break", desc:"Snorkel the barrier reef at Banco Chinchorro then relax on a pristine empty beach with lunch included.", duration:5, price:2, rating:4.7, reviews:765, distance:"30 min boat", fitness:"Low", transport:["boat"], family:true, accessibility:false, types:["Water Activities","Beach Day"], emoji:"🐠" , maxGroupSize:12 },
-      { id:"mx4", url:"https://www.viator.com/searchResults/all?text=costa+maya+kayak+mangrove", title:"Kayak & Mangrove Eco Tour", desc:"Paddle through tranquil mangrove channels spotting tropical birds, fish, and unique coastal ecosystems.", duration:3, price:1, rating:4.6, reviews:432, distance:"5 min walk", fitness:"Moderate", transport:["walking"], family:true, accessibility:false, types:["Wildlife","Adventure","Scenic"], emoji:"🚣" , maxGroupSize:12 },
+      { id:"mx1", url:"https://www.viator.com/searchResults/all?text=chacchoben+mayan+ruins+costa+maya", title:"Chacchoben Mayan Ruins", desc:"One of the most impressive and least-visited Mayan sites in Mexico, set deep in the lush jungle.", duration:4, price:2, rating:4.9, reviews:1543, distance:"1 hr drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Historical","Cultural"], emoji:"🏛️", maxGroupSize:12, meetingPoint:"Costa Maya port main exit — look for your tour operator's sign near the shuttle staging area", meetingTime:"Arrive 15 min before shuttle; ruins are 1 hr each way so early departures are typical", whatToBring:["Comfortable walking shoes","Sunscreen","Water bottle","Insect repellent","Cash for tips & souvenirs","Camera"] },
+      { id:"mx2", url:"https://www.viator.com/searchResults/all?text=bacalar+lagoon+boat+tour", title:"Bacalar Lagoon Boat Tour", desc:"Cruise the stunning Lake of Seven Colors — a freshwater lagoon with impossibly clear turquoise waters.", duration:5, price:2, rating:4.8, reviews:987, distance:"1.5 hr drive", fitness:"Low", transport:["shuttle","boat"], family:true, accessibility:true, types:["Scenic","Water Activities","Relaxation"], emoji:"💎", maxGroupSize:12, meetingPoint:"Port main gate — shuttle departs from staging area; confirm exact spot in your booking confirmation", meetingTime:"Arrive 15 min before departure; it is a 90-min drive so departures are early morning", whatToBring:["Swimsuit & towel","Sunscreen","Water & snacks for the drive","Camera","Cash for tips & souvenirs","Bug spray"] },
+      { id:"mx3", url:"https://www.viator.com/searchResults/all?text=costa+maya+snorkel+beach", title:"Snorkel & Beach Break", desc:"Snorkel the barrier reef at Banco Chinchorro then relax on a pristine empty beach with lunch included.", duration:5, price:2, rating:4.7, reviews:765, distance:"30 min boat", fitness:"Low", transport:["boat"], family:true, accessibility:false, types:["Water Activities","Beach Day"], emoji:"🐠", maxGroupSize:12, meetingPoint:"Costa Maya port dock — boat departs from the main pier docking facility; check confirmation for exact slip", meetingTime:"Check in 20 min before boat departure", whatToBring:["Swimsuit & rash guard","Reef-safe sunscreen","Towel","Water shoes","Cash for tips","Underwater camera"] },
+      { id:"mx4", url:"https://www.viator.com/searchResults/all?text=costa+maya+kayak+mangrove", title:"Kayak & Mangrove Eco Tour", desc:"Paddle through tranquil mangrove channels spotting tropical birds, fish, and unique coastal ecosystems.", duration:3, price:1, rating:4.6, reviews:432, distance:"5 min walk", fitness:"Moderate", transport:["walking"], family:true, accessibility:false, types:["Wildlife","Adventure","Scenic"], emoji:"🚣", maxGroupSize:12, meetingPoint:"5-min walk from pier exit to the kayak launch — guide will be at the mangrove access point with equipment", meetingTime:"Meet guide 10 min before start time", whatToBring:["Quick-dry clothing","Water shoes","Bug spray","Sunscreen","Water bottle","Dry bag for valuables","Cash for tips"] },
     ],
     dining: [
-      { id:"md1", url:"https://www.tripadvisor.com/Restaurant_Review-g2366737-d12796799-Reviews-Espresso_Caribe-Mahahual_Quintana_Roo.html", title:"Espresso Caribe", desc:"Charming cafe serving excellent coffee, fresh pastries, and light Mexican bites in a shaded garden setting.", cuisine:"Cafe & Mexican", price:1, rating:4.6, reviews:543, distance:"3 min walk", kidFriendly:true, hours:"7:00 AM – 6:00 PM", emoji:"☕" },
-      { id:"md2", url:"https://www.tripadvisor.com/Restaurant_Review-g2366737-d4440226-Reviews-El_Gringo_Loco-Mahahual_Quintana_Roo.html", title:"El Gringo Loco", desc:"Casual beachside grill serving massive burritos, fresh ceviche, and cold Mexican beers steps from the port.", cuisine:"Mexican", price:1, rating:4.5, reviews:876, distance:"5 min walk", kidFriendly:true, hours:"9:00 AM – 5:00 PM", emoji:"🌯" },
-      { id:"md3", url:"https://www.viator.com/searchResults/all?text=mahahual+seafood+restaurant", title:"Mahahual Seafood Kitchen", desc:"Local fisherman-run restaurant with the freshest catch of the day, grilled simply with lime and cilantro.", cuisine:"Fresh Seafood", price:1, rating:4.7, reviews:432, distance:"10 min walk", kidFriendly:true, hours:"10:00 AM – 7:00 PM", emoji:"🐟" },
+      { id:"md1", url:"https://www.tripadvisor.com/Restaurant_Review-g2366737-d12796799-Reviews-Espresso_Caribe-Mahahual_Quintana_Roo.html", title:"Espresso Caribe", desc:"Charming cafe serving excellent coffee, fresh pastries, and light Mexican bites in a shaded garden setting.", cuisine:"Cafe & Mexican", price:1, rating:4.6, reviews:543, distance:"3 min walk", kidFriendly:true, hours:"7:00 AM – 6:00 PM", emoji:"☕", address:"Mahahual Malecón, Mahahual, Quintana Roo, Mexico" },
+      { id:"md2", url:"https://www.tripadvisor.com/Restaurant_Review-g2366737-d4440226-Reviews-El_Gringo_Loco-Mahahual_Quintana_Roo.html", title:"El Gringo Loco", desc:"Casual beachside grill serving massive burritos, fresh ceviche, and cold Mexican beers steps from the port.", cuisine:"Mexican", price:1, rating:4.5, reviews:876, distance:"5 min walk", kidFriendly:true, hours:"9:00 AM – 5:00 PM", emoji:"🌯", address:"Mahahual Malecón 25, Mahahual, Quintana Roo, Mexico" },
+      { id:"md3", url:"https://www.viator.com/searchResults/all?text=mahahual+seafood+restaurant", title:"Mahahual Seafood Kitchen", desc:"Local fisherman-run restaurant with the freshest catch of the day, grilled simply with lime and cilantro.", cuisine:"Fresh Seafood", price:1, rating:4.7, reviews:432, distance:"10 min walk", kidFriendly:true, hours:"10:00 AM – 7:00 PM", emoji:"🐟", address:"Av. Mahahual, Mahahual, Quintana Roo, Mexico" },
     ],
     activities: [
       { id:"ma1", url:"https://www.viator.com/searchResults/all?text=mahahual+beach+walk", title:"Mahahual Beach Walk", desc:"Stroll the stunning 2km malecon along one of the Caribbean's most unspoiled stretches of white sand beach.", duration:2, price:0, rating:4.7, reviews:1876, distance:"2 min walk", fitness:"Low", family:true, accessibility:true, types:["Beach Day","Scenic","Relaxation"], emoji:"🏖️" },
@@ -1251,15 +1251,15 @@ const PORT_DATA = {
 
   "Nassau, Bahamas": {
     excursions: [
-      { id:"nx1", url:"https://www.atlantisparadise.com/day-passes", title:"Atlantis Resort Day Pass", desc:"Full access to Atlantis Paradise Island's legendary water park, aquarium, and private beach for the day.", duration:7, price:3, rating:4.7, reviews:3241, distance:"15 min taxi", fitness:"Low", transport:["shuttle"], family:true, accessibility:true, types:["Beach Day","Water Activities","Relaxation"], emoji:"🏰" , maxGroupSize:null },
-      { id:"nx2", url:"https://www.viator.com/searchResults/all?text=swimming+pigs+exumas+bahamas", title:"Swimming with Pigs — Exumas", desc:"Take a speedboat to the Exumas to swim with the world-famous Bahamian swimming pigs.", duration:6, price:3, rating:4.9, reviews:876, distance:"45 min boat", fitness:"Low", transport:["boat"], family:true, accessibility:false, types:["Wildlife","Adventure"], emoji:"🐷" , maxGroupSize:12 },
-      { id:"nx3", url:"https://www.dolphinencounters.com", title:"Blue Lagoon Dolphin Swim", desc:"Swim and interact with Atlantic bottlenose dolphins in a stunning natural lagoon setting.", duration:4, price:3, rating:4.8, reviews:1543, distance:"25 min boat", fitness:"Low", transport:["boat"], family:true, accessibility:false, types:["Wildlife","Water Activities"], emoji:"🐬" , maxGroupSize:12 },
-      { id:"nx4", url:"https://www.viator.com/searchResults/all?text=nassau+historic+city+tour", title:"Nassau Historic City Tour", desc:"Walk through 300 years of colonial history visiting the Queen's Staircase, Fort Fincastle, and Government House.", duration:3, price:1, rating:4.5, reviews:987, distance:"10 min walk", fitness:"Moderate", transport:["walking","shuttle"], family:true, accessibility:false, types:["Historical","Cultural"], emoji:"🏛️" , maxGroupSize:12 },
+      { id:"nx1", url:"https://www.atlantisparadise.com/day-passes", title:"Atlantis Resort Day Pass", desc:"Full access to Atlantis Paradise Island's legendary water park, aquarium, and private beach for the day.", duration:7, price:3, rating:4.7, reviews:3241, distance:"15 min taxi", fitness:"Low", transport:["shuttle"], family:true, accessibility:true, types:["Beach Day","Water Activities","Relaxation"], emoji:"🏰", maxGroupSize:null, meetingPoint:"Prince George Wharf taxi stand — take a taxi directly to Atlantis Paradise Island (~15 min, fixed rate ~USD $5 per person each way)", meetingTime:"Head out as early as possible right after docking to maximize your time at the resort", whatToBring:["Swimsuit & towel","Sunscreen","Cash/card for food, lockers & extras","Flip flops","Change of clothes","Waterproof bag"] },
+      { id:"nx2", url:"https://www.viator.com/searchResults/all?text=swimming+pigs+exumas+bahamas", title:"Swimming with Pigs — Exumas", desc:"Take a speedboat to the Exumas to swim with the world-famous Bahamian swimming pigs.", duration:6, price:3, rating:4.9, reviews:876, distance:"45 min boat", fitness:"Low", transport:["boat"], family:true, accessibility:false, types:["Wildlife","Adventure"], emoji:"🐷", maxGroupSize:12, meetingPoint:"Prince George Wharf — confirm exact dock/slip in your booking; speedboat departs from the Nassau waterfront near the cruise pier", meetingTime:"Arrive 30 min before departure; early morning tours book out fastest", whatToBring:["Swimsuit & towel","Reef-safe sunscreen","Water shoes","Cash for tips","Motion sickness medication if prone","Waterproof camera"] },
+      { id:"nx3", url:"https://www.dolphinencounters.com", title:"Blue Lagoon Dolphin Swim", desc:"Swim and interact with Atlantic bottlenose dolphins in a stunning natural lagoon setting.", duration:4, price:3, rating:4.8, reviews:1543, distance:"25 min boat", fitness:"Low", transport:["boat"], family:true, accessibility:false, types:["Wildlife","Water Activities"], emoji:"🐬", maxGroupSize:12, meetingPoint:"Blue Lagoon Island ferry dock at Prince George Wharf, Nassau waterfront — check booking for exact slip number", meetingTime:"Arrive 20 min before ferry departure", whatToBring:["Swimsuit","Towel","Sunscreen","Change of clothes","Cash for photos/souvenirs","Camera"] },
+      { id:"nx4", url:"https://www.viator.com/searchResults/all?text=nassau+historic+city+tour", title:"Nassau Historic City Tour", desc:"Walk through 300 years of colonial history visiting the Queen's Staircase, Fort Fincastle, and Government House.", duration:3, price:1, rating:4.5, reviews:987, distance:"10 min walk", fitness:"Moderate", transport:["walking","shuttle"], family:true, accessibility:false, types:["Historical","Cultural"], emoji:"🏛️", maxGroupSize:12, meetingPoint:"Rawson Square, a 5-min walk from Prince George Wharf — or confirm with your guide for exact meeting spot", meetingTime:"Arrive 10 min before tour start", whatToBring:["Comfortable walking shoes","Water bottle","Camera","Light jacket for AC buildings","Cash for tips & souvenirs"] },
     ],
     dining: [
-      { id:"nd1", url:"https://www.graycliff.com/restaurant", title:"Graycliff Restaurant", desc:"Nassau's most celebrated fine dining experience in a 1740 colonial mansion with a legendary wine cellar.", cuisine:"Continental Fine Dining", price:3, rating:4.8, reviews:654, distance:"15 min walk", kidFriendly:false, hours:"12:00 PM – 10:00 PM", emoji:"🍷" },
-      { id:"nd2", url:"https://www.tripadvisor.com/Attraction_Review-g147416-d6905973-Reviews-Fish_Fry_at_Arawak_Cay-Nassau_New_Providence_Island_Bahamas.html", title:"Fish Fry at Arawak Cay", desc:"The authentic Nassau experience — local fish shacks serving fried snapper, conch fritters, and Kalik beer.", cuisine:"Bahamian", price:1, rating:4.7, reviews:2341, distance:"20 min walk", kidFriendly:true, hours:"11:00 AM – 11:00 PM", emoji:"🐟" },
-      { id:"nd3", url:"https://www.cafematisse.com", title:"Café Matisse", desc:"Romantic Italian-Caribbean fusion restaurant in a historic building near Parliament Square.", cuisine:"Italian-Caribbean", price:2, rating:4.6, reviews:543, distance:"12 min walk", kidFriendly:false, hours:"11:30 AM – 10:00 PM", emoji:"🍝" },
+      { id:"nd1", url:"https://www.graycliff.com/restaurant", title:"Graycliff Restaurant", desc:"Nassau's most celebrated fine dining experience in a 1740 colonial mansion with a legendary wine cellar.", cuisine:"Continental Fine Dining", price:3, rating:4.8, reviews:654, distance:"15 min walk", kidFriendly:false, hours:"12:00 PM – 10:00 PM", emoji:"🍷", address:"8-9 W Hill St, Nassau, Bahamas" },
+      { id:"nd2", url:"https://www.tripadvisor.com/Attraction_Review-g147416-d6905973-Reviews-Fish_Fry_at_Arawak_Cay-Nassau_New_Providence_Island_Bahamas.html", title:"Fish Fry at Arawak Cay", desc:"The authentic Nassau experience — local fish shacks serving fried snapper, conch fritters, and Kalik beer.", cuisine:"Bahamian", price:1, rating:4.7, reviews:2341, distance:"20 min walk", kidFriendly:true, hours:"11:00 AM – 11:00 PM", emoji:"🐟", address:"Arawak Cay, Nassau, Bahamas" },
+      { id:"nd3", url:"https://www.cafematisse.com", title:"Café Matisse", desc:"Romantic Italian-Caribbean fusion restaurant in a historic building near Parliament Square.", cuisine:"Italian-Caribbean", price:2, rating:4.6, reviews:543, distance:"12 min walk", kidFriendly:false, hours:"11:30 AM – 10:00 PM", emoji:"🍝", address:"Bank Lane, Nassau, Bahamas" },
     ],
     activities: [
       { id:"na1", url:"https://www.viator.com/searchResults/all?text=nassau+straw+market", title:"Straw Market Shopping", desc:"Nassau's famous open-air market is the place to find hand-woven straw bags, local crafts, and souvenirs.", duration:1, price:0, rating:4.2, reviews:2876, distance:"5 min walk", fitness:"Low", family:true, accessibility:true, types:["Shopping","Cultural"], emoji:"🛍️" },
@@ -1273,15 +1273,15 @@ const PORT_DATA = {
 
   "San Juan, Puerto Rico": {
     excursions: [
-      { id:"sjx1", url:"https://www.viator.com/searchResults/all?text=el+yunque+rainforest+tour+puerto+rico", title:"El Yunque Rainforest Tour", desc:"Hike through the only tropical rainforest in the US National Forest system with stunning waterfall swims.", duration:5, price:2, rating:4.8, reviews:1432, distance:"45 min drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Wildlife","Adventure","Scenic"], emoji:"🌿" , maxGroupSize:12 },
-      { id:"sjx2", url:"https://www.viator.com/searchResults/all?text=old+san+juan+walking+tour", title:"Old San Juan Walking Tour", desc:"Explore the colorful colonial streets, 500-year-old forts, and vibrant plazas of this UNESCO World Heritage city.", duration:3, price:1, rating:4.8, reviews:2134, distance:"10 min walk", fitness:"Moderate", transport:["walking"], family:true, accessibility:false, types:["Historical","Cultural","Scenic"], emoji:"🏰" , maxGroupSize:12 },
-      { id:"sjx3", url:"https://www.viator.com/searchResults/all?text=bioluminescent+bay+kayak+puerto+rico", title:"Bioluminescent Bay Kayak Tour", desc:"Paddle through glowing bioluminescent waters at night — one of the most magical natural experiences in the Caribbean.", duration:4, price:2, rating:4.9, reviews:876, distance:"1 hr drive", fitness:"Low", transport:["shuttle","boat"], family:true, accessibility:false, types:["Wildlife","Adventure","Scenic"], emoji:"✨" , maxGroupSize:12 },
-      { id:"sjx4", url:"https://www.viator.com/searchResults/all?text=culebra+flamenco+beach+ferry", title:"Snorkel & Beach at Culebra", desc:"Take a ferry to Flamenco Beach, consistently rated one of the world's top beaches, and snorkel the clear waters.", duration:6, price:2, rating:4.7, reviews:654, distance:"1 hr ferry", fitness:"Low", transport:["boat"], family:true, accessibility:false, types:["Beach Day","Water Activities"], emoji:"🏖️" , maxGroupSize:12 },
+      { id:"sjx1", url:"https://www.viator.com/searchResults/all?text=el+yunque+rainforest+tour+puerto+rico", title:"El Yunque Rainforest Tour", desc:"Hike through the only tropical rainforest in the US National Forest system with stunning waterfall swims.", duration:5, price:2, rating:4.8, reviews:1432, distance:"45 min drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Wildlife","Adventure","Scenic"], emoji:"🌿", maxGroupSize:12, meetingPoint:"Pier 4 (Pan American Pier) main gate — look for your tour operator's sign near the exit", meetingTime:"Arrive 15 min before shuttle departure", whatToBring:["Water shoes or hiking sandals","Swimsuit for waterfall swimming","Rain jacket (it WILL rain in the rainforest)","Bug spray (essential)","Sunscreen","Water bottle","Cash for tips","Waterproof bag for phone"] },
+      { id:"sjx2", url:"https://www.viator.com/searchResults/all?text=old+san+juan+walking+tour", title:"Old San Juan Walking Tour", desc:"Explore the colorful colonial streets, 500-year-old forts, and vibrant plazas of this UNESCO World Heritage city.", duration:3, price:1, rating:4.8, reviews:2134, distance:"10 min walk", fitness:"Moderate", transport:["walking"], family:true, accessibility:false, types:["Historical","Cultural","Scenic"], emoji:"🏰", maxGroupSize:12, meetingPoint:"La Casita Tourism Office at Pier 3, or confirm exact meeting point with your guide in the booking confirmation", meetingTime:"Arrive 10 min before tour start", whatToBring:["Comfortable walking shoes","Water bottle","Sunscreen","Camera","Small cash for souvenirs and tips"] },
+      { id:"sjx3", url:"https://www.viator.com/searchResults/all?text=bioluminescent+bay+kayak+puerto+rico", title:"Bioluminescent Bay Kayak Tour", desc:"Paddle through glowing bioluminescent waters at night — one of the most magical natural experiences in the Caribbean.", duration:4, price:2, rating:4.9, reviews:876, distance:"1 hr drive", fitness:"Low", transport:["shuttle","boat"], family:true, accessibility:false, types:["Wildlife","Adventure","Scenic"], emoji:"✨", maxGroupSize:12, meetingPoint:"Shuttle from Pier 4 to Laguna Grande, Fajardo — confirm exact pickup point with operator at booking", meetingTime:"Evening tour; meet 15 min before shuttle time (typically departs around 6–7 PM)", whatToBring:["Insect repellent (essential — mosquitoes are heavy near the lagoon)","Quick-dry clothing","Water shoes","No sunscreen in the water (harms bioluminescence)","Cash for tips","Light jacket"] },
+      { id:"sjx4", url:"https://www.viator.com/searchResults/all?text=culebra+flamenco+beach+ferry", title:"Snorkel & Beach at Culebra", desc:"Take a ferry to Flamenco Beach, consistently rated one of the world's top beaches, and snorkel the clear waters.", duration:6, price:2, rating:4.7, reviews:654, distance:"1 hr ferry", fitness:"Low", transport:["boat"], family:true, accessibility:false, types:["Beach Day","Water Activities"], emoji:"🏖️", maxGroupSize:12, meetingPoint:"Fajardo Ferry Terminal — shuttle from Pier 4 departs 1 hr before the ferry; confirm shuttle pickup with operator", meetingTime:"Allow 1+ hr to reach Fajardo; depart from pier early morning", whatToBring:["Swimsuit & towel","Reef-safe sunscreen","Snorkel gear (can rent on Culebra)","Cash (USD — ATMs limited on island)","Water & snacks","Motion sickness medication if needed"] },
     ],
     dining: [
-      { id:"sjd1", url:"https://www.lafactoria.com", title:"La Factoria", desc:"San Juan's most celebrated cocktail bar and restaurant serving creative Puerto Rican cuisine in a colonial building.", cuisine:"Puerto Rican", price:2, rating:4.8, reviews:1876, distance:"15 min walk", kidFriendly:false, hours:"6:00 PM – 3:00 AM", emoji:"🍹" },
-      { id:"sjd2", url:"https://www.tripadvisor.com/Restaurant_Review-g147338-d1099641-Reviews-Raices_Restaurant-San_Juan_Puerto_Rico.html", title:"Raíces Restaurant", desc:"Traditional Puerto Rican comfort food in a cheerful Old San Juan setting. Best mofongo on the island.", cuisine:"Traditional Puerto Rican", price:1, rating:4.7, reviews:2341, distance:"12 min walk", kidFriendly:true, hours:"11:00 AM – 10:00 PM", emoji:"🍽️" },
-      { id:"sjd3", url:"https://www.marmaladepr.com", title:"Marmalade Restaurant", desc:"Award-winning contemporary Caribbean cuisine with a rotating seasonal menu and outstanding wine list.", cuisine:"Contemporary Caribbean", price:3, rating:4.8, reviews:654, distance:"18 min walk", kidFriendly:false, hours:"6:00 PM – 11:00 PM", emoji:"🌟" },
+      { id:"sjd1", url:"https://www.lafactoria.com", title:"La Factoria", desc:"San Juan's most celebrated cocktail bar and restaurant serving creative Puerto Rican cuisine in a colonial building.", cuisine:"Puerto Rican", price:2, rating:4.8, reviews:1876, distance:"15 min walk", kidFriendly:false, hours:"6:00 PM – 3:00 AM", emoji:"🍹", address:"148 Calle Luna, Old San Juan, Puerto Rico 00901" },
+      { id:"sjd2", url:"https://www.tripadvisor.com/Restaurant_Review-g147338-d1099641-Reviews-Raices_Restaurant-San_Juan_Puerto_Rico.html", title:"Raíces Restaurant", desc:"Traditional Puerto Rican comfort food in a cheerful Old San Juan setting. Best mofongo on the island.", cuisine:"Traditional Puerto Rican", price:1, rating:4.7, reviews:2341, distance:"12 min walk", kidFriendly:true, hours:"11:00 AM – 10:00 PM", emoji:"🍽️", address:"315 Recinto Sur, Old San Juan, Puerto Rico 00901" },
+      { id:"sjd3", url:"https://www.marmaladepr.com", title:"Marmalade Restaurant", desc:"Award-winning contemporary Caribbean cuisine with a rotating seasonal menu and outstanding wine list.", cuisine:"Contemporary Caribbean", price:3, rating:4.8, reviews:654, distance:"18 min walk", kidFriendly:false, hours:"6:00 PM – 11:00 PM", emoji:"🌟", address:"317 Calle Fortaleza, Old San Juan, Puerto Rico 00901" },
     ],
     activities: [
       { id:"sja1", url:"https://www.nps.gov/saju/index.htm", title:"Castillo San Felipe del Morro", desc:"Explore the iconic 16th-century Spanish fort overlooking the Atlantic. Stunning views and rich history.", duration:2, price:0, rating:4.8, reviews:3241, distance:"15 min walk", fitness:"Moderate", family:true, accessibility:false, types:["Historical","Scenic"], emoji:"🏰" },
@@ -1295,15 +1295,15 @@ const PORT_DATA = {
 
   "St. Thomas, USVI": {
     excursions: [
-      { id:"stx1", url:"https://www.viator.com/searchResults/all?text=st+john+trunk+bay+snorkel+ferry", title:"St. John Snorkel & Beach Day", desc:"Take the ferry to St. John and spend the day at Trunk Bay, one of the world's most beautiful beaches.", duration:6, price:2, rating:4.9, reviews:2134, distance:"30 min ferry", fitness:"Low", transport:["boat"], family:true, accessibility:false, types:["Beach Day","Water Activities","Scenic"], emoji:"🏝️" , maxGroupSize:12 },
-      { id:"stx2", url:"https://www.coralworldvi.com", title:"Coral World Ocean Park", desc:"Walk-through underwater observatory, shark tank, sea turtle lagoon, and stingray pool. Great for kids.", duration:4, price:2, rating:4.7, reviews:987, distance:"20 min taxi", fitness:"Low", transport:["shuttle"], family:true, accessibility:true, types:["Wildlife"], emoji:"🐠" , maxGroupSize:12 },
-      { id:"stx3", url:"https://www.paradisepointvi.com", title:"Skyride to Paradise Point", desc:"Take the aerial tramway to 700 feet above Charlotte Amalie for stunning panoramic views of the harbor.", duration:2, price:1, rating:4.6, reviews:1543, distance:"10 min taxi", fitness:"Low", transport:["shuttle"], family:true, accessibility:true, types:["Scenic"], emoji:"🚡" , maxGroupSize:12 },
-      { id:"stx4", url:"https://www.viator.com/searchResults/all?text=buck+island+sailing+snorkel+st+thomas", title:"Buck Island Sailing & Snorkel", desc:"Sail to the protected Buck Island reef system for snorkeling in a designated underwater trail.", duration:5, price:2, rating:4.8, reviews:765, distance:"20 min boat", fitness:"Low", transport:["boat"], family:true, accessibility:false, types:["Water Activities","Scenic"], emoji:"⛵" , maxGroupSize:12 },
+      { id:"stx1", url:"https://www.viator.com/searchResults/all?text=st+john+trunk+bay+snorkel+ferry", title:"St. John Snorkel & Beach Day", desc:"Take the ferry to St. John and spend the day at Trunk Bay, one of the world's most beautiful beaches.", duration:6, price:2, rating:4.9, reviews:2134, distance:"30 min ferry", fitness:"Low", transport:["boat"], family:true, accessibility:false, types:["Beach Day","Water Activities","Scenic"], emoji:"🏝️", maxGroupSize:12, meetingPoint:"Red Hook Ferry Terminal on the east end of St. Thomas — take a taxi from Crown Bay Pier (~20 min, ~$10 pp each way)", meetingTime:"Ferries to St. John run on the hour from Red Hook; plan to catch an early one", whatToBring:["Swimsuit & towel","Reef-safe sunscreen","Snorkel gear (rentable at Trunk Bay)","Water shoes","Cash for ferry ($7 pp) & tips","Snacks & water","Day bag"] },
+      { id:"stx2", url:"https://www.coralworldvi.com", title:"Coral World Ocean Park", desc:"Walk-through underwater observatory, shark tank, sea turtle lagoon, and stingray pool. Great for kids.", duration:4, price:2, rating:4.7, reviews:987, distance:"20 min taxi", fitness:"Low", transport:["shuttle"], family:true, accessibility:true, types:["Wildlife"], emoji:"🐠", maxGroupSize:12, meetingPoint:"Take a taxi from Crown Bay or Havensight Pier to Coral World at Coki Beach (~20 min); negotiate a round-trip fare with the driver", meetingTime:"Self-paced; go early to avoid midday heat and crowds", whatToBring:["Swimsuit if doing the snorkel park","Comfortable shoes","Sunscreen","Camera","Cash for activities, souvenirs & tips"] },
+      { id:"stx3", url:"https://www.paradisepointvi.com", title:"Skyride to Paradise Point", desc:"Take the aerial tramway to 700 feet above Charlotte Amalie for stunning panoramic views of the harbor.", duration:2, price:1, rating:4.6, reviews:1543, distance:"10 min taxi", fitness:"Low", transport:["shuttle"], family:true, accessibility:true, types:["Scenic"], emoji:"🚡", maxGroupSize:12, meetingPoint:"Paradise Point Tramway is just up the hill from Havensight Pier — short taxi ride or 10-min walk", meetingTime:"Go early for the best views before clouds build in the afternoon", whatToBring:["Comfortable shoes","Camera","Cash for tram ticket and drinks at the summit bar","Sunscreen"] },
+      { id:"stx4", url:"https://www.viator.com/searchResults/all?text=buck+island+sailing+snorkel+st+thomas", title:"Buck Island Sailing & Snorkel", desc:"Sail to the protected Buck Island reef system for snorkeling in a designated underwater trail.", duration:5, price:2, rating:4.8, reviews:765, distance:"20 min boat", fitness:"Low", transport:["boat"], family:true, accessibility:false, types:["Water Activities","Scenic"], emoji:"⛵", maxGroupSize:12, meetingPoint:"Boat departs from the dock near Havensight Pier — operator provides exact slip number in your booking confirmation", meetingTime:"Check in 20 min before sail time", whatToBring:["Swimsuit & towel","Reef-safe sunscreen","Snorkel gear (provided)","Camera","Cash for tips","Seasickness medication if prone"] },
     ],
     dining: [
-      { id:"std1", url:"https://www.tripadvisor.com/Restaurant_Review-g147374-d786885-Reviews-Gladys_Cafe-Charlotte_Amalie_St_Thomas_U_S_Virgin_Islands.html", title:"Gladys' Cafe", desc:"Legendary Charlotte Amalie institution serving authentic West Indian breakfast and lunch since 1974.", cuisine:"West Indian", price:1, rating:4.7, reviews:1243, distance:"10 min walk", kidFriendly:true, hours:"7:00 AM – 5:00 PM", emoji:"🍳" },
-      { id:"std2", url:"https://www.tripadvisor.com/Restaurant_Review-g147374-d786901-Reviews-Herve_Restaurant_Wine_Bar-Charlotte_Amalie_St_Thomas_U_S_Virgin_Islands.html", title:"Herve Restaurant & Wine Bar", desc:"Romantic hilltop restaurant with panoramic harbor views and sophisticated Caribbean fusion cuisine.", cuisine:"Caribbean Fusion", price:3, rating:4.8, reviews:543, distance:"20 min taxi", kidFriendly:false, hours:"11:30 AM – 10:00 PM", emoji:"🌅" },
-      { id:"std3", url:"https://www.tripadvisor.com/Restaurant_Review-g147374-d1590614-Reviews-Hull_Bay_Hideaway-St_Thomas_U_S_Virgin_Islands.html", title:"Hull Bay Hideaway", desc:"Casual local beach bar on a quiet bay serving fresh fish sandwiches and cold Presidentes. Locals only.", cuisine:"American & Seafood", price:1, rating:4.6, reviews:432, distance:"25 min taxi", kidFriendly:true, hours:"11:00 AM – 8:00 PM", emoji:"🍺" },
+      { id:"std1", url:"https://www.tripadvisor.com/Restaurant_Review-g147374-d786885-Reviews-Gladys_Cafe-Charlotte_Amalie_St_Thomas_U_S_Virgin_Islands.html", title:"Gladys' Cafe", desc:"Legendary Charlotte Amalie institution serving authentic West Indian breakfast and lunch since 1974.", cuisine:"West Indian", price:1, rating:4.7, reviews:1243, distance:"10 min walk", kidFriendly:true, hours:"7:00 AM – 5:00 PM", emoji:"🍳", address:"Royal Dane Mall, Charlotte Amalie, St. Thomas, USVI 00802" },
+      { id:"std2", url:"https://www.tripadvisor.com/Restaurant_Review-g147374-d786901-Reviews-Herve_Restaurant_Wine_Bar-Charlotte_Amalie_St_Thomas_U_S_Virgin_Islands.html", title:"Herve Restaurant & Wine Bar", desc:"Romantic hilltop restaurant with panoramic harbor views and sophisticated Caribbean fusion cuisine.", cuisine:"Caribbean Fusion", price:3, rating:4.8, reviews:543, distance:"20 min taxi", kidFriendly:false, hours:"11:30 AM – 10:00 PM", emoji:"🌅", address:"Government Hill, Charlotte Amalie, St. Thomas, USVI 00802" },
+      { id:"std3", url:"https://www.tripadvisor.com/Restaurant_Review-g147374-d1590614-Reviews-Hull_Bay_Hideaway-St_Thomas_U_S_Virgin_Islands.html", title:"Hull Bay Hideaway", desc:"Casual local beach bar on a quiet bay serving fresh fish sandwiches and cold Presidentes. Locals only.", cuisine:"American & Seafood", price:1, rating:4.6, reviews:432, distance:"25 min taxi", kidFriendly:true, hours:"11:00 AM – 8:00 PM", emoji:"🍺", address:"Hull Bay, St. Thomas, USVI 00802" },
     ],
     activities: [
       { id:"sta1", url:"https://www.viator.com/searchResults/all?text=st+thomas+duty+free+shopping+charlotte+amalie", title:"Charlotte Amalie Duty-Free Shopping", desc:"St. Thomas is famous for duty-free luxury shopping. Find jewelry, spirits, perfume, and watches at bargain prices.", duration:2, price:0, rating:4.5, reviews:2341, distance:"5 min walk", fitness:"Low", family:true, accessibility:true, types:["Shopping"], emoji:"💎" },
@@ -1316,17 +1316,17 @@ const PORT_DATA = {
 
   "Juneau, AK": {
     excursions: [
-      { id:"jux1", url:"https://www.alaskaexcursions.com/glacier-walk", title:"Mendenhall Glacier & Ice Walk", desc:"Walk on the face of the stunning Mendenhall Glacier with a certified guide. An extraordinary Alaska experience.", duration:4, price:3, rating:4.9, reviews:1876, distance:"15 min shuttle", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure","Scenic"], emoji:"🧊" , maxGroupSize:12 },
-      { id:"jux2", url:"https://www.viator.com/searchResults/all?text=juneau+whale+watching+wildlife", title:"Whale Watching & Wildlife Tour", desc:"Spot humpback whales, orcas, sea lions, and eagles on a naturalist-guided whale watching cruise.", duration:3, price:2, rating:4.9, reviews:2341, distance:"10 min walk", fitness:"Low", transport:["boat"], family:true, accessibility:true, types:["Wildlife","Scenic"], emoji:"🐋" , maxGroupSize:12 },
-      { id:"jux3", url:"https://www.northstartreks.com/dog-sledding-on-glacier", title:"Helicopter & Glacier Dog Sled", desc:"Fly by helicopter to a remote glacier and mush your own dog sled team across the ice. Unforgettable.", duration:3, price:3, rating:4.9, reviews:987, distance:"5 min drive", fitness:"Low", transport:["shuttle"], family:true, accessibility:false, types:["Adventure","Wildlife"], emoji:"🚁" , maxGroupSize:6 },
-      { id:"jux4", url:"https://www.alaskacanoopy.com", title:"Juneau Rainforest Zipline", desc:"Soar through the Tongass National Forest — America's largest rainforest — on 9 exciting zip lines.", duration:3, price:2, rating:4.8, reviews:876, distance:"15 min drive", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure","Scenic"], emoji:"🌲" , maxGroupSize:12 },
-      { id:"jux5", url:"https://www.goldcreeksalmonbake.com", title:"Salmon Bake & Mendenhall Visit", desc:"Alaska's most popular shore excursion — visit the glacier then feast on fresh wild salmon at Gold Creek.", duration:4, price:2, rating:4.7, reviews:3241, distance:"15 min drive", fitness:"Low", transport:["shuttle"], family:true, accessibility:true, types:["Food & Drink","Scenic"], emoji:"🐟" , maxGroupSize:12 },
-      { id:"jux6", url:"https://www.juneautours.com", title:"Mendenhall Glacier & Whale Watching Combo — Juneau Tours", desc:"Alaska-owned Juneau Tours combines a naturalist-guided whale watch with a glacier shuttle to Mendenhall in a single 5-hour excursion. Heated cabin, two viewing decks, snacks, and binoculars included. $199 per adult. Departs downtown, a short walk from the pier.", duration:5, price:3, rating:4.9, reviews:9457, distance:"5 min walk from pier", fitness:"Low", transport:["walking"], family:true, accessibility:true, types:["Wildlife","Scenic","Adventure","Water Activities"], emoji:"🐋", maxGroupSize:12 },
+      { id:"jux1", url:"https://www.alaskaexcursions.com/glacier-walk", title:"Mendenhall Glacier & Ice Walk", desc:"Walk on the face of the stunning Mendenhall Glacier with a certified guide. An extraordinary Alaska experience.", duration:4, price:3, rating:4.9, reviews:1876, distance:"15 min shuttle", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure","Scenic"], emoji:"🧊", maxGroupSize:12, meetingPoint:"Alaska Excursions office at 76 Egan Drive — 5-min walk from the cruise terminal at Marine Park", meetingTime:"Check in 15 min before shuttle departure; shuttles run throughout the day", whatToBring:["Waterproof hiking boots or sturdy trail shoes","Rain jacket & warm layers (weather changes fast)","Gloves (even in summer on the glacier)","Sunscreen (UV reflects off ice)","Water bottle","Camera","Cash for tips"] },
+      { id:"jux2", url:"https://www.viator.com/searchResults/all?text=juneau+whale+watching+wildlife", title:"Whale Watching & Wildlife Tour", desc:"Spot humpback whales, orcas, sea lions, and eagles on a naturalist-guided whale watching cruise.", duration:3, price:2, rating:4.9, reviews:2341, distance:"10 min walk", fitness:"Low", transport:["boat"], family:true, accessibility:true, types:["Wildlife","Scenic"], emoji:"🐋", maxGroupSize:12, meetingPoint:"Egan Drive boat dock near Marine Park — look for your whale watching company's sign; a short walk from the cruise terminal", meetingTime:"Arrive 15 min before departure for boarding and safety briefing", whatToBring:["Warm waterproof jacket (wind on the water is cold)","Layers","Motion sickness medication if prone","Binoculars","Camera with zoom lens","Non-skid shoes","Cash for tips"] },
+      { id:"jux3", url:"https://www.northstartreks.com/dog-sledding-on-glacier", title:"Helicopter & Glacier Dog Sled", desc:"Fly by helicopter to a remote glacier and mush your own dog sled team across the ice. Unforgettable.", duration:3, price:3, rating:4.9, reviews:987, distance:"5 min drive", fitness:"Low", transport:["shuttle"], family:true, accessibility:false, types:["Adventure","Wildlife"], emoji:"🚁", maxGroupSize:6, meetingPoint:"North Star Treks heliport — shuttle picks up from the cruise terminal gate, approximately 5-min drive", meetingTime:"Meet at terminal shuttle stop 20 min before flight time; weight limits apply (confirm at booking)", whatToBring:["Warm layers — it's cold on the glacier year-round","Sunglasses (bright glare off snow)","Sunscreen","Gloves","Camera","Cash for tips","No loose scarves or jewelry near the helicopter"] },
+      { id:"jux4", url:"https://www.alaskacanoopy.com", title:"Juneau Rainforest Zipline", desc:"Soar through the Tongass National Forest — America's largest rainforest — on 9 exciting zip lines.", duration:3, price:2, rating:4.8, reviews:876, distance:"15 min drive", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure","Scenic"], emoji:"🌲", maxGroupSize:12, meetingPoint:"Alaska Canopy Adventures shuttle at the cruise terminal gate — 15-min drive to the zipline base", meetingTime:"Arrive at terminal gate 15 min before shuttle departure", whatToBring:["Closed-toe shoes (required)","Long pants recommended","Light rain jacket","Hair tie","Camera with secure strap","Cash for tips","Bug spray"] },
+      { id:"jux5", url:"https://www.goldcreeksalmonbake.com", title:"Salmon Bake & Mendenhall Visit", desc:"Alaska's most popular shore excursion — visit the glacier then feast on fresh wild salmon at Gold Creek.", duration:4, price:2, rating:4.7, reviews:3241, distance:"15 min drive", fitness:"Low", transport:["shuttle"], family:true, accessibility:true, types:["Food & Drink","Scenic"], emoji:"🐟", maxGroupSize:12, meetingPoint:"Gold Creek Salmon Bake shuttle at Marine Park — departs from the main pier area near Egan Drive", meetingTime:"Arrive 15 min before departure; multiple departures throughout the day", whatToBring:["Light layers","Rain jacket","Comfortable shoes","Camera","Cash for tips and extra drinks","Appetite"] },
+      { id:"jux6", url:"https://www.juneautours.com", title:"Mendenhall Glacier & Whale Watching Combo — Juneau Tours", desc:"Alaska-owned Juneau Tours combines a naturalist-guided whale watch with a glacier shuttle to Mendenhall in a single 5-hour excursion. Heated cabin, two viewing decks, snacks, and binoculars included. $199 per adult. Departs downtown, a short walk from the pier.", duration:5, price:3, rating:4.9, reviews:9457, distance:"5 min walk from pier", fitness:"Low", transport:["walking"], family:true, accessibility:true, types:["Wildlife","Scenic","Adventure","Water Activities"], emoji:"🐋", maxGroupSize:12, meetingPoint:"Juneau Tours & Whale Watch dock at 76 Egan Drive — 5-min walk south from the main cruise terminal along the waterfront", meetingTime:"Check in at the Egan Drive dock 15 min before departure", whatToBring:["Warm waterproof jacket","Binoculars","Camera with zoom","Motion sickness medication","Layers","Cash for tips","Snacks for the glacier portion"] },
     ],
     dining: [
-      { id:"jud1", url:"https://www.kingcrabshack.com", title:"Tracy's King Crab Shack", desc:"World-famous outdoor crab shack serving the freshest Alaskan king crab legs right off the dock. A must.", cuisine:"Alaskan Seafood", price:2, rating:4.8, reviews:4321, distance:"5 min walk", kidFriendly:true, hours:"10:00 AM – 6:00 PM", emoji:"🦀" },
-      { id:"jud2", url:"https://www.hangaronthewharf.com", title:"The Hangar on the Wharf", desc:"Casual waterfront restaurant in a converted seaplane hangar. Great halibut fish and chips and local beers.", cuisine:"Alaskan Comfort Food", price:2, rating:4.6, reviews:1543, distance:"8 min walk", kidFriendly:true, hours:"11:00 AM – 9:00 PM", emoji:"✈️" },
-      { id:"jud3", url:"https://www.saltjuneau.com", title:"Salt Restaurant", desc:"Upscale farm-to-table Alaskan cuisine featuring locally sourced halibut, salmon, and Alaskan ingredients.", cuisine:"Contemporary Alaskan", price:3, rating:4.8, reviews:765, distance:"12 min walk", kidFriendly:false, hours:"5:00 PM – 10:00 PM", emoji:"🌿" },
+      { id:"jud1", url:"https://www.kingcrabshack.com", title:"Tracy's King Crab Shack", desc:"World-famous outdoor crab shack serving the freshest Alaskan king crab legs right off the dock. A must.", cuisine:"Alaskan Seafood", price:2, rating:4.8, reviews:4321, distance:"5 min walk", kidFriendly:true, hours:"10:00 AM – 6:00 PM", emoji:"🦀", address:"432 S Franklin St, Juneau, AK 99801" },
+      { id:"jud2", url:"https://www.hangaronthewharf.com", title:"The Hangar on the Wharf", desc:"Casual waterfront restaurant in a converted seaplane hangar. Great halibut fish and chips and local beers.", cuisine:"Alaskan Comfort Food", price:2, rating:4.6, reviews:1543, distance:"8 min walk", kidFriendly:true, hours:"11:00 AM – 9:00 PM", emoji:"✈️", address:"2 Marine Way Suite 106, Juneau, AK 99801" },
+      { id:"jud3", url:"https://www.saltjuneau.com", title:"Salt Restaurant", desc:"Upscale farm-to-table Alaskan cuisine featuring locally sourced halibut, salmon, and Alaskan ingredients.", cuisine:"Contemporary Alaskan", price:3, rating:4.8, reviews:765, distance:"12 min walk", kidFriendly:false, hours:"5:00 PM – 10:00 PM", emoji:"🌿", address:"200 Seward St, Juneau, AK 99801" },
     ],
     activities: [
       { id:"jua1", url:"https://www.alaskabrewingco.com/brewery-tours", title:"Alaskan Brewing Company Tour", desc:"Tour and tasting at Alaska's beloved craft brewery, famous for its Amber Ale and Seasonal brews.", duration:1, price:0, rating:4.6, reviews:1876, distance:"20 min taxi", fitness:"Low", family:false, accessibility:true, types:["Food & Drink","Cultural"], emoji:"🍺" },
@@ -1338,15 +1338,15 @@ const PORT_DATA = {
 
   "Ketchikan, AK": {
     excursions: [
-      { id:"kex1", url:"https://www.viator.com/searchResults/all?text=misty+fjords+floatplane+ketchikan", title:"Misty Fjords Floatplane Tour", desc:"Fly over the breathtaking Misty Fjords National Monument — ancient glaciers, waterfalls, and fjords from above.", duration:2, price:3, rating:4.9, reviews:876, distance:"5 min drive", fitness:"Low", transport:["shuttle"], family:true, accessibility:false, types:["Scenic","Adventure"], emoji:"🛩️" , maxGroupSize:8 },
-      { id:"kex2", url:"https://www.viator.com/searchResults/all?text=ketchikan+rainforest+zip+line", title:"Rainforest Canopy & Zip Line", desc:"Soar through the ancient temperate rainforest canopy on a thrilling zip line adventure above the treetops.", duration:3, price:2, rating:4.8, reviews:1234, distance:"15 min drive", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure"], emoji:"🌲" , maxGroupSize:12 },
-      { id:"kex3", url:"https://www.viator.com/searchResults/all?text=saxman+village+totem+poles+ketchikan", title:"Totem Poles & Saxman Village", desc:"Visit the world's largest collection of standing totem poles and learn about the Tlingit and Haida cultures.", duration:2, price:1, rating:4.7, reviews:1543, distance:"10 min taxi", fitness:"Low", transport:["shuttle"], family:true, accessibility:true, types:["Cultural","Historical"], emoji:"🗿" , maxGroupSize:12 },
-      { id:"kex4", url:"https://www.viator.com/searchResults/all?text=ketchikan+salmon+fishing+charter", title:"Salmon Fishing Charter", desc:"Go sport fishing for wild Alaskan salmon with an experienced guide. Gear and license provided.", duration:4, price:3, rating:4.8, reviews:654, distance:"15 min drive", fitness:"Low", transport:["shuttle","boat"], family:false, accessibility:false, types:["Wildlife","Adventure"], emoji:"🎣" , maxGroupSize:6 },
-      { id:"kex5", url:"https://www.kayakketchikan.com", title:"Orca Cove Fast Boat & Sea Kayaking", desc:"Southeast Sea Kayaks ferries you by fast boat to the sheltered waters of Orca Cove, then you paddle through kelp forests past sea lions, eagles, and marine life. Max 6 guests per trip; snacks and smoked salmon included. One of Ketchikan's most distinctive small-group water experiences.", duration:3, price:2, rating:4.9, reviews:689, distance:"5 min walk from pier", fitness:"Moderate", transport:["walking"], family:true, accessibility:false, types:["Adventure","Water Activities","Wildlife"], emoji:"🚣", maxGroupSize:6 },
+      { id:"kex1", url:"https://www.viator.com/searchResults/all?text=misty+fjords+floatplane+ketchikan", title:"Misty Fjords Floatplane Tour", desc:"Fly over the breathtaking Misty Fjords National Monument — ancient glaciers, waterfalls, and fjords from above.", duration:2, price:3, rating:4.9, reviews:876, distance:"5 min drive", fitness:"Low", transport:["shuttle"], family:true, accessibility:false, types:["Scenic","Adventure"], emoji:"🛩️", maxGroupSize:8, meetingPoint:"Ketchikan waterfront floatplane dock near the cruise pier — operator shuttle picks up at the pier gate; confirm dock slip in booking", meetingTime:"Arrive 20 min before flight for check-in and safety briefing; weight limits apply (confirm at booking)", whatToBring:["Layers (it's cold in the air)","Sunglasses","Camera","Secure all loose items before boarding","Cash for tips","No large bags — space is very limited"] },
+      { id:"kex2", url:"https://www.viator.com/searchResults/all?text=ketchikan+rainforest+zip+line", title:"Rainforest Canopy & Zip Line", desc:"Soar through the ancient temperate rainforest canopy on a thrilling zip line adventure above the treetops.", duration:3, price:2, rating:4.8, reviews:1234, distance:"15 min drive", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure"], emoji:"🌲", maxGroupSize:12, meetingPoint:"Shuttle pickup at the cruise pier gate — look for the zipline operator's sign near the exit", meetingTime:"Arrive 15 min before shuttle departure", whatToBring:["Closed-toe shoes (required)","Long pants recommended","Light rain jacket","Hair tie","Camera with secure strap","Cash for tips","Bug spray"] },
+      { id:"kex3", url:"https://www.viator.com/searchResults/all?text=saxman+village+totem+poles+ketchikan", title:"Totem Poles & Saxman Village", desc:"Visit the world's largest collection of standing totem poles and learn about the Tlingit and Haida cultures.", duration:2, price:1, rating:4.7, reviews:1543, distance:"10 min taxi", fitness:"Low", transport:["shuttle"], family:true, accessibility:true, types:["Cultural","Historical"], emoji:"🗿", maxGroupSize:12, meetingPoint:"Taxi or shuttle from cruise pier — Saxman Village is about 2 miles south of downtown; taxis queue at the pier exit", meetingTime:"Go early to catch cultural demonstrations (carving and dance) that run in the morning", whatToBring:["Comfortable walking shoes","Camera","Cash for entrance fee (~$6) and gifts","Rain jacket","Insect repellent"] },
+      { id:"kex4", url:"https://www.viator.com/searchResults/all?text=ketchikan+salmon+fishing+charter", title:"Salmon Fishing Charter", desc:"Go sport fishing for wild Alaskan salmon with an experienced guide. Gear and license provided.", duration:4, price:3, rating:4.8, reviews:654, distance:"15 min drive", fitness:"Low", transport:["shuttle","boat"], family:false, accessibility:false, types:["Wildlife","Adventure"], emoji:"🎣", maxGroupSize:6, meetingPoint:"Ketchikan boat harbor — confirm exact dock and slip with your charter operator; short drive from the cruise pier", meetingTime:"Arrive 20 min before departure for safety briefing and gear setup", whatToBring:["Warm waterproof layers","Non-skid shoes","Sunscreen","Sunglasses","Snacks & water","Cash for tips & fish processing if you want to keep your catch","Seasickness medication if prone"] },
+      { id:"kex5", url:"https://www.kayakketchikan.com", title:"Orca Cove Fast Boat & Sea Kayaking", desc:"Southeast Sea Kayaks ferries you by fast boat to the sheltered waters of Orca Cove, then you paddle through kelp forests past sea lions, eagles, and marine life. Max 6 guests per trip; snacks and smoked salmon included. One of Ketchikan's most distinctive small-group water experiences.", duration:3, price:2, rating:4.9, reviews:689, distance:"5 min walk from pier", fitness:"Moderate", transport:["walking"], family:true, accessibility:false, types:["Adventure","Water Activities","Wildlife"], emoji:"🚣", maxGroupSize:6, meetingPoint:"Southeast Sea Kayaks office at 1621 Tongass Ave — 5-min walk from the cruise pier along the waterfront", meetingTime:"Check in at the office 15 min before departure", whatToBring:["Quick-dry or synthetic layers (avoid cotton)","Waterproof jacket","Water shoes or sandals with straps","Sunscreen","Camera in a waterproof bag","Cash for tips"] },
     ],
     dining: [
-      { id:"ked1", url:"https://www.capefoxlodge.com/dining", title:"Cape Fox Lodge Restaurant", desc:"Stunning hilltop lodge restaurant with panoramic views and the best wild salmon chowder in Southeast Alaska.", cuisine:"Alaskan", price:2, rating:4.7, reviews:543, distance:"10 min walk+tram", kidFriendly:true, hours:"11:00 AM – 9:00 PM", emoji:"🌲" },
-      { id:"ked2", url:"https://www.tripadvisor.com/Restaurant_Review-g60868-d786853-Reviews-Bar_Harbor_Restaurant-Ketchikan_Alaska.html", title:"Bar Harbor Restaurant", desc:"Beloved local waterfront diner serving fresh Dungeness crab, halibut, and all-day breakfast.", cuisine:"Alaskan Seafood", price:1, rating:4.6, reviews:876, distance:"5 min walk", kidFriendly:true, hours:"6:00 AM – 8:00 PM", emoji:"🦀" },
+      { id:"ked1", url:"https://www.capefoxlodge.com/dining", title:"Cape Fox Lodge Restaurant", desc:"Stunning hilltop lodge restaurant with panoramic views and the best wild salmon chowder in Southeast Alaska.", cuisine:"Alaskan", price:2, rating:4.7, reviews:543, distance:"10 min walk+tram", kidFriendly:true, hours:"11:00 AM – 9:00 PM", emoji:"🌲", address:"800 Venetia Way, Ketchikan, AK 99901" },
+      { id:"ked2", url:"https://www.tripadvisor.com/Restaurant_Review-g60868-d786853-Reviews-Bar_Harbor_Restaurant-Ketchikan_Alaska.html", title:"Bar Harbor Restaurant", desc:"Beloved local waterfront diner serving fresh Dungeness crab, halibut, and all-day breakfast.", cuisine:"Alaskan Seafood", price:1, rating:4.6, reviews:876, distance:"5 min walk", kidFriendly:true, hours:"6:00 AM – 8:00 PM", emoji:"🦀", address:"2813 Tongass Ave, Ketchikan, AK 99901" },
     ],
     activities: [
       { id:"kea1", url:"https://www.viator.com/searchResults/all?text=creek+street+ketchikan+boardwalk", title:"Creek Street Boardwalk", desc:"Stroll the famous red-light district turned charming boardwalk with boutiques, galleries, and historic buildings.", duration:1, price:0, rating:4.6, reviews:2341, distance:"5 min walk", fitness:"Low", family:true, accessibility:false, types:["Historical","Shopping","Scenic"], emoji:"🚶" },
@@ -1358,14 +1358,14 @@ const PORT_DATA = {
 
   "Barcelona, Spain": {
     excursions: [
-      { id:"bcnx1", url:"https://www.viator.com/searchResults/all?text=gaudi+architecture+tour+barcelona", title:"Gaudí Architecture Tour", desc:"Visit the Sagrada Familia, Park Güell, and Casa Batlló — the masterworks of Barcelona's iconic architect.", duration:5, price:2, rating:4.9, reviews:3241, distance:"20 min metro", fitness:"Moderate", transport:["shuttle","walking"], family:true, accessibility:false, types:["Cultural","Historical","Scenic"], emoji:"🏛️" , maxGroupSize:12 },
-      { id:"bcnx2", url:"https://www.viator.com/searchResults/all?text=gothic+quarter+tapas+tour+barcelona", title:"Gothic Quarter & Tapas Walk", desc:"Explore Barcelona's medieval Gothic Quarter with a local guide, stopping for tapas and local wine along the way.", duration:3, price:2, rating:4.8, reviews:1876, distance:"15 min walk", fitness:"Moderate", transport:["walking"], family:false, accessibility:false, types:["Cultural","Food & Drink","Historical"], emoji:"🥘" , maxGroupSize:12 },
-      { id:"bcnx3", url:"https://www.viator.com/searchResults/all?text=montserrat+monastery+day+trip+barcelona", title:"Montserrat Monastery Day Trip", desc:"Travel to the dramatic mountain monastery of Montserrat with stunning views and a medieval basilica.", duration:6, price:2, rating:4.8, reviews:1432, distance:"1 hr drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Scenic","Cultural","Historical"], emoji:"⛪" , maxGroupSize:12 },
+      { id:"bcnx1", url:"https://www.viator.com/searchResults/all?text=gaudi+architecture+tour+barcelona", title:"Gaudí Architecture Tour", desc:"Visit the Sagrada Familia, Park Güell, and Casa Batlló — the masterworks of Barcelona's iconic architect.", duration:5, price:2, rating:4.9, reviews:3241, distance:"20 min metro", fitness:"Moderate", transport:["shuttle","walking"], family:true, accessibility:false, types:["Cultural","Historical","Scenic"], emoji:"🏛️", maxGroupSize:12, meetingPoint:"Confirm exact meeting point with your operator in the booking confirmation — most tours meet near the cruise terminal gate or Barceloneta metro station", meetingTime:"Arrive 15 min before tour; book Sagrada Familia skip-the-line tickets in advance (required)", whatToBring:["Comfortable walking shoes","Sunscreen","Water bottle","Camera","Cash or card for entrance fees","Light jacket for AC interiors"] },
+      { id:"bcnx2", url:"https://www.viator.com/searchResults/all?text=gothic+quarter+tapas+tour+barcelona", title:"Gothic Quarter & Tapas Walk", desc:"Explore Barcelona's medieval Gothic Quarter with a local guide, stopping for tapas and local wine along the way.", duration:3, price:2, rating:4.8, reviews:1876, distance:"15 min walk", fitness:"Moderate", transport:["walking"], family:false, accessibility:false, types:["Cultural","Food & Drink","Historical"], emoji:"🥘", maxGroupSize:12, meetingPoint:"Confirm exact meeting point in booking — typically at a central plaza in the Gothic Quarter (Plaça de Sant Jaume or similar)", meetingTime:"Arrive 10 min before start; most food tours run late morning or early evening", whatToBring:["Comfortable walking shoes","Appetite","Cash for any extras","Camera","Light layer for evening tours"] },
+      { id:"bcnx3", url:"https://www.viator.com/searchResults/all?text=montserrat+monastery+day+trip+barcelona", title:"Montserrat Monastery Day Trip", desc:"Travel to the dramatic mountain monastery of Montserrat with stunning views and a medieval basilica.", duration:6, price:2, rating:4.8, reviews:1432, distance:"1 hr drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Scenic","Cultural","Historical"], emoji:"⛪", maxGroupSize:12, meetingPoint:"Shuttle pickup at the cruise terminal or central Barcelona pickup point — confirm exact location in booking", meetingTime:"Arrive 15 min before shuttle; it's a 1-hr drive so morning departures are typical", whatToBring:["Comfortable walking shoes","Layers (mountain is cooler)","Sunscreen","Camera","Cash for cable car, lunch & souvenirs","Water bottle"] },
     ],
     dining: [
-      { id:"bcnd1", url:"https://www.boqueria.barcelona", title:"La Boqueria Market", desc:"Barcelona's legendary fresh food market — graze on fresh fruit, jamón, seafood, and local specialties.", cuisine:"Market & Tapas", price:1, rating:4.7, reviews:5432, distance:"20 min walk", kidFriendly:true, hours:"8:00 AM – 8:30 PM", emoji:"🥗" },
-      { id:"bcnd2", url:"https://www.bardelpla.cat", title:"Bar del Pla", desc:"Classic Barcelona tapas bar in the Gothic Quarter, famous for its foie gras croquettes and local vermouth.", cuisine:"Catalan Tapas", price:2, rating:4.8, reviews:2341, distance:"25 min walk", kidFriendly:false, hours:"12:00 PM – 11:00 PM", emoji:"🍷" },
-      { id:"bcnd3", url:"https://www.cansole.com", title:"Can Solé Seafood Restaurant", desc:"A Barcelona institution since 1903, serving the finest fideuà (noodle paella) and fresh seafood in Barceloneta.", cuisine:"Catalan Seafood", price:3, rating:4.8, reviews:1234, distance:"25 min walk", kidFriendly:true, hours:"1:00 PM – 11:00 PM", emoji:"🦞" },
+      { id:"bcnd1", url:"https://www.boqueria.barcelona", title:"La Boqueria Market", desc:"Barcelona's legendary fresh food market — graze on fresh fruit, jamón, seafood, and local specialties.", cuisine:"Market & Tapas", price:1, rating:4.7, reviews:5432, distance:"20 min walk", kidFriendly:true, hours:"8:00 AM – 8:30 PM", emoji:"🥗", address:"La Rambla 91, 08001 Barcelona, Spain" },
+      { id:"bcnd2", url:"https://www.bardelpla.cat", title:"Bar del Pla", desc:"Classic Barcelona tapas bar in the Gothic Quarter, famous for its foie gras croquettes and local vermouth.", cuisine:"Catalan Tapas", price:2, rating:4.8, reviews:2341, distance:"25 min walk", kidFriendly:false, hours:"12:00 PM – 11:00 PM", emoji:"🍷", address:"Carrer de la Montcada 2, 08003 Barcelona, Spain" },
+      { id:"bcnd3", url:"https://www.cansole.com", title:"Can Solé Seafood Restaurant", desc:"A Barcelona institution since 1903, serving the finest fideuà (noodle paella) and fresh seafood in Barceloneta.", cuisine:"Catalan Seafood", price:3, rating:4.8, reviews:1234, distance:"25 min walk", kidFriendly:true, hours:"1:00 PM – 11:00 PM", emoji:"🦞", address:"Carrer de Sant Carles 4, 08003 Barcelona, Spain" },
     ],
     activities: [
       { id:"bcna1", url:"https://www.viator.com/searchResults/all?text=las+ramblas+barceloneta+beach+barcelona", title:"Las Ramblas & Barceloneta Beach", desc:"Stroll the famous promenade then relax on Barcelona's urban beach steps from the city center.", duration:3, price:0, rating:4.6, reviews:4321, distance:"20 min walk", fitness:"Low", family:true, accessibility:true, types:["Scenic","Beach Day","Shopping"], emoji:"🚶" },
@@ -1376,13 +1376,13 @@ const PORT_DATA = {
 
   "Rome, Italy": {
     excursions: [
-      { id:"romx1", url:"https://www.viator.com/searchResults/all?text=vatican+colosseum+tour+rome", title:"Vatican, Sistine Chapel & Colosseum", desc:"The ultimate Rome day — visit the Vatican Museums, Sistine Chapel, and the iconic Colosseum with a expert guide.", duration:8, price:3, rating:4.9, reviews:4321, distance:"1 hr drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Historical","Cultural"], emoji:"🏛️" , maxGroupSize:12 },
-      { id:"romx2", url:"https://www.viator.com/searchResults/all?text=rome+trevi+fountain+pantheon+tour", title:"Rome Highlights: Trevi & Pantheon", desc:"See the Trevi Fountain, Spanish Steps, Pantheon, and Piazza Navona on a guided walking tour of ancient Rome.", duration:5, price:2, rating:4.8, reviews:2876, distance:"1 hr drive", fitness:"Moderate", transport:["shuttle","walking"], family:true, accessibility:false, types:["Historical","Cultural","Scenic"], emoji:"⛲" , maxGroupSize:12 },
-      { id:"romx3", url:"https://www.viator.com/searchResults/all?text=rome+food+wine+tour", title:"Roman Food & Wine Tour", desc:"A culinary journey through Rome's best trattorias, wine bars, and street food markets with a local food guide.", duration:4, price:2, rating:4.8, reviews:1543, distance:"1 hr drive", fitness:"Low", transport:["shuttle","walking"], family:false, accessibility:true, types:["Food & Drink","Cultural"], emoji:"🍝" , maxGroupSize:12 },
+      { id:"romx1", url:"https://www.viator.com/searchResults/all?text=vatican+colosseum+tour+rome", title:"Vatican, Sistine Chapel & Colosseum", desc:"The ultimate Rome day — visit the Vatican Museums, Sistine Chapel, and the iconic Colosseum with a expert guide.", duration:8, price:3, rating:4.9, reviews:4321, distance:"1 hr drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Historical","Cultural"], emoji:"🏛️", maxGroupSize:12, meetingPoint:"Shuttle from Civitavecchia cruise port — confirm meeting location in booking; most operators pick up at the port gate", meetingTime:"Arrive 15 min before shuttle (typically 8 AM); Vatican gets very crowded — early entry tickets are essential", whatToBring:["Comfortable walking shoes (miles of cobblestone)","Shoulders and knees covered (required for Vatican)","Water bottle","Camera","Cash or card","Light jacket"] },
+      { id:"romx2", url:"https://www.viator.com/searchResults/all?text=rome+trevi+fountain+pantheon+tour", title:"Rome Highlights: Trevi & Pantheon", desc:"See the Trevi Fountain, Spanish Steps, Pantheon, and Piazza Navona on a guided walking tour of ancient Rome.", duration:5, price:2, rating:4.8, reviews:2876, distance:"1 hr drive", fitness:"Moderate", transport:["shuttle","walking"], family:true, accessibility:false, types:["Historical","Cultural","Scenic"], emoji:"⛲", maxGroupSize:12, meetingPoint:"Shuttle from Civitavecchia port — confirm pickup point in booking confirmation", meetingTime:"Arrive 15 min before shuttle; 1-hr drive to Rome so morning departure typical", whatToBring:["Comfortable walking shoes","Sunscreen","Water bottle","Camera","Cash for tips, gelato & coffee","Backpack"] },
+      { id:"romx3", url:"https://www.viator.com/searchResults/all?text=rome+food+wine+tour", title:"Roman Food & Wine Tour", desc:"A culinary journey through Rome's best trattorias, wine bars, and street food markets with a local food guide.", duration:4, price:2, rating:4.8, reviews:1543, distance:"1 hr drive", fitness:"Low", transport:["shuttle","walking"], family:false, accessibility:true, types:["Food & Drink","Cultural"], emoji:"🍝", maxGroupSize:12, meetingPoint:"Shuttle from Civitavecchia port; confirm exact Rome meeting point (typically Trastevere or Campo de' Fiori) in booking", meetingTime:"Arrive 15 min before tour; food tours often run midday or early evening", whatToBring:["Appetite (skip breakfast)","Comfortable shoes","Cash for tips","Camera","Wine glass is usually provided"] },
     ],
     dining: [
-      { id:"romd1", url:"https://www.tripadvisor.com/Restaurant_Review-g187791-d1016927-Reviews-Trattoria_da_Enzo_al_29-Rome_Lazio.html", title:"Trattoria da Enzo al 29", desc:"Tiny, beloved Trastevere trattoria with the finest cacio e pepe in Rome. Arrive early — no reservations.", cuisine:"Roman Trattoria", price:2, rating:4.9, reviews:3241, distance:"1 hr drive", kidFriendly:true, hours:"12:30 PM – 3:00 PM, 7:30 PM – 10:30 PM", emoji:"🍝" },
-      { id:"romd2", url:"https://www.pizzariumbonci.com", title:"Pizzarium Bonci", desc:"Rome's most famous pizza al taglio spot — innovative toppings on light, airy Roman-style focaccia.", cuisine:"Roman Pizza", price:1, rating:4.8, reviews:2134, distance:"1 hr drive", kidFriendly:true, hours:"11:00 AM – 10:00 PM", emoji:"🍕" },
+      { id:"romd1", url:"https://www.tripadvisor.com/Restaurant_Review-g187791-d1016927-Reviews-Trattoria_da_Enzo_al_29-Rome_Lazio.html", title:"Trattoria da Enzo al 29", desc:"Tiny, beloved Trastevere trattoria with the finest cacio e pepe in Rome. Arrive early — no reservations.", cuisine:"Roman Trattoria", price:2, rating:4.9, reviews:3241, distance:"1 hr drive", kidFriendly:true, hours:"12:30 PM – 3:00 PM, 7:30 PM – 10:30 PM", emoji:"🍝", address:"Via dei Vascellari 29, 00153 Rome, Italy" },
+      { id:"romd2", url:"https://www.pizzariumbonci.com", title:"Pizzarium Bonci", desc:"Rome's most famous pizza al taglio spot — innovative toppings on light, airy Roman-style focaccia.", cuisine:"Roman Pizza", price:1, rating:4.8, reviews:2134, distance:"1 hr drive", kidFriendly:true, hours:"11:00 AM – 10:00 PM", emoji:"🍕", address:"Via della Meloria 43, 00136 Rome, Italy" },
     ],
     activities: [
       { id:"roma1", url:"https://www.viator.com/searchResults/all?text=trastevere+walking+tour+rome", title:"Trastevere Neighborhood Walk", desc:"Wander the cobblestone streets of Rome's most charming medieval neighborhood. Alive with local color.", duration:2, price:0, rating:4.7, reviews:2341, distance:"1 hr drive", fitness:"Low", family:true, accessibility:false, types:["Cultural","Scenic"], emoji:"🚶" },
@@ -1392,14 +1392,14 @@ const PORT_DATA = {
 
   "Ocho Rios, Jamaica": {
     excursions: [
-      { id:"orx1", url:"https://www.dunnsriverfalls.com", title:"Dunn's River Falls Climb", desc:"Climb the iconic 600-foot cascading waterfall in a human chain — Jamaica's most famous experience.", duration:4, price:2, rating:4.8, reviews:3241, distance:"15 min drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Adventure","Water Activities","Scenic"], emoji:"💦" , maxGroupSize:50 },
-      { id:"orx2", url:"https://www.viator.com/searchResults/all?text=bobsled+jamaica+mystic+mountain", title:"Bobsled Jamaica & Zipline", desc:"Ride the world's only bobsled attraction in the tropics then soar on zip lines through the jungle canopy.", duration:3, price:2, rating:4.7, reviews:1876, distance:"20 min drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Adventure"], emoji:"🛷" , maxGroupSize:12 },
-      { id:"orx3", url:"https://www.viator.com/searchResults/all?text=blue+hole+secret+falls+ocho+rios", title:"Blue Hole Secret Falls", desc:"Swim in Jamaica's stunning hidden blue lagoon and waterfall — a less-crowded and magical alternative to Dunn's.", duration:4, price:2, rating:4.9, reviews:987, distance:"30 min drive", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure","Water Activities","Scenic"], emoji:"💎" , maxGroupSize:12 },
-      { id:"orx4", url:"https://www.viator.com/searchResults/all?text=catamaran+snorkel+ocho+rios", title:"Catamaran Snorkel & Beach Party", desc:"Sail on a party catamaran to a snorkel reef and private beach with an open bar and reggae music.", duration:4, price:2, rating:4.7, reviews:1543, distance:"10 min walk", fitness:"Low", transport:["boat"], family:false, accessibility:false, types:["Water Activities","Beach Day","Relaxation"], emoji:"⛵" , maxGroupSize:40 },
+      { id:"orx1", url:"https://www.dunnsriverfalls.com", title:"Dunn's River Falls Climb", desc:"Climb the iconic 600-foot cascading waterfall in a human chain — Jamaica's most famous experience.", duration:4, price:2, rating:4.8, reviews:3241, distance:"15 min drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Adventure","Water Activities","Scenic"], emoji:"💦", maxGroupSize:50, meetingPoint:"Shuttle pickup at the Ocho Rios cruise pier gate — look for Dunn's River Falls shuttle signs", meetingTime:"Arrive 15 min before departure; go early to beat the crowds", whatToBring:["Water shoes (required — no bare feet on the rocks)","Swimsuit","Change of dry clothes","Sunscreen","Waterproof camera or dry bag","Cash for locker rental, tips & park fees","Towel"] },
+      { id:"orx2", url:"https://www.viator.com/searchResults/all?text=bobsled+jamaica+mystic+mountain", title:"Bobsled Jamaica & Zipline", desc:"Ride the world's only bobsled attraction in the tropics then soar on zip lines through the jungle canopy.", duration:3, price:2, rating:4.7, reviews:1876, distance:"20 min drive", fitness:"Moderate", transport:["shuttle"], family:true, accessibility:false, types:["Adventure"], emoji:"🛷", maxGroupSize:12, meetingPoint:"Shuttle from cruise pier gate — look for Mystic Mountain signs; taxis also available at pier exit", meetingTime:"Arrive 15 min before shuttle departure", whatToBring:["Closed-toe shoes (recommended)","Change of clothes","Sunscreen","Camera","Cash for tips & souvenirs"] },
+      { id:"orx3", url:"https://www.viator.com/searchResults/all?text=blue+hole+secret+falls+ocho+rios", title:"Blue Hole Secret Falls", desc:"Swim in Jamaica's stunning hidden blue lagoon and waterfall — a less-crowded and magical alternative to Dunn's.", duration:4, price:2, rating:4.9, reviews:987, distance:"30 min drive", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure","Water Activities","Scenic"], emoji:"💎", maxGroupSize:12, meetingPoint:"Shuttle pickup at pier gate — confirm exact pickup spot with operator in booking confirmation", meetingTime:"Arrive 15 min before shuttle; 30-min drive so morning departures typical", whatToBring:["Swimsuit","Water shoes or grip sandals","Towel","Change of clothes","Waterproof bag for phone","Cash for tips","Bug spray","Sunscreen"] },
+      { id:"orx4", url:"https://www.viator.com/searchResults/all?text=catamaran+snorkel+ocho+rios", title:"Catamaran Snorkel & Beach Party", desc:"Sail on a party catamaran to a snorkel reef and private beach with an open bar and reggae music.", duration:4, price:2, rating:4.7, reviews:1543, distance:"10 min walk", fitness:"Low", transport:["boat"], family:false, accessibility:false, types:["Water Activities","Beach Day","Relaxation"], emoji:"⛵", maxGroupSize:40, meetingPoint:"Ocho Rios dock near the cruise pier — approximately 10-min walk; confirm exact berth in booking confirmation", meetingTime:"Check in 20 min before sail time", whatToBring:["Swimsuit","Towel","Reef-safe sunscreen","Sunglasses","Cash for tips","Camera"] },
     ],
     dining: [
-      { id:"ord1", url:"https://www.scotchies.com", title:"Scotchies Jerk Centre", desc:"The gold standard of Jamaican jerk — whole pork and chicken slow-cooked over pimento wood. A pilgrimage.", cuisine:"Jamaican Jerk", price:1, rating:4.9, reviews:2876, distance:"15 min drive", kidFriendly:true, hours:"11:00 AM – 11:00 PM", emoji:"🔥" },
-      { id:"ord2", url:"https://www.tripadvisor.com/Restaurant_Review-g147310-d786894-Reviews-Evita_s_Italian_Restaurant-Ocho_Rios_Saint_Ann_Parish_Jamaica.html", title:"Evita's Italian Restaurant", desc:"Charming hilltop Italian restaurant with stunning bay views and a famous lobster linguine made by Miss Eva herself.", cuisine:"Italian-Jamaican", price:2, rating:4.7, reviews:1234, distance:"20 min drive", kidFriendly:true, hours:"11:00 AM – 10:00 PM", emoji:"🦞" },
+      { id:"ord1", url:"https://www.scotchies.com", title:"Scotchies Jerk Centre", desc:"The gold standard of Jamaican jerk — whole pork and chicken slow-cooked over pimento wood. A pilgrimage.", cuisine:"Jamaican Jerk", price:1, rating:4.9, reviews:2876, distance:"15 min drive", kidFriendly:true, hours:"11:00 AM – 11:00 PM", emoji:"🔥", address:"Drax Hall, St. Ann, Ocho Rios, Jamaica" },
+      { id:"ord2", url:"https://www.tripadvisor.com/Restaurant_Review-g147310-d786894-Reviews-Evita_s_Italian_Restaurant-Ocho_Rios_Saint_Ann_Parish_Jamaica.html", title:"Evita's Italian Restaurant", desc:"Charming hilltop Italian restaurant with stunning bay views and a famous lobster linguine made by Miss Eva herself.", cuisine:"Italian-Jamaican", price:2, rating:4.7, reviews:1234, distance:"20 min drive", kidFriendly:true, hours:"11:00 AM – 10:00 PM", emoji:"🦞", address:"Eden Bower Rd, Ocho Rios, Jamaica" },
     ],
     activities: [
       { id:"ora1", url:"https://www.mysticmountain.com", title:"Mystic Mountain Reggae Park", desc:"Visit this Jamaican cultural park with a treetop bobsled, zipline, and reggae museum celebrating island culture.", duration:3, price:1, rating:4.6, reviews:1543, distance:"15 min drive", fitness:"Low", family:true, accessibility:true, types:["Cultural","Adventure"], emoji:"🎵" },
@@ -1412,13 +1412,13 @@ const PORT_DATA = {
 
   "George Town, Cayman": {
     excursions: [
-      { id:"gcx1", url:"https://www.viator.com/searchResults/all?text=stingray+city+grand+cayman", title:"Stingray City Sandbar", desc:"The world's most famous marine attraction — wade in the shallow sandbar and hand-feed friendly stingrays.", duration:3, price:2, rating:4.9, reviews:5432, distance:"30 min boat", fitness:"Low", transport:["boat"], family:true, accessibility:true, types:["Wildlife","Water Activities"], emoji:"🦈" , maxGroupSize:12 },
-      { id:"gcx2", url:"https://www.viator.com/searchResults/all?text=seven+mile+beach+grand+cayman", title:"Seven Mile Beach Day", desc:"Relax on one of the Caribbean's most beautiful beaches — powder-white sand and calm, crystal-clear turquoise water.", duration:4, price:0, rating:4.8, reviews:4321, distance:"15 min tender+taxi", fitness:"Low", transport:["boat","shuttle"], family:true, accessibility:true, types:["Beach Day","Relaxation"], emoji:"🏖️" , maxGroupSize:12 },
-      { id:"gcx3", url:"https://www.caymancrystalcaves.com", title:"Cayman Crystal Caves", desc:"Explore a stunning network of crystal-studded underground caves formed over millions of years.", duration:2, price:1, rating:4.7, reviews:876, distance:"30 min tender+drive", fitness:"Moderate", transport:["boat","shuttle"], family:true, accessibility:false, types:["Adventure","Scenic"], emoji:"🗿" , maxGroupSize:12 },
+      { id:"gcx1", url:"https://www.viator.com/searchResults/all?text=stingray+city+grand+cayman", title:"Stingray City Sandbar", desc:"The world's most famous marine attraction — wade in the shallow sandbar and hand-feed friendly stingrays.", duration:3, price:2, rating:4.9, reviews:5432, distance:"30 min boat", fitness:"Low", transport:["boat"], family:true, accessibility:true, types:["Wildlife","Water Activities"], emoji:"🦈", maxGroupSize:12, meetingPoint:"George Town tender dock — take the ship's tender to shore, then meet your operator's boat at the main George Town dock; confirm exact berth in booking", meetingTime:"Allow 30 min for tender + transfer; arrive at operator's dock 15 min before departure", whatToBring:["Swimsuit","Reef-safe sunscreen","Towel","Water shoes","Underwater camera","Cash for tips","Change of clothes"] },
+      { id:"gcx2", url:"https://www.viator.com/searchResults/all?text=seven+mile+beach+grand+cayman", title:"Seven Mile Beach Day", desc:"Relax on one of the Caribbean's most beautiful beaches — powder-white sand and calm, crystal-clear turquoise water.", duration:4, price:0, rating:4.8, reviews:4321, distance:"15 min tender+taxi", fitness:"Low", transport:["boat","shuttle"], family:true, accessibility:true, types:["Beach Day","Relaxation"], emoji:"🏖️", maxGroupSize:12, meetingPoint:"Take tender to George Town dock, then taxi to Seven Mile Beach (~$10–15 pp each way); negotiate round-trip fare with driver", meetingTime:"Self-paced; head out right after tendering to maximize beach time", whatToBring:["Swimsuit & towel","Sunscreen (UV is intense here)","Cash (USD and KYD accepted)","Water & snacks","Chair/umbrella rental cash","Camera"] },
+      { id:"gcx3", url:"https://www.caymancrystalcaves.com", title:"Cayman Crystal Caves", desc:"Explore a stunning network of crystal-studded underground caves formed over millions of years.", duration:2, price:1, rating:4.7, reviews:876, distance:"30 min tender+drive", fitness:"Moderate", transport:["boat","shuttle"], family:true, accessibility:false, types:["Adventure","Scenic"], emoji:"🗿", maxGroupSize:12, meetingPoint:"Shuttle from the George Town tender dock — operator picks up at the main arrival dock; confirm in booking", meetingTime:"Allow 30 min for tender; arrive at shuttle 15 min before departure", whatToBring:["Closed-toe shoes (cave floors are uneven)","Light jacket (caves are cool)","Camera","Cash for tips","Water bottle"] },
     ],
     dining: [
-      { id:"gcd1", url:"https://www.wharfrestaurant.com", title:"The Wharf Restaurant", desc:"Romantic waterfront dining with spectacular sunset views and fresh Caymanian seafood. A local institution.", cuisine:"Caribbean Seafood", price:3, rating:4.7, reviews:1234, distance:"20 min tender+walk", kidFriendly:false, hours:"5:00 PM – 10:00 PM", emoji:"🌅" },
-      { id:"gcd2", url:"https://www.tripadvisor.com/Restaurant_Review-g147372-d786870-Reviews-Calypso_Grill-George_Town_Grand_Cayman_Cayman_Islands.html", title:"Calypso Grill", desc:"Casual beachside grill popular with locals serving jerk chicken, fish tacos, and tropical cocktails.", cuisine:"Caribbean & Grill", price:2, rating:4.6, reviews:876, distance:"15 min tender+taxi", kidFriendly:true, hours:"11:00 AM – 9:00 PM", emoji:"🌴" },
+      { id:"gcd1", url:"https://www.wharfrestaurant.com", title:"The Wharf Restaurant", desc:"Romantic waterfront dining with spectacular sunset views and fresh Caymanian seafood. A local institution.", cuisine:"Caribbean Seafood", price:3, rating:4.7, reviews:1234, distance:"20 min tender+walk", kidFriendly:false, hours:"5:00 PM – 10:00 PM", emoji:"🌅", address:"43 N Church St, George Town, Grand Cayman KY1-1102" },
+      { id:"gcd2", url:"https://www.tripadvisor.com/Restaurant_Review-g147372-d786870-Reviews-Calypso_Grill-George_Town_Grand_Cayman_Cayman_Islands.html", title:"Calypso Grill", desc:"Casual beachside grill popular with locals serving jerk chicken, fish tacos, and tropical cocktails.", cuisine:"Caribbean & Grill", price:2, rating:4.6, reviews:876, distance:"15 min tender+taxi", kidFriendly:true, hours:"11:00 AM – 9:00 PM", emoji:"🌴", address:"Morgan's Harbour, West Bay, Grand Cayman KY1-1202" },
     ],
     activities: [
       { id:"gca1", url:"https://www.turtle.ky", title:"Cayman Turtle Centre", desc:"The world's only sea turtle farm — swim with green sea turtles and learn about conservation efforts.", duration:2, price:1, rating:4.5, reviews:1543, distance:"20 min tender+drive", fitness:"Low", family:true, accessibility:true, types:["Wildlife"], emoji:"🐢" },
@@ -1460,17 +1460,17 @@ const PORT_DATA = {
 
   "Skagway, AK": {
     excursions: [
-      { id:"skx1", url:"https://www.wpyr.com", title:"White Pass & Yukon Route Railway", desc:"Ride the historic narrow-gauge railway through dramatic mountain scenery on the same route as the 1898 Klondike Gold Rush stampeders. The most iconic excursion in Skagway.", duration:3, price:2, rating:4.9, reviews:3241, distance:"2 min walk", fitness:"Low", transport:["walking"], family:true, accessibility:true, types:["Scenic","Historical"], emoji:"🚂", maxGroupSize:12 },
-      { id:"skx2", url:"https://www.viator.com/searchResults/all?text=chilkat+bald+eagle+preserve+float+skagway", title:"Chilkat Bald Eagle Preserve Float", desc:"Float the Chilkat River through the world's largest congregation of bald eagles with a naturalist guide. Spectacular wildlife and mountain scenery.", duration:4, price:2, rating:4.8, reviews:876, distance:"45 min drive", fitness:"Low", transport:["shuttle","boat"], family:true, accessibility:false, types:["Wildlife","Scenic"], emoji:"🦅", maxGroupSize:12 },
-      { id:"skx3", url:"https://www.viator.com/searchResults/all?text=glacier+dog+sledding+helicopter+skagway", title:"Helicopter & Glacier Dog Sledding", desc:"Fly by helicopter to a remote glacier camp and mush your own dog sled team across the ice with an Iditarod-experienced musher.", duration:3, price:3, rating:4.9, reviews:654, distance:"5 min drive", fitness:"Low", transport:["shuttle"], family:true, accessibility:false, types:["Adventure","Wildlife"], emoji:"🐕", maxGroupSize:6 },
-      { id:"skx4", url:"https://www.viator.com/searchResults/all?text=skagway+mountain+biking+klondike+trail", title:"Klondike Trail Mountain Bike Adventure", desc:"Pedal the historic Klondike Gold Rush trail through old-growth forest and alpine meadows with stunning fjord views below.", duration:3, price:2, rating:4.7, reviews:432, distance:"5 min drive", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure","Scenic"], emoji:"🚵", maxGroupSize:12 },
-      { id:"skx5", url:"https://www.viator.com/searchResults/all?text=skagway+kayak+taiya+inlet", title:"Taiya Inlet Sea Kayaking", desc:"Paddle the glassy waters of Taiya Inlet surrounded by snow-capped peaks and towering glaciers with a certified guide.", duration:4, price:2, rating:4.8, reviews:543, distance:"10 min drive", fitness:"Moderate", transport:["shuttle"], family:false, accessibility:false, types:["Water Activities","Adventure","Scenic"], emoji:"🛶", maxGroupSize:12 },
+      { id:"skx1", url:"https://www.wpyr.com", title:"White Pass & Yukon Route Railway", desc:"Ride the historic narrow-gauge railway through dramatic mountain scenery on the same route as the 1898 Klondike Gold Rush stampeders. The most iconic excursion in Skagway.", duration:3, price:2, rating:4.9, reviews:3241, distance:"2 min walk", fitness:"Low", transport:["walking"], family:true, accessibility:true, types:["Scenic","Historical"], emoji:"🚂", maxGroupSize:12, meetingPoint:"White Pass & Yukon Route depot at 231 2nd Ave — a 2-min walk straight from the cruise pier along Broadway", meetingTime:"Arrive 20 min before departure; trains sell out so book and print tickets in advance", whatToBring:["Warm layers (it gets cold at elevation even in summer)","Rain jacket","Camera","Water bottle","Cash for snacks","Binoculars for wildlife spotting"] },
+      { id:"skx2", url:"https://www.viator.com/searchResults/all?text=chilkat+bald+eagle+preserve+float+skagway", title:"Chilkat Bald Eagle Preserve Float", desc:"Float the Chilkat River through the world's largest congregation of bald eagles with a naturalist guide. Spectacular wildlife and mountain scenery.", duration:4, price:2, rating:4.8, reviews:876, distance:"45 min drive", fitness:"Low", transport:["shuttle","boat"], family:true, accessibility:false, types:["Wildlife","Scenic"], emoji:"🦅", maxGroupSize:12, meetingPoint:"Shuttle pickup at cruise pier gate — look for your float tour operator's sign near the Broadway exit", meetingTime:"Arrive 15 min before shuttle; it's 45 min to the launch site so early morning departures are typical", whatToBring:["Warm waterproof layers (river is cold)","Rain jacket","Rubber-soled shoes","Binoculars","Camera","Bug spray","Cash for tips"] },
+      { id:"skx3", url:"https://www.viator.com/searchResults/all?text=glacier+dog+sledding+helicopter+skagway", title:"Helicopter & Glacier Dog Sledding", desc:"Fly by helicopter to a remote glacier camp and mush your own dog sled team across the ice with an Iditarod-experienced musher.", duration:3, price:3, rating:4.9, reviews:654, distance:"5 min drive", fitness:"Low", transport:["shuttle"], family:true, accessibility:false, types:["Adventure","Wildlife"], emoji:"🐕", maxGroupSize:6, meetingPoint:"Helicopter pad near the Skagway waterfront — shuttle from pier gate, ~5-min drive; confirm exact staging area in booking", meetingTime:"Arrive at terminal 20 min before flight; weight limits apply (confirm at booking)", whatToBring:["Very warm layers — glaciers are frigid even in summer","Gloves","Sunglasses (snow glare)","Sunscreen","Camera","No loose scarves near helicopter","Cash for tips"] },
+      { id:"skx4", url:"https://www.viator.com/searchResults/all?text=skagway+mountain+biking+klondike+trail", title:"Klondike Trail Mountain Bike Adventure", desc:"Pedal the historic Klondike Gold Rush trail through old-growth forest and alpine meadows with stunning fjord views below.", duration:3, price:2, rating:4.7, reviews:432, distance:"5 min drive", fitness:"High", transport:["shuttle"], family:false, accessibility:false, types:["Adventure","Scenic"], emoji:"🚵", maxGroupSize:12, meetingPoint:"Shuttle from cruise pier gate — look for bike tour operator sign at the Broadway exit", meetingTime:"Arrive 15 min before departure", whatToBring:["Athletic clothes","Sturdy closed-toe shoes","Rain jacket","Gloves","Helmet (provided)","Sunscreen","Water bottle","Cash for tips"] },
+      { id:"skx5", url:"https://www.viator.com/searchResults/all?text=skagway+kayak+taiya+inlet", title:"Taiya Inlet Sea Kayaking", desc:"Paddle the glassy waters of Taiya Inlet surrounded by snow-capped peaks and towering glaciers with a certified guide.", duration:4, price:2, rating:4.8, reviews:543, distance:"10 min drive", fitness:"Moderate", transport:["shuttle"], family:false, accessibility:false, types:["Water Activities","Adventure","Scenic"], emoji:"🛶", maxGroupSize:12, meetingPoint:"Shuttle from cruise pier gate to the Dyea launch site (~10-min drive); confirm pickup in booking", meetingTime:"Arrive at pier gate 15 min before shuttle departure", whatToBring:["Quick-dry layers","Waterproof jacket","Water shoes","Sunscreen","Sunglasses","Camera in waterproof bag","Cash for tips","Bug spray"] },
     ],
     dining: [
-      { id:"skd1", url:"https://www.skagwaybrewing.com", title:"Skagway Brewing Company", desc:"Beloved local brewery in a restored 1897 building, serving craft beers and hearty comfort food. A Skagway institution.", cuisine:"American Pub", price:1, rating:4.7, reviews:1543, distance:"5 min walk", kidFriendly:true, hours:"11:00 AM – 9:00 PM", emoji:"🍺" },
-      { id:"skd2", url:"https://www.tripadvisor.com/Restaurant_Review-g60893-d436696-Reviews-Starfire-Skagway_Alaska.html", title:"Starfire Thai Restaurant", desc:"A legendary surprise in Alaska — authentic Thai cuisine that locals and cruise passengers rave about year after year.", cuisine:"Thai", price:1, rating:4.8, reviews:876, distance:"8 min walk", kidFriendly:true, hours:"11:00 AM – 8:00 PM", emoji:"🍜" },
-      { id:"skd3", url:"https://www.skagwayfishcompany.com", title:"Skagway Fish Company", desc:"Popular waterfront seafood restaurant serving locally caught salmon, halibut, and crab in a warm, lodge-style dining room. Reservations are highly recommended for dinner.", cuisine:"Seafood", price:2, rating:4.6, reviews:987, distance:"6 min walk", kidFriendly:true, hours:"11:30 AM – 9:00 PM", emoji:"🐟" },
-      { id:"skd4", url:"https://www.skagwayinn.com/dining", title:"Olivia's at the Historic Skagway Inn", desc:"Charming bistro inside a restored Victorian inn, serving fresh Alaskan salmon, chowder, and homemade desserts.", cuisine:"Contemporary Alaskan", price:2, rating:4.6, reviews:432, distance:"6 min walk", kidFriendly:true, hours:"7:00 AM – 8:00 PM", emoji:"🏡" },
+      { id:"skd1", url:"https://www.skagwaybrewing.com", title:"Skagway Brewing Company", desc:"Beloved local brewery in a restored 1897 building, serving craft beers and hearty comfort food. A Skagway institution.", cuisine:"American Pub", price:1, rating:4.7, reviews:1543, distance:"5 min walk", kidFriendly:true, hours:"11:00 AM – 9:00 PM", emoji:"🍺", address:"7th Ave & Broadway, Skagway, AK 99840" },
+      { id:"skd2", url:"https://www.tripadvisor.com/Restaurant_Review-g60893-d436696-Reviews-Starfire-Skagway_Alaska.html", title:"Starfire Thai Restaurant", desc:"A legendary surprise in Alaska — authentic Thai cuisine that locals and cruise passengers rave about year after year.", cuisine:"Thai", price:1, rating:4.8, reviews:876, distance:"8 min walk", kidFriendly:true, hours:"11:00 AM – 8:00 PM", emoji:"🍜", address:"4th Ave & Spring St, Skagway, AK 99840" },
+      { id:"skd3", url:"https://www.skagwayfishcompany.com", title:"Skagway Fish Company", desc:"Popular waterfront seafood restaurant serving locally caught salmon, halibut, and crab in a warm, lodge-style dining room. Reservations are highly recommended for dinner.", cuisine:"Seafood", price:2, rating:4.6, reviews:987, distance:"6 min walk", kidFriendly:true, hours:"11:30 AM – 9:00 PM", emoji:"🐟", address:"201 Congress Way, Skagway, AK 99840" },
+      { id:"skd4", url:"https://www.skagwayinn.com/dining", title:"Olivia's at the Historic Skagway Inn", desc:"Charming bistro inside a restored Victorian inn, serving fresh Alaskan salmon, chowder, and homemade desserts.", cuisine:"Contemporary Alaskan", price:2, rating:4.6, reviews:432, distance:"6 min walk", kidFriendly:true, hours:"7:00 AM – 8:00 PM", emoji:"🏡", address:"655 Broadway, Skagway, AK 99840" },
     ],
     activities: [
       { id:"ska1", url:"https://www.nps.gov/klgo/index.htm", title:"Klondike Gold Rush National Historical Park", desc:"Free visitor center and ranger-led tours exploring the 1898 Gold Rush that put Skagway on the map. Fascinating history.", duration:2, price:0, rating:4.7, reviews:2341, distance:"3 min walk", fitness:"Low", family:true, accessibility:true, types:["Historical","Cultural"], emoji:"⛏️" },
@@ -1482,10 +1482,10 @@ const PORT_DATA = {
 
   "Victoria, BC": {
     excursions: [
-      { id:"vicx1", url:"https://www.discoverthepast.com", title:"Ghostly Walks Route 1 — Old Town Tour", desc:"Discover the Past guides you through Victoria's historic Old Town after dark, uncovering tales of hangings, hauntings, and eccentric characters at eight atmospheric locations. Victoria's most beloved evening walking experience — rain or shine. Departs nightly at 9 PM from the Visitor Centre at 812 Wharf Street.", duration:1, price:1, rating:4.7, reviews:989, distance:"20 min walk from pier", fitness:"Low", transport:["walking"], family:true, accessibility:false, types:["Cultural","Historical","Scenic"], emoji:"👻", maxGroupSize:12 },
-      { id:"vicx2", url:"https://www.tallyhotours.com", title:"Tally-Ho Horse-Drawn Carriage Tour", desc:"Victoria's iconic lantern-lit carriage rides through the historic Inner Harbour depart from beside the BC Legislature — a 10-min walk from Ogden Point. Private carriages seat up to 6 guests. The 45-min Salish Sea route is the best evening option. Operates until 8 PM — ideal for ships arriving by 6 PM.", duration:1, price:2, rating:4.7, reviews:417, distance:"10 min walk from pier", fitness:"Low", transport:["walking"], family:true, accessibility:true, types:["Cultural","Historical","Scenic"], emoji:"🐴", maxGroupSize:6 },
-      { id:"vicx3", url:"https://www.butchartgardens.com", title:"Butchart Gardens — Night Illuminations", desc:"One of the world's great gardens, transformed after dusk by 3,000+ lights. Open Wednesday–Sunday evenings until 10 PM (viewing until 11 PM); Saturday nights in July–August include a fireworks show included with admission. Adult admission $44.25 CAD. 22 km from Ogden Point — a 25-min taxi ride. Best for ships arriving by 6 PM.", duration:2, price:2, rating:4.7, reviews:11810, distance:"25 min drive from pier", fitness:"Low", transport:["taxi"], family:true, accessibility:true, types:["Scenic","Cultural","Historical"], emoji:"🌺", maxGroupSize:null },
-      { id:"vicx4", url:"https://www.victoriakayak.com", title:"Victoria Kayak — Sunset Harbour Paddle", desc:"Paddle the Inner Harbour as the sun sets, gliding past the Empress Hotel and BC Legislature on one of Victoria's most iconic waterways. Women-owned and operated since 1996; max 6 guests per tour. Located at 1006 Wharf Street, a 20-min walk from the pier. Summer hours 9 AM–8 PM — last tours depart around 6 PM, making this ideal for ships arriving by 6 PM.", duration:2, price:2, rating:4.9, reviews:283, distance:"20 min walk or short taxi from pier", fitness:"Moderate", transport:["walking","taxi"], family:true, accessibility:false, types:["Water Activities","Scenic","Wildlife"], emoji:"🚣", maxGroupSize:6 },
+      { id:"vicx1", url:"https://www.discoverthepast.com", title:"Ghostly Walks Route 1 — Old Town Tour", desc:"Discover the Past guides you through Victoria's historic Old Town after dark, uncovering tales of hangings, hauntings, and eccentric characters at eight atmospheric locations. Victoria's most beloved evening walking experience — rain or shine. Departs nightly at 9 PM from the Visitor Centre at 812 Wharf Street.", duration:1, price:1, rating:4.7, reviews:989, distance:"20 min walk from pier", fitness:"Low", transport:["walking"], family:true, accessibility:false, types:["Cultural","Historical","Scenic"], emoji:"👻", maxGroupSize:12, meetingPoint:"Tourism Victoria Visitor Centre at 812 Wharf Street — walk 20 min north along the waterfront from Ogden Point, past Fisherman's Wharf", meetingTime:"Tour departs nightly at 9:00 PM sharp — arrive 10 min early", whatToBring:["Comfortable walking shoes","Rain jacket (Victoria is rainy)","Warm layers for the evening","Camera"] },
+      { id:"vicx2", url:"https://www.tallyhotours.com", title:"Tally-Ho Horse-Drawn Carriage Tour", desc:"Victoria's iconic lantern-lit carriage rides through the historic Inner Harbour depart from beside the BC Legislature — a 10-min walk from Ogden Point. Private carriages seat up to 6 guests. The 45-min Salish Sea route is the best evening option. Operates until 8 PM — ideal for ships arriving by 6 PM.", duration:1, price:2, rating:4.7, reviews:417, distance:"10 min walk from pier", fitness:"Low", transport:["walking"], family:true, accessibility:true, types:["Cultural","Historical","Scenic"], emoji:"🐴", maxGroupSize:6, meetingPoint:"Beside the BC Legislature at 501 Belleville St — 10-min walk east from Ogden Point along Dallas Road and Belleville Street", meetingTime:"Book a specific time in advance; carriages queue at the Legislature from late afternoon until 8 PM", whatToBring:["Light jacket for the evening breeze","Camera","Cash or card for booking"] },
+      { id:"vicx3", url:"https://www.butchartgardens.com", title:"Butchart Gardens — Night Illuminations", desc:"One of the world's great gardens, transformed after dusk by 3,000+ lights. Open Wednesday–Sunday evenings until 10 PM (viewing until 11 PM); Saturday nights in July–August include a fireworks show included with admission. Adult admission $44.25 CAD. 22 km from Ogden Point — a 25-min taxi ride. Best for ships arriving by 6 PM.", duration:2, price:2, rating:4.7, reviews:11810, distance:"25 min drive from pier", fitness:"Low", transport:["taxi"], family:true, accessibility:true, types:["Scenic","Cultural","Historical"], emoji:"🌺", maxGroupSize:null, meetingPoint:"800 Benvenuto Ave, Brentwood Bay — take a taxi from Ogden Point cruise terminal (~$40–50 CAD each way; negotiate round trip)", meetingTime:"Gardens are illuminated at dusk; aim to arrive by 8:30–9:00 PM; fireworks are Saturday nights at 10:15 PM in July–Aug", whatToBring:["Comfortable walking shoes","Layers (evenings are cool)","Camera","CAD cash or card for admission & gift shop","Insect repellent for evening visits"] },
+      { id:"vicx4", url:"https://www.victoriakayak.com", title:"Victoria Kayak — Sunset Harbour Paddle", desc:"Paddle the Inner Harbour as the sun sets, gliding past the Empress Hotel and BC Legislature on one of Victoria's most iconic waterways. Women-owned and operated since 1996; max 6 guests per tour. Located at 1006 Wharf Street, a 20-min walk from the pier. Summer hours 9 AM–8 PM — last tours depart around 6 PM, making this ideal for ships arriving by 6 PM.", duration:2, price:2, rating:4.9, reviews:283, distance:"20 min walk or short taxi from pier", fitness:"Moderate", transport:["walking","taxi"], family:true, accessibility:false, types:["Water Activities","Scenic","Wildlife"], emoji:"🚣", maxGroupSize:6, meetingPoint:"Victoria Kayak at 1006 Wharf Street — walk 20 min along the Inner Harbour from Ogden Point, or take a taxi (~$10 CAD)", meetingTime:"Check in 15 min before your booked departure; last tours depart ~6 PM", whatToBring:["Layers (it cools down on the water)","Light waterproof jacket","Secure footwear","Camera in a waterproof bag","Cash for tips"] },
     ],
     dining: [],
     activities: [],
@@ -1778,12 +1778,43 @@ function ResultCard({ item, category, planItem, isAdded, onToggle, onTimeChange,
           </div>
         )}
 
+        {/* Dining address */}
+        {item.address && (
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.address)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display:"flex", alignItems:"center", gap:4, fontSize:12, color:"#1d4ed8", textDecoration:"none", marginTop:6 }}
+          >
+            🗺️ {item.address}
+          </a>
+        )}
+
         {/* Expanded detail */}
         {expanded && (
-          <div style={{ background: "#F4F6F9", borderRadius: 10, padding: "0.75rem", marginBottom: 10, fontSize: 13, color: "#334155", lineHeight: 1.6 }}>
+          <div style={{ background: "#F4F6F9", borderRadius: 10, padding: "0.75rem", marginTop:8, marginBottom: 10, fontSize: 13, color: "#334155", lineHeight: 1.6, display:"flex", flexDirection:"column", gap:6 }}>
             {item.fitness && <div><strong>Fitness level:</strong> {item.fitness}</div>}
             {item.transport && <div><strong>Transport:</strong> {item.transport.join(", ")}</div>}
             {item.types && <div><strong>Type:</strong> {item.types.join(", ")}</div>}
+            {item.meetingPoint && (
+              <div style={{ borderTop:"1px solid #e2e8f0", paddingTop:6 }}>
+                <div style={{ fontWeight:700, marginBottom:2 }}>📍 Meeting point</div>
+                <div>{item.meetingPoint}</div>
+              </div>
+            )}
+            {item.meetingTime && (
+              <div>
+                <span style={{ fontWeight:700 }}>⏰ Meeting time: </span>{item.meetingTime}
+              </div>
+            )}
+            {item.whatToBring && item.whatToBring.length > 0 && (
+              <div style={{ borderTop:"1px solid #e2e8f0", paddingTop:6 }}>
+                <div style={{ fontWeight:700, marginBottom:4 }}>🎒 What to bring</div>
+                <ul style={{ margin:0, paddingLeft:16 }}>
+                  {item.whatToBring.map((thing, i) => <li key={i}>{thing}</li>)}
+                </ul>
+              </div>
+            )}
           </div>
         )}
 
@@ -2847,8 +2878,11 @@ function PlanScreen({ appState, updateAppState, navigate }) {
   const [manualConf, setManualConf] = useState("");
   const [manualNotes, setManualNotes] = useState("");
   const [manualCategory, setManualCategory] = useState("excursions");
+  const [planPort, setPlanPort] = useState(null);
 
-  const currentPort = selectedPort?.port;
+  const portDayOptions = itinerary.filter(p => !p.sea_day && p.arrival !== "Embarkation" && p.departure !== "Disembarkation");
+  const activePort = planPort || selectedPort || portDayOptions[0] || null;
+  const currentPort = activePort?.port;
   const currentPortPlan = plan.filter(p => p.port === currentPort);
   const bookedItems = plan.filter(p => (p.booked || p.isManual) && p.port === currentPort);
   const cruisePorts = itinerary.filter(p => !p.sea_day);
@@ -2921,9 +2955,9 @@ function PlanScreen({ appState, updateAppState, navigate }) {
     );
   }
 
-  const timeline = buildTimeline(currentPortPlan, selectedPort);
-  const safetyTips = getSafetyTips(selectedPort?.port);
-  const win = selectedPort ? getPortWindow(selectedPort) : null;
+  const timeline = buildTimeline(currentPortPlan, activePort);
+  const safetyTips = getSafetyTips(activePort?.port);
+  const win = activePort ? getPortWindow(activePort) : null;
 
   const typeColors = {
     logistics: { bg:"#f1f5f9", border:"#cbd5e1", dot:"#64748b" },
@@ -2934,8 +2968,8 @@ function PlanScreen({ appState, updateAppState, navigate }) {
   };
 
   const shareText = [
-    `🚢 Skip the Ship Plan — ${viewMode === "cruise" ? "Full Cruise" : selectedPort?.port || "Port Day"}`,
-    `📅 ${viewMode === "cruise" ? cruise?.ship || "" : selectedPort?.date || ""} · ${cruise?.ship || ""}`,
+    `🚢 Skip the Ship Plan — ${viewMode === "cruise" ? "Full Cruise" : activePort?.port || "Port Day"}`,
+    `📅 ${viewMode === "cruise" ? cruise?.ship || "" : activePort?.date || ""} · ${cruise?.ship || ""}`,
     viewMode === "port" && win ? `⏱️ Port window: ${win.start} – ${win.end}` : "",
     "",
     "📋 MY TIMELINE:",
@@ -2961,7 +2995,7 @@ function PlanScreen({ appState, updateAppState, navigate }) {
       {/* Header */}
       <div style={{ marginBottom:"1rem" }}>
         <h2 style={{ fontSize:20, fontWeight:700, marginBottom:2 }}>{viewMode === "cruise" ? "Full Cruise Plan" : "My Port Day Plan"}</h2>
-        {viewMode === "port" && selectedPort && <p style={{ fontSize:13, color:"#334155" }}>{selectedPort.port} · {selectedPort.date}</p>}
+        {viewMode === "port" && activePort && <p style={{ fontSize:13, color:"#334155" }}>{activePort.port} · {activePort.date}</p>}
         {cruise?.ship && <p style={{ fontSize:12, color:"#94a3b8" }}>{cruise.ship} · {cruise.sail_date}</p>}
       </div>
       <div style={{ display:"flex", gap:10, marginBottom:"1rem" }}>
@@ -2981,8 +3015,27 @@ function PlanScreen({ appState, updateAppState, navigate }) {
         </button>
       </div>
 
+      {/* Port selector */}
+      {viewMode === "port" && portDayOptions.length > 1 && (
+        <div style={{ marginBottom:"1rem" }}>
+          <div style={{ fontSize:11, fontWeight:700, color:"#94a3b8", letterSpacing:"0.05em", marginBottom:6, textTransform:"uppercase" }}>Select Port</div>
+          <div style={{ display:"flex", flexWrap:"wrap", gap:6 }}>
+            {portDayOptions.map(p => (
+              <button
+                key={p.port}
+                className={activePort?.port === p.port ? "btn btn-primary" : "btn btn-outline"}
+                style={{ fontSize:12, padding:"6px 14px", minHeight:36 }}
+                onClick={() => setPlanPort(p)}
+              >
+                {p.port.split(",")[0]}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Port window banner */}
-      {win && (
+      {viewMode !== "cruise" && win && (
         <div style={{ background:"#fdf8ed", border:"1px solid #C9A84C", borderRadius:12, padding:"0.75rem 1rem", marginBottom:"1rem", display:"flex", gap:10, alignItems:"center" }}>
           <span style={{ fontSize:20 }}>✅</span>
           <div>
@@ -2993,7 +3046,7 @@ function PlanScreen({ appState, updateAppState, navigate }) {
       )}
 
       {/* Tender warning */}
-      {selectedPort?.tender && (
+      {viewMode !== "cruise" && activePort?.tender && (
         <div className="warning-box" style={{ marginBottom:"1rem" }}>
           <span>🚢</span>
           <span><strong>Tender port</strong> — factor in 30 min each way for the tender boat when planning your day.</span>
@@ -3186,128 +3239,143 @@ function PlanScreen({ appState, updateAppState, navigate }) {
         </div>
       )}
 
-      {/* Timeline */}
-      <div className="section-card" style={{ marginBottom:"1rem" }}>
-        <div className="section-header">
-          <span>🗓️</span>
-          <span className="section-title">Your Day Timeline</span>
-        </div>
-        <div style={{ padding:"0.75rem 1.25rem" }}>
-          {timeline.map((event, i) => {
-            const colors = typeColors[event.type] || typeColors.logistics;
-            const isLast = i === timeline.length - 1;
-            return (
-              <div key={i} style={{ display:"flex", gap:12, marginBottom: isLast ? 0 : 4 }}>
-                {/* Time column */}
-                <div style={{ width:60, flexShrink:0, paddingTop:12 }}>
-                  <div style={{ fontSize:11, fontWeight:700, color:"#64748b", textAlign:"right" }}>{event.time}</div>
-                </div>
-
-                {/* Line + dot */}
-                <div style={{ display:"flex", flexDirection:"column", alignItems:"center", width:20, flexShrink:0 }}>
-                  <div style={{ width:12, height:12, borderRadius:"50%", background:colors.dot, marginTop:14, flexShrink:0, zIndex:1 }} />
-                  {!isLast && <div style={{ width:2, flex:1, background:"#e2e8f0", marginTop:2 }} />}
-                </div>
-
-                {/* Event card */}
-                <div style={{ flex:1, background:colors.bg, border:`1px solid ${colors.border}`, borderRadius:10, padding:"0.625rem 0.875rem", marginBottom:8 }}>
-                  <div style={{ display:"flex", alignItems:"center", gap:6, marginBottom:2 }}>
-                    <span style={{ fontSize:16 }}>{event.icon}</span>
-                    <span style={{ fontSize:14, fontWeight:700, color:"#0D1B2A" }}>{event.title}</span>
+      {viewMode !== "cruise" && (
+        <>
+          {/* Timeline */}
+          <div className="section-card" style={{ marginBottom:"1rem" }}>
+            <div className="section-header">
+              <span>🗓️</span>
+              <span className="section-title">Your Day Timeline</span>
+            </div>
+            <div style={{ padding:"0.75rem 1.25rem" }}>
+              {timeline.map((event, i) => {
+                const colors = typeColors[event.type] || typeColors.logistics;
+                const isLast = i === timeline.length - 1;
+                return (
+                  <div key={i} style={{ display:"flex", gap:12, marginBottom: isLast ? 0 : 4 }}>
+                    <div style={{ width:60, flexShrink:0, paddingTop:12 }}>
+                      <div style={{ fontSize:11, fontWeight:700, color:"#64748b", textAlign:"right" }}>{event.time}</div>
+                    </div>
+                    <div style={{ display:"flex", flexDirection:"column", alignItems:"center", width:20, flexShrink:0 }}>
+                      <div style={{ width:12, height:12, borderRadius:"50%", background:colors.dot, marginTop:14, flexShrink:0, zIndex:1 }} />
+                      {!isLast && <div style={{ width:2, flex:1, background:"#e2e8f0", marginTop:2 }} />}
+                    </div>
+                    <div style={{ flex:1, background:colors.bg, border:`1px solid ${colors.border}`, borderRadius:10, padding:"0.625rem 0.875rem", marginBottom:8 }}>
+                      <div style={{ display:"flex", alignItems:"center", gap:6, marginBottom:2 }}>
+                        <span style={{ fontSize:16 }}>{event.icon}</span>
+                        <span style={{ fontSize:14, fontWeight:700, color:"#0D1B2A" }}>{event.title}</span>
+                      </div>
+                      <div style={{ fontSize:12, color:"#334155", lineHeight:1.4 }}>{event.desc}</div>
+                    </div>
                   </div>
-                  <div style={{ fontSize:12, color:"#334155", lineHeight:1.4 }}>{event.desc}</div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Selected items summary */}
+          <div className="section-card" style={{ marginBottom:"1rem" }}>
+            <div className="section-header"><span>📋</span><span className="section-title">Selected Items ({currentPortPlan.length})</span></div>
+            {currentPortPlan.map(item => (
+              <div key={item.id} style={{ padding:"0.75rem 1.25rem", borderBottom:"1px solid #f1f5f9", display:"flex", gap:10, alignItems:"center" }}>
+                <span style={{ fontSize:24, flexShrink:0 }}>{item.emoji}</span>
+                <div style={{ flex:1 }}>
+                  <div style={{ fontSize:14, fontWeight:600 }}>{item.title}</div>
+                  {(item.distance || item.rating) && (
+                    <div style={{ fontSize:12, color:"#64748b" }}>
+                      {[item.distance, item.rating ? `⭐ ${item.rating.toFixed(1)}` : null].filter(Boolean).join(" · ")}
+                    </div>
+                  )}
+                  {item.meetingPoint && (
+                    <div style={{ fontSize:12, color:"#334155", marginTop:4 }}>📍 <strong>Meet:</strong> {item.meetingPoint}</div>
+                  )}
+                  {item.meetingTime && (
+                    <div style={{ fontSize:12, color:"#334155" }}>⏰ <strong>Time:</strong> {item.meetingTime}</div>
+                  )}
+                  {item.address && (
+                    <a
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.address)}`}
+                      target="_blank" rel="noopener noreferrer"
+                      style={{ fontSize:12, color:"#1d4ed8", textDecoration:"none", display:"block", marginTop:2 }}
+                    >
+                      🗺️ {item.address}
+                    </a>
+                  )}
+                  {item.whatToBring && item.whatToBring.length > 0 && (
+                    <div style={{ fontSize:12, color:"#475569", marginTop:4 }}>
+                      🎒 {item.whatToBring.join(" · ")}
+                    </div>
+                  )}
+                </div>
+                <div style={{ display:"flex", flexDirection:"column", gap:4, alignItems:"flex-end" }}>
+                  <span className={`cat-pill ${
+                    item.category==="excursions"?"cat-excursion":
+                    item.category==="dining"?"cat-dining":
+                    item.category==="resorts"?"cat-resort":"cat-activity"
+                  }`} style={{ fontSize:10 }}>
+                    {item.category.slice(0,-1)}
+                  </span>
+                  {item.url && (
+                    <a href={item.url} target="_blank" rel="noopener noreferrer"
+                      style={{ fontSize:11, fontWeight:700, color:"#C9A84C", textDecoration:"none" }}>
+                      🔗 Book
+                    </a>
+                  )}
                 </div>
               </div>
-            );
-          })}
-        </div>
-      </div>
+            ))}
+          </div>
 
-      {/* Selected items summary */}
-      <div className="section-card" style={{ marginBottom:"1rem" }}>
-        <div className="section-header"><span>📋</span><span className="section-title">Selected Items ({currentPortPlan.length})</span></div>
-        {currentPortPlan.map(item => (
-          <div key={item.id} style={{ padding:"0.75rem 1.25rem", borderBottom:"1px solid #f1f5f9", display:"flex", gap:10, alignItems:"center" }}>
-            <span style={{ fontSize:24, flexShrink:0 }}>{item.emoji}</span>
-            <div style={{ flex:1 }}>
-              <div style={{ fontSize:14, fontWeight:600 }}>{item.title}</div>
-              {(item.distance || item.rating) && (
-                <div style={{ fontSize:12, color:"#64748b" }}>
-                  {[item.distance, item.rating ? `⭐ ${item.rating.toFixed(1)}` : null].filter(Boolean).join(" · ")}
+          {/* Transportation notes */}
+          <div className="section-card" style={{ marginBottom:"1rem" }}>
+            <div className="section-header"><span>🚐</span><span className="section-title">Transportation Notes</span></div>
+            <div style={{ padding:"0.875rem 1.25rem" }}>
+              {[
+                activePort?.tender ? "🚢 Tender port — water taxi to shore, ~20–30 min each way. Check tender schedule on the ship." : null,
+                currentPortPlan.some(p => p.transport?.includes("boat")) ? "⛵ One or more excursions require a boat transfer. Confirm meeting point with operator." : null,
+                currentPortPlan.some(p => p.transport?.includes("shuttle")) ? "🚐 Shuttle/van transport needed for some excursions. Confirm pickup location at the pier." : null,
+                currentPortPlan.some(p => p.distance?.includes("taxi")) ? "🚕 Taxis needed — agree on fare before departing. Only use official port taxis." : null,
+                currentPortPlan.some(p => p.transport?.includes("walking") || p.distance?.includes("walk")) ? "🚶 Some options are walkable from the pier — easy and free." : null,
+                "⏱️ Always allow at least 60 minutes to return to the ship before departure.",
+              ].filter(Boolean).map((note, i) => (
+                <div key={i} style={{ display:"flex", gap:8, marginBottom:8, fontSize:13, color:"#334155", lineHeight:1.5 }}>
+                  <span style={{ flexShrink:0, marginTop:1 }}></span>
+                  <span>{note}</span>
                 </div>
-              )}
-            </div>
-            <div style={{ display:"flex", flexDirection:"column", gap:4, alignItems:"flex-end" }}>
-              <span className={`cat-pill ${
-                item.category==="excursions"?"cat-excursion":
-                item.category==="dining"?"cat-dining":
-                item.category==="resorts"?"cat-resort":"cat-activity"
-              }`} style={{ fontSize:10 }}>
-                {item.category.slice(0,-1)}
-              </span>
-              {item.url && (
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ fontSize:11, fontWeight:700, color:"#C9A84C", textDecoration:"none" }}
-                >
-                  🔗 Book
-                </a>
-              )}
+              ))}
             </div>
           </div>
-        ))}
-      </div>
 
-      {/* Transportation notes */}
-      <div className="section-card" style={{ marginBottom:"1rem" }}>
-        <div className="section-header"><span>🚐</span><span className="section-title">Transportation Notes</span></div>
-        <div style={{ padding:"0.875rem 1.25rem" }}>
-          {[
-            selectedPort?.tender ? "🚢 Tender port — water taxi to shore, ~20–30 min each way. Check tender schedule on the ship." : null,
-            currentPortPlan.some(p => p.transport?.includes("boat")) ? "⛵ One or more excursions require a boat transfer. Confirm meeting point with operator." : null,
-            currentPortPlan.some(p => p.transport?.includes("shuttle")) ? "🚐 Shuttle/van transport needed for some excursions. Confirm pickup location at the pier." : null,
-            currentPortPlan.some(p => p.distance?.includes("taxi")) ? "🚕 Taxis needed — agree on fare before departing. Only use official port taxis." : null,
-            currentPortPlan.some(p => p.transport?.includes("walking") || p.distance?.includes("walk")) ? "🚶 Some options are walkable from the pier — easy and free." : null,
-            "⏱️ Always allow at least 60 minutes to return to the ship before departure.",
-          ].filter(Boolean).map((note, i) => (
-            <div key={i} style={{ display:"flex", gap:8, marginBottom:8, fontSize:13, color:"#334155", lineHeight:1.5 }}>
-              <span style={{ flexShrink:0, marginTop:1 }}></span>
-              <span>{note}</span>
+          {/* Safety tips */}
+          <div className="section-card" style={{ marginBottom:"1rem" }}>
+            <div className="section-header"><span>⚠️</span><span className="section-title">Safety Tips for {activePort?.port?.split(",")[0] || "This Port"}</span></div>
+            <div style={{ padding:"0.875rem 1.25rem" }}>
+              {safetyTips.map((tip, i) => (
+                <div key={i} style={{ display:"flex", gap:10, marginBottom:8, fontSize:13, color:"#334155", lineHeight:1.5 }}>
+                  <span style={{ color:"#0D1B2A", fontWeight:700, flexShrink:0 }}>✓</span>
+                  <span>{tip}</span>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Safety tips */}
-      <div className="section-card" style={{ marginBottom:"1rem" }}>
-        <div className="section-header"><span>⚠️</span><span className="section-title">Safety Tips for {selectedPort?.port?.split(",")[0] || "This Port"}</span></div>
-        <div style={{ padding:"0.875rem 1.25rem" }}>
-          {safetyTips.map((tip, i) => (
-            <div key={i} style={{ display:"flex", gap:10, marginBottom:8, fontSize:13, color:"#334155", lineHeight:1.5 }}>
-              <span style={{ color:"#0D1B2A", fontWeight:700, flexShrink:0 }}>✓</span>
-              <span>{tip}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Important reminder */}
-      <div style={{ background:"#fef9f0", border:"1px solid #fcd34d", borderRadius:12, padding:"0.875rem 1rem", marginBottom:"1rem" }}>
-        <div style={{ fontSize:13, fontWeight:700, color:"#92400e", marginBottom:6 }}>⚠️ Important Reminders</div>
-        {[
-          `Ship departs at ${selectedPort?.departure || "scheduled time"} — be back at least 1 hour early`,
-          "The ship will NOT wait for late passengers",
-          "Carry a copy of your cruise card and a form of ID",
-          "Save the ship's emergency number in your phone",
-          selectedPort?.tender ? "Last tender time is usually 90 min before departure — confirm onboard" : "Know which gangway to use when returning",
-        ].map((r, i) => (
-          <div key={i} style={{ fontSize:13, color:"#92400e", display:"flex", gap:8, marginBottom:4 }}>
-            <span style={{ flexShrink:0 }}>•</span><span>{r}</span>
           </div>
-        ))}
-      </div>
+
+          {/* Important reminder */}
+          <div style={{ background:"#fef9f0", border:"1px solid #fcd34d", borderRadius:12, padding:"0.875rem 1rem", marginBottom:"1rem" }}>
+            <div style={{ fontSize:13, fontWeight:700, color:"#92400e", marginBottom:6 }}>⚠️ Important Reminders</div>
+            {[
+              `Ship departs at ${activePort?.departure || "scheduled time"} — be back at least 1 hour early`,
+              "The ship will NOT wait for late passengers",
+              "Carry a copy of your cruise card and a form of ID",
+              "Save the ship's emergency number in your phone",
+              activePort?.tender ? "Last tender time is usually 90 min before departure — confirm onboard" : "Know which gangway to use when returning",
+            ].map((r, i) => (
+              <div key={i} style={{ fontSize:13, color:"#92400e", display:"flex", gap:8, marginBottom:4 }}>
+                <span style={{ flexShrink:0 }}>•</span><span>{r}</span>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
 
       {/* Share button */}
       <button className="btn btn-primary" onClick={handleShare} style={{ marginBottom:8 }}>
@@ -3348,7 +3416,62 @@ const NAV = [
 const SCREEN_TITLES = { home:"Skip the Ship", prefs:"My Preferences", ports:"My Itinerary", portday:"Port Day", results:"Top Options", plan:"My Plan" };
 const BACK_TARGETS  = { prefs:"home", ports:"prefs", portday:"ports", results:"portday", plan:"results" };
 
+// ─── Change this to set your app password ─────────────────────
+const APP_PASSWORD = "SkipTheShip2025";
+const AUTH_KEY = "sts_auth";
+
+function LoginScreen({ onLogin }) {
+  const [input, setInput] = useState("");
+  const [error, setError] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (input === APP_PASSWORD) {
+      localStorage.setItem(AUTH_KEY, "true");
+      onLogin();
+    } else {
+      setError(true);
+      setInput("");
+    }
+  };
+
+  return (
+    <div style={{ minHeight:"100dvh", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", background:"#0D1B2A", padding:"2rem" }}>
+      <div style={{ fontSize:48, marginBottom:"1rem" }}>⚓</div>
+      <div style={{ fontSize:24, fontWeight:800, color:"#ffffff", marginBottom:4, letterSpacing:"-0.5px" }}>Skip the Ship</div>
+      <div style={{ fontSize:14, color:"#94a3b8", marginBottom:"2rem" }}>Private Cruise Planner</div>
+      <form onSubmit={handleSubmit} style={{ width:"100%", maxWidth:320, display:"flex", flexDirection:"column", gap:12 }}>
+        <input
+          type="password"
+          placeholder="Enter password"
+          value={input}
+          onChange={e => { setInput(e.target.value); setError(false); }}
+          autoFocus
+          style={{
+            padding:"14px 18px", borderRadius:14, border: error ? "2px solid #ef4444" : "2px solid #334155",
+            fontSize:16, background:"#1e293b", color:"#f8fafc", outline:"none",
+            textAlign:"center", letterSpacing:"0.1em",
+          }}
+        />
+        {error && (
+          <div style={{ fontSize:13, color:"#ef4444", textAlign:"center" }}>Incorrect password. Try again.</div>
+        )}
+        <button
+          type="submit"
+          style={{
+            padding:"14px", borderRadius:14, background:"#C9A84C", color:"#0D1B2A",
+            fontWeight:800, fontSize:16, border:"none", cursor:"pointer",
+          }}
+        >
+          Enter →
+        </button>
+      </form>
+    </div>
+  );
+}
+
 function App() {
+  const [authed, setAuthed] = useState(() => localStorage.getItem(AUTH_KEY) === "true");
   const [screen, setScreen] = useState("home");
   const [appState, setAppState] = useState({
     cruise: { line:"", ship:"", sail_date:"" },
@@ -3371,6 +3494,8 @@ function App() {
     results: <ResultsScreen      appState={appState} updateAppState={updateAppState} navigate={navigate} />,
     plan:    <PlanScreen         appState={appState} updateAppState={updateAppState} navigate={navigate} />,
   };
+
+  if (!authed) return <LoginScreen onLogin={() => setAuthed(true)} />;
 
   return (
     <div className="app">
