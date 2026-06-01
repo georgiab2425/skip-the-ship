@@ -3417,7 +3417,7 @@ const SCREEN_TITLES = { home:"Skip the Ship", prefs:"My Preferences", ports:"My 
 const BACK_TARGETS  = { prefs:"home", ports:"prefs", portday:"ports", results:"portday", plan:"results" };
 
 // ─── Change this to set your app password ─────────────────────
-const APP_PASSWORD = "SkipTheShip2025";
+const APP_PASSWORD = "SkipTheShipGB";
 const AUTH_KEY = "sts_auth";
 
 function LoginScreen({ onLogin }) {
