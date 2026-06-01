@@ -4,12 +4,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, doc, setDoc, getDocs, deleteDoc, serverTimestamp } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyALW4StEhvwDrLLo7Iph_vjUtJnHBMRqIY",
-  authDomain: "skip-the-ship.firebaseapp.com",
-  projectId: "skip-the-ship",
-  storageBucket: "skip-the-ship.firebasestorage.app",
-  messagingSenderId: "476040151274",
-  appId: "1:476040151274:web:11a3f9db41cee15b96d793",
+  apiKey:            import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain:        import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId:         import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket:     import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId:             import.meta.env.VITE_FIREBASE_APP_ID,
 };
 const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp);
