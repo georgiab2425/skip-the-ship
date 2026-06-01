@@ -1,4 +1,4 @@
-﻿import React, { StrictMode, useState } from "react";
+﻿import React, { StrictMode, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 
 const css = `
@@ -397,6 +397,36 @@ const css = `
     padding-top: 0.5rem;
     background: linear-gradient(to top, #F4F6F9 60%, transparent);
     padding-bottom: 4px;
+  }
+
+  .sticky-add {
+    position: sticky;
+    z-index: 18;
+    padding-top: 0.75rem;
+    background: linear-gradient(to top, #F4F6F9 60%, transparent);
+    padding-bottom: 4px;
+    margin-top: 1rem;
+  }
+
+  .manual-form-footer {
+    position: sticky;
+    bottom: 140px;
+    z-index: 19;
+    background: #ffffff;
+    margin-top: 0.5rem;
+    border-top: 1px solid #e2e8f0;
+    padding: 0.75rem 1.25rem 0.75rem;
+    box-shadow: 0 -10px 32px rgba(15,23,42,0.08);
+  }
+
+  .manual-form-header {
+    position: sticky;
+    top: 0;
+    z-index: 19;
+    background: #ffffff;
+    padding: 1rem 1.25rem 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 12px 30px rgba(15,23,42,0.08);
   }
 
   /* ── Tab bar ──────────────────────────────────────────────── */
@@ -1439,7 +1469,8 @@ const PORT_DATA = {
     dining: [
       { id:"skd1", url:"https://www.skagwaybrewing.com", title:"Skagway Brewing Company", desc:"Beloved local brewery in a restored 1897 building, serving craft beers and hearty comfort food. A Skagway institution.", cuisine:"American Pub", price:1, rating:4.7, reviews:1543, distance:"5 min walk", kidFriendly:true, hours:"11:00 AM – 9:00 PM", emoji:"🍺" },
       { id:"skd2", url:"https://www.tripadvisor.com/Restaurant_Review-g60893-d436696-Reviews-Starfire-Skagway_Alaska.html", title:"Starfire Thai Restaurant", desc:"A legendary surprise in Alaska — authentic Thai cuisine that locals and cruise passengers rave about year after year.", cuisine:"Thai", price:1, rating:4.8, reviews:876, distance:"8 min walk", kidFriendly:true, hours:"11:00 AM – 8:00 PM", emoji:"🍜" },
-      { id:"skd3", url:"https://www.skagwayinn.com/dining", title:"Olivia's at the Historic Skagway Inn", desc:"Charming bistro inside a restored Victorian inn, serving fresh Alaskan salmon, chowder, and homemade desserts.", cuisine:"Contemporary Alaskan", price:2, rating:4.6, reviews:432, distance:"6 min walk", kidFriendly:true, hours:"7:00 AM – 8:00 PM", emoji:"🏡" },
+      { id:"skd3", url:"https://www.skagwayfishcompany.com", title:"Skagway Fish Company", desc:"Popular waterfront seafood restaurant serving locally caught salmon, halibut, and crab in a warm, lodge-style dining room. Reservations are highly recommended for dinner.", cuisine:"Seafood", price:2, rating:4.6, reviews:987, distance:"6 min walk", kidFriendly:true, hours:"11:30 AM – 9:00 PM", emoji:"🐟" },
+      { id:"skd4", url:"https://www.skagwayinn.com/dining", title:"Olivia's at the Historic Skagway Inn", desc:"Charming bistro inside a restored Victorian inn, serving fresh Alaskan salmon, chowder, and homemade desserts.", cuisine:"Contemporary Alaskan", price:2, rating:4.6, reviews:432, distance:"6 min walk", kidFriendly:true, hours:"7:00 AM – 8:00 PM", emoji:"🏡" },
     ],
     activities: [
       { id:"ska1", url:"https://www.nps.gov/klgo/index.htm", title:"Klondike Gold Rush National Historical Park", desc:"Free visitor center and ranger-led tours exploring the 1898 Gold Rush that put Skagway on the map. Fascinating history.", duration:2, price:0, rating:4.7, reviews:2341, distance:"3 min walk", fitness:"Low", family:true, accessibility:true, types:["Historical","Cultural"], emoji:"⛏️" },
@@ -1674,10 +1705,11 @@ function filterAndRank(items, prefs, win, category) {
 }
 
 // ─── Result Card ──────────────────────────────────────────────
-function ResultCard({ item, category, isAdded, onToggle, onBook, bookedInfo }) {
+function ResultCard({ item, category, planItem, isAdded, onToggle, onTimeChange, onBook, bookedInfo }) {
   const [expanded, setExpanded] = useState(false);
   const [bookMode, setBookMode] = useState(false);
   const [confInput, setConfInput] = useState("");
+  const [timeInput, setTimeInput] = useState(planItem?.time || item.time || "");
   const priceStr = category === "dining"
     ? ["Free","$","$$","$$$"][item.price] || "$"
     : ["Free","$","$$","$$$"][item.price] || "$";
@@ -1685,6 +1717,10 @@ function ResultCard({ item, category, isAdded, onToggle, onBook, bookedInfo }) {
   const catLabel = { excursions: "Excursion", dining: "Dining", activities: "Activity", resorts: "Resort" }[category];
   const catClass = { excursions: "cat-excursion", dining: "cat-dining", activities: "cat-activity", resorts: "cat-resort" }[category];
   const bgColor  = { excursions: "#fef9f0", dining: "#f0fdf4", activities: "#eff6ff", resorts: "#fdf4ff" }[category];
+
+  React.useEffect(() => {
+    setTimeInput(planItem?.time || item.time || "");
+  }, [planItem?.time, item.time]);
 
   return (
     <div className="result-card">
@@ -1725,6 +1761,22 @@ function ResultCard({ item, category, isAdded, onToggle, onBook, bookedInfo }) {
           {item.cuisine && <span className="icon-item">🍴 {item.cuisine}</span>}
           {item.hours && <span className="icon-item">🕐 {item.hours}</span>}
         </div>
+
+        {(category === "excursions" || category === "dining") && (
+          <div style={{ display:"flex", gap:8, flexWrap:"wrap", marginTop:8 }}>
+            <input
+              type="time"
+              value={timeInput}
+              onChange={e => {
+                const value = e.target.value;
+                setTimeInput(value);
+                if (planItem && onTimeChange) onTimeChange(value);
+              }}
+              style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14, minWidth:160 }}
+              placeholder="Reservation time"
+            />
+          </div>
+        )}
 
         {/* Expanded detail */}
         {expanded && (
@@ -1774,7 +1826,7 @@ function ResultCard({ item, category, isAdded, onToggle, onBook, bookedInfo }) {
             <button
               className={`btn ${isAdded ? "btn-added" : "btn-primary"}`}
               style={{ flex: "2 1 auto", minHeight: 44, fontSize: 13 }}
-              onClick={onToggle}
+              onClick={() => onToggle(timeInput)}
             >
               {isAdded ? "✓ Added" : "+ Add to Plan"}
             </button>
@@ -2373,9 +2425,14 @@ function ResultsScreen({ appState, updateAppState, navigate }) {
   const { selectedPort, userPreferences = {}, plan = [] } = appState;
   const [activeTab, setActiveTab] = useState("excursions");
   const [showManualForm, setShowManualForm] = useState(false);
+  useEffect(() => {
+    setShowManualForm(false);
+  }, [activeTab]);
   const [manualTitle, setManualTitle]       = useState("");
   const [manualPort, setManualPort]         = useState("");
   const [manualDate, setManualDate]         = useState("");
+  const [manualTime, setManualTime]         = useState("");
+  const [manualDuration, setManualDuration] = useState("");
   const [manualOperator, setManualOperator] = useState("");
   const [manualConf, setManualConf]         = useState("");
   const [manualNotes, setManualNotes]       = useState("");
@@ -2406,10 +2463,29 @@ function ResultsScreen({ appState, updateAppState, navigate }) {
     { id: "resorts",    label: "Resorts",    icon: "🏖️", count: resorts.length },
   ];
 
-  const togglePlan = (item) => {
+  const updatePlanItemTime = (item, time) => {
     const exists = plan.find(p => p.id === item.id);
-    const newPlan = exists ? plan.filter(p => p.id !== item.id) : [...plan, { ...item, category: activeTab, port: selectedPort.port }];
+    if (!exists) return;
+    const newPlan = plan.map(p =>
+      p.id === item.id ? { ...p, time: time.trim() || undefined } : p
+    );
     updateAppState({ plan: newPlan });
+  };
+
+  const togglePlan = (item, time = "") => {
+    const exists = plan.find(p => p.id === item.id);
+    if (exists) {
+      const newPlan = plan.filter(p => p.id !== item.id);
+      updateAppState({ plan: newPlan });
+      return;
+    }
+    const newPlanItem = {
+      ...item,
+      category: activeTab,
+      port: selectedPort.port,
+      time: time.trim() || item.time || undefined,
+    };
+    updateAppState({ plan: [...plan, newPlanItem] });
   };
 
   const handleBook = (item, confirmationNumber) => {
@@ -2426,16 +2502,18 @@ function ResultsScreen({ appState, updateAppState, navigate }) {
       title: manualTitle.trim(),
       port: manualPort.trim() || selectedPort?.port || "",
       date: manualDate.trim(),
+      time: manualTime.trim(),
+      duration: manualDuration ? Number(manualDuration) : undefined,
       operator: manualOperator.trim(),
       confirmationNumber: manualConf.trim(),
       notes: manualNotes.trim(),
-      emoji: "📌",
-      category: "excursions",
+      emoji: activeTab === "dining" ? "🍽️" : "📌",
+      category: activeTab,
       isManual: true,
       booked: true,
     };
     updateAppState({ plan: [...plan, newItem] });
-    setManualTitle(""); setManualPort(""); setManualDate("");
+    setManualTitle(""); setManualPort(""); setManualDate(""); setManualTime(""); setManualDuration("");
     setManualOperator(""); setManualConf(""); setManualNotes("");
     setShowManualForm(false);
   };
@@ -2452,7 +2530,6 @@ function ResultsScreen({ appState, updateAppState, navigate }) {
         {win && <p style={{ fontSize:12, color:"#0D1B2A", marginTop:2 }}>Showing options that fit your {win.hours} hr port window</p>}
       </div>
 
-      {/* Tab bar */}
       <div className="tab-bar">
         {tabs.map(t => (
           <button key={t.id} className={`tab-btn ${activeTab===t.id?"active":""}`} onClick={() => setActiveTab(t.id)}>
@@ -2470,43 +2547,56 @@ function ResultsScreen({ appState, updateAppState, navigate }) {
           <button className="btn btn-outline" style={{ marginTop:"1rem", maxWidth:200 }} onClick={() => navigate("portday")}>Adjust Filters</button>
         </div>
       ) : (
-        currentItems.map(item => (
-          <ResultCard
-            key={item.id}
-            item={item}
-            category={activeTab}
-            isAdded={plan.some(p => p.id === item.id)}
-            onToggle={() => togglePlan(item)}
-            onBook={(confNum) => handleBook(item, confNum)}
-            bookedInfo={plan.find(p => p.id === item.id && p.booked)}
-          />
-        ))
+        currentItems.map(item => {
+          const planItem = plan.find(p => p.id === item.id);
+          return (
+            <ResultCard
+              key={item.id}
+              item={item}
+              category={activeTab}
+              isAdded={Boolean(planItem)}
+              planItem={planItem}
+              onToggle={(time) => togglePlan(item, time)}
+              onTimeChange={(newTime) => updatePlanItemTime(item, newTime)}
+              onBook={(confNum) => handleBook(item, confNum)}
+              bookedInfo={planItem?.booked ? planItem : null}
+            />
+          );
+        })
       )}
 
-      {/* Add My Own Excursion — button */}
-      {activeTab === "excursions" && !showManualForm && (
-        <button
-          className="btn btn-outline"
-          style={{ width:"100%", marginTop:"1rem", marginBottom:"0.5rem" }}
-          onClick={() => { setManualPort(selectedPort?.port || ""); setShowManualForm(true); }}
-        >
-          + Add My Own Excursion
-        </button>
+      {/* Add My Own item — button */}
+      {["excursions","dining"].includes(activeTab) && !showManualForm && (
+        <div className="sticky-add" style={{ bottom: `${planCount > 0 ? 140 : 76}px` }}>
+          <button
+            className="btn btn-outline"
+            style={{ width:"100%" }}
+            onClick={() => { setManualPort(selectedPort?.port || ""); setShowManualForm(true); }}
+          >
+            + Add My Own {activeTab === "dining" ? "Dining" : "Excursion"}
+          </button>
+        </div>
       )}
 
-      {/* Add My Own Excursion — inline form */}
-      {activeTab === "excursions" && showManualForm && (
-        <div className="section-card" style={{ marginTop:"1rem", marginBottom:"0.5rem" }}>
-          <div className="section-header"><span>📌</span><span className="section-title">Add Excursion Manually</span></div>
+      {/* Add My Own item — inline form */}
+      {["excursions","dining"].includes(activeTab) && showManualForm && (
+        <div className="section-card" style={{ marginTop:"1rem", marginBottom:"0.5rem", paddingBottom: planCount > 0 ? 120 : 16 }}>
+          <div className="section-header"><span>📌</span><span className="section-title">Add {activeTab === "dining" ? "Dining" : "Excursion"} Manually</span></div>
           <div style={{ padding:"0.75rem 1.25rem", display:"flex", flexDirection:"column", gap:10 }}>
-            <input type="text" placeholder="Excursion name *" value={manualTitle}
+            <input type="text" placeholder={activeTab === "dining" ? "Restaurant name *" : "Excursion name *"} value={manualTitle}
               onChange={e => setManualTitle(e.target.value)}
               style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14 }} />
             <input type="text" placeholder="Port / destination" value={manualPort}
               onChange={e => setManualPort(e.target.value)}
               style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14 }} />
-            <input type="text" placeholder="Date (e.g. Aug 3)" value={manualDate}
+            <input type="date" placeholder="Date" value={manualDate}
               onChange={e => setManualDate(e.target.value)}
+              style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14 }} />
+            <input type="time" placeholder="Time" value={manualTime}
+              onChange={e => setManualTime(e.target.value)}
+              style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14 }} />
+            <input type="number" min="0" step="0.25" placeholder="Duration (hours)" value={manualDuration}
+              onChange={e => setManualDuration(e.target.value)}
               style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14 }} />
             <input type="text" placeholder="Operator / company" value={manualOperator}
               onChange={e => setManualOperator(e.target.value)}
@@ -2518,9 +2608,11 @@ function ResultsScreen({ appState, updateAppState, navigate }) {
               onChange={e => setManualNotes(e.target.value)}
               rows={3}
               style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14, resize:"vertical" }} />
-            <div style={{ display:"flex", gap:8 }}>
-              <button className="btn btn-primary" style={{ flex:2 }} onClick={handleAddManual}>Save Excursion</button>
-              <button className="btn btn-outline" style={{ flex:1 }} onClick={() => setShowManualForm(false)}>Cancel</button>
+            <div className="manual-form-footer">
+              <div style={{ display:"flex", gap:8 }}>
+                <button className="btn btn-primary" style={{ flex:2 }} onClick={handleAddManual}>Save {activeTab === "dining" ? "Dining" : "Excursion"}</button>
+                <button className="btn btn-outline" style={{ flex:1 }} onClick={() => setShowManualForm(false)}>Cancel</button>
+              </div>
             </div>
           </div>
         </div>
@@ -2547,11 +2639,23 @@ function buildTimeline(plan, selectedPort) {
 
   const parseT = (str) => {
     if (!str) return null;
-    const [time, period] = str.split(" ");
-    let [h, m] = time.split(":").map(Number);
-    if (period === "PM" && h !== 12) h += 12;
-    if (period === "AM" && h === 12) h = 0;
-    return h * 60 + m;
+    const trimmed = str.trim();
+    const ampmMatch = trimmed.match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
+    if (ampmMatch) {
+      let [, hour, min, period] = ampmMatch;
+      hour = Number(hour);
+      const minutes = Number(min);
+      if (period.toUpperCase() === "PM" && hour !== 12) hour += 12;
+      if (period.toUpperCase() === "AM" && hour === 12) hour = 0;
+      return hour * 60 + minutes;
+    }
+    const twentyFourMatch = trimmed.match(/^(\d{1,2}):(\d{2})$/);
+    if (twentyFourMatch) {
+      const hour = Number(twentyFourMatch[1]);
+      const minutes = Number(twentyFourMatch[2]);
+      return (hour * 60 + minutes) % 1440;
+    }
+    return null;
   };
 
   const fmtT = (mins) => {
@@ -2561,6 +2665,18 @@ function buildTimeline(plan, selectedPort) {
     const hr = h > 12 ? h - 12 : h === 0 ? 12 : h;
     return `${hr}:${String(m).padStart(2,"0")} ${p}`;
   };
+
+  const getStartTime = (item) => {
+    if (!item?.time) return null;
+    return parseT(item.time);
+  };
+
+  const getDuration = (item, fallback) => {
+    const duration = Number(item?.duration);
+    return Number.isFinite(duration) && duration > 0 ? duration : fallback;
+  };
+
+  const formatDetails = (parts) => parts.filter(Boolean).join(" · ");
 
   let cursor = win ? parseT(win.start) : parseT(selectedPort?.arrival) || 480;
 
@@ -2596,29 +2712,66 @@ function buildTimeline(plan, selectedPort) {
 
   // Breakfast
   breakfast.forEach(item => {
-    events.push({ time: fmtT(cursor), icon: item.emoji, title: item.title, desc: `${item.cuisine} · ${item.distance} · ${["Free","$","$$","$$$"][item.price]}`, type: "dining" });
-    cursor += 60;
+    const itemStart = getStartTime(item);
+    if (itemStart !== null && itemStart > cursor) cursor = itemStart;
+    const desc = formatDetails([
+      item.duration ? `${item.duration} hrs` : null,
+      item.cuisine,
+      item.distance,
+      item.price !== undefined ? ["Free","$","$$","$$$"][item.price] : null,
+      item.confirmationNumber ? `Conf: ${item.confirmationNumber}` : null,
+      item.notes,
+    ]);
+    events.push({ time: fmtT(cursor), icon: item.emoji, title: item.title, desc: desc || "Breakfast reservation", type: "dining" });
+    cursor += getDuration(item, 1) * 60;
   });
 
   // Excursions
   excursions.forEach(item => {
-    events.push({ time: fmtT(cursor), icon: item.emoji, title: item.title, desc: `${item.duration} hrs · ${item.distance} · ⭐ ${item.rating}`, type: "excursion" });
-    cursor += (item.duration || 3) * 60;
-    // Buffer between activities
+    const itemStart = getStartTime(item);
+    if (itemStart !== null && itemStart > cursor) cursor = itemStart;
+    const desc = formatDetails([
+      item.duration ? `${item.duration} hrs` : null,
+      item.distance,
+      item.rating ? `⭐ ${item.rating}` : null,
+      item.operator,
+      item.confirmationNumber ? `Conf: ${item.confirmationNumber}` : null,
+      item.notes,
+    ]);
+    events.push({ time: fmtT(cursor), icon: item.emoji, title: item.title, desc: desc || "Planned excursion", type: "excursion" });
+    cursor += getDuration(item, 3) * 60;
     cursor += 20;
   });
 
   // Resorts
   resorts.forEach(item => {
-    events.push({ time: fmtT(cursor), icon: item.emoji, title: item.title, desc: `Beach & pool day · ${item.distance} · ⭐ ${item.rating}`, type: "resort" });
-    cursor += 180;
+    const itemStart = getStartTime(item);
+    if (itemStart !== null && itemStart > cursor) cursor = itemStart;
+    const desc = formatDetails([
+      item.duration ? `${item.duration} hrs` : null,
+      item.distance,
+      item.rating ? `⭐ ${item.rating}` : null,
+      item.notes,
+    ]);
+    events.push({ time: fmtT(cursor), icon: item.emoji, title: item.title, desc: desc || "Beach & pool day", type: "resort" });
+    cursor += getDuration(item, 3) * 60;
     cursor += 20;
   });
 
   // Activities
   activities.forEach(item => {
-    events.push({ time: fmtT(cursor), icon: item.emoji, title: item.title, desc: `${item.duration ? item.duration+" hrs · " : ""}${item.distance} · ⭐ ${item.rating}`, type: "activity" });
-    cursor += (item.duration || 1.5) * 60;
+    const itemStart = getStartTime(item);
+    if (itemStart !== null && itemStart > cursor) cursor = itemStart;
+    const desc = formatDetails([
+      item.duration ? `${item.duration} hrs` : null,
+      item.distance,
+      item.rating ? `⭐ ${item.rating}` : null,
+      item.operator,
+      item.confirmationNumber ? `Conf: ${item.confirmationNumber}` : null,
+      item.notes,
+    ]);
+    events.push({ time: fmtT(cursor), icon: item.emoji, title: item.title, desc: desc || "Activity planned", type: "activity" });
+    cursor += getDuration(item, 1.5) * 60;
     cursor += 15;
   });
 
@@ -2630,8 +2783,10 @@ function buildTimeline(plan, selectedPort) {
 
   // Dinner
   dining.forEach(item => {
+    const itemStart = getStartTime(item);
+    if (itemStart !== null && itemStart > cursor) cursor = itemStart;
     events.push({ time: fmtT(cursor), icon: item.emoji, title: item.title, desc: `${item.cuisine} · ${item.distance} · ${["Free","$","$$","$$$"][item.price]}`, type: "dining" });
-    cursor += 90;
+    cursor += getDuration(item, 1.5) * 60;
   });
 
   // Return to ship
@@ -2678,38 +2833,77 @@ function getSafetyTips(portName) {
 
 // ─── Screen: Plan ─────────────────────────────────────────────
 function PlanScreen({ appState, updateAppState, navigate }) {
-  const { plan = [], selectedPort, cruise } = appState;
+  const { plan = [], selectedPort, cruise, itinerary = [] } = appState;
+  const [viewMode, setViewMode] = useState("port");
   const [shared, setShared] = useState(false);
   const [showManualForm, setShowManualForm] = useState(false);
+  const [editingItemId, setEditingItemId] = useState(null);
   const [manualTitle, setManualTitle] = useState("");
   const [manualPort, setManualPort] = useState("");
   const [manualDate, setManualDate] = useState("");
+  const [manualTime, setManualTime] = useState("");
+  const [manualDuration, setManualDuration] = useState("");
   const [manualOperator, setManualOperator] = useState("");
   const [manualConf, setManualConf] = useState("");
   const [manualNotes, setManualNotes] = useState("");
+  const [manualCategory, setManualCategory] = useState("excursions");
 
-  const appPlan = plan.filter(p => !p.isManual);
-  const bookedItems = plan.filter(p => p.booked || p.isManual);
+  const currentPort = selectedPort?.port;
+  const currentPortPlan = plan.filter(p => p.port === currentPort);
+  const bookedItems = plan.filter(p => (p.booked || p.isManual) && p.port === currentPort);
+  const cruisePorts = itinerary.filter(p => !p.sea_day);
+  const cruisePlanByPort = cruisePorts.map(port => ({
+    port,
+    items: plan.filter(item => item.port === port.port),
+  }));
+
+  const clearManualForm = () => {
+    setManualTitle(""); setManualPort(""); setManualDate(""); setManualTime(""); setManualDuration("");
+    setManualOperator(""); setManualConf(""); setManualNotes(""); setManualCategory("excursions");
+    setEditingItemId(null);
+  };
 
   const handleAddManual = () => {
     if (!manualTitle.trim()) return;
-    const newItem = {
-      id: `manual_${Date.now()}`,
+    const manualItem = {
+      id: editingItemId || `manual_${Date.now()}`,
       title: manualTitle.trim(),
       port: manualPort.trim() || selectedPort?.port || "",
       date: manualDate.trim(),
+      time: manualTime.trim(),
+      duration: manualDuration ? Number(manualDuration) : undefined,
       operator: manualOperator.trim(),
       confirmationNumber: manualConf.trim(),
       notes: manualNotes.trim(),
-      emoji: "📌",
-      category: "excursions",
+      emoji: manualCategory === "dining" ? "🍽️" : "📌",
+      category: manualCategory,
       isManual: true,
       booked: true,
     };
-    updateAppState({ plan: [...plan, newItem] });
-    setManualTitle(""); setManualPort(""); setManualDate("");
-    setManualOperator(""); setManualConf(""); setManualNotes("");
+
+    if (editingItemId) {
+      const updatedPlan = plan.map(p => p.id === editingItemId ? manualItem : p);
+      updateAppState({ plan: updatedPlan });
+    } else {
+      updateAppState({ plan: [...plan, manualItem] });
+    }
+
+    clearManualForm();
     setShowManualForm(false);
+  };
+
+  const handleEditManual = (item) => {
+    setEditingItemId(item.id);
+    setManualCategory(item.category || "excursions");
+    setManualTitle(item.title || "");
+    setManualPort(item.port || selectedPort?.port || "");
+    setManualDate(item.date || "");
+    setManualTime(item.time || "");
+    setManualDuration(item.duration || "");
+    setManualOperator(item.operator || "");
+    setManualConf(item.confirmationNumber || "");
+    setManualNotes(item.notes || "");
+    setShowManualForm(true);
   };
 
   if (plan.length === 0 && !showManualForm) {
@@ -2721,13 +2915,13 @@ function PlanScreen({ appState, updateAppState, navigate }) {
           <p style={{ marginBottom:4 }}>No items added to your plan yet.</p>
           <p style={{ fontSize:13 }}>Go to Results and tap "Add to Plan" on items you like.</p>
           <button className="btn btn-primary" style={{ marginTop:"1rem" }} onClick={() => navigate("results")}>Browse Options →</button>
-          <button className="btn btn-outline" style={{ marginTop:"0.5rem" }} onClick={() => setShowManualForm(true)}>+ Add Excursion Manually</button>
+          <button className="btn btn-outline" style={{ marginTop:"0.5rem" }} onClick={() => setShowManualForm(true)}>+ Add {manualCategory === "dining" ? "Dining" : "Excursion"} Manually</button>
         </div>
       </div>
     );
   }
 
-  const timeline = buildTimeline(appPlan, selectedPort);
+  const timeline = buildTimeline(currentPortPlan, selectedPort);
   const safetyTips = getSafetyTips(selectedPort?.port);
   const win = selectedPort ? getPortWindow(selectedPort) : null;
 
@@ -2740,9 +2934,9 @@ function PlanScreen({ appState, updateAppState, navigate }) {
   };
 
   const shareText = [
-    `🚢 Skip the Ship Plan — ${selectedPort?.port || "Port Day"}`,
-    `📅 ${selectedPort?.date || ""} · ${cruise?.ship || ""}`,
-    win ? `⏱️ Port window: ${win.start} – ${win.end}` : "",
+    `🚢 Skip the Ship Plan — ${viewMode === "cruise" ? "Full Cruise" : selectedPort?.port || "Port Day"}`,
+    `📅 ${viewMode === "cruise" ? cruise?.ship || "" : selectedPort?.date || ""} · ${cruise?.ship || ""}`,
+    viewMode === "port" && win ? `⏱️ Port window: ${win.start} – ${win.end}` : "",
     "",
     "📋 MY TIMELINE:",
     ...timeline.map(e => `${e.time}  ${e.icon} ${e.title}`),
@@ -2766,9 +2960,25 @@ function PlanScreen({ appState, updateAppState, navigate }) {
     <div>
       {/* Header */}
       <div style={{ marginBottom:"1rem" }}>
-        <h2 style={{ fontSize:20, fontWeight:700, marginBottom:2 }}>My Port Day Plan</h2>
-        {selectedPort && <p style={{ fontSize:13, color:"#334155" }}>{selectedPort.port} · {selectedPort.date}</p>}
+        <h2 style={{ fontSize:20, fontWeight:700, marginBottom:2 }}>{viewMode === "cruise" ? "Full Cruise Plan" : "My Port Day Plan"}</h2>
+        {viewMode === "port" && selectedPort && <p style={{ fontSize:13, color:"#334155" }}>{selectedPort.port} · {selectedPort.date}</p>}
         {cruise?.ship && <p style={{ fontSize:12, color:"#94a3b8" }}>{cruise.ship} · {cruise.sail_date}</p>}
+      </div>
+      <div style={{ display:"flex", gap:10, marginBottom:"1rem" }}>
+        <button
+          className={viewMode === "port" ? "btn btn-primary" : "btn btn-outline"}
+          style={{ flex:1, minHeight:42 }}
+          onClick={() => setViewMode("port")}
+        >
+          Port plan
+        </button>
+        <button
+          className={viewMode === "cruise" ? "btn btn-primary" : "btn btn-outline"}
+          style={{ flex:1, minHeight:42 }}
+          onClick={() => setViewMode("cruise")}
+        >
+          Cruise plan
+        </button>
       </div>
 
       {/* Port window banner */}
@@ -2790,13 +3000,33 @@ function PlanScreen({ appState, updateAppState, navigate }) {
         </div>
       )}
 
+      {!showManualForm && (
+        <div style={{ marginBottom:"1rem" }}>
+          <button
+            className="btn btn-outline"
+            style={{ width:"100%", marginTop:"0.5rem" }}
+            onClick={() => setShowManualForm(true)}
+          >
+            + Add Excursion or Dining Manually
+          </button>
+        </div>
+      )}
+
       {/* Manual add form */}
       {showManualForm && (
         <div className="section-card" style={{ marginBottom:"1rem" }}>
-          <div className="section-header"><span>📌</span><span className="section-title">Add Excursion Manually</span></div>
+          <div className="section-header"><span>📌</span><span className="section-title">{editingItemId ? "Edit" : "Add"} {manualCategory === "dining" ? "Dining" : "Excursion"} Manually</span></div>
           <div style={{ padding:"0.75rem 1.25rem", display:"flex", flexDirection:"column", gap:10 }}>
+            <select
+              value={manualCategory}
+              onChange={e => setManualCategory(e.target.value)}
+              style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14, background:"white" }}
+            >
+              <option value="excursions">Excursion</option>
+              <option value="dining">Dining Reservation</option>
+            </select>
             <input
-              type="text" placeholder="Excursion name *" value={manualTitle}
+              type="text" placeholder={manualCategory === "dining" ? "Restaurant name *" : "Excursion name *"} value={manualTitle}
               onChange={e => setManualTitle(e.target.value)}
               style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14 }}
             />
@@ -2806,8 +3036,18 @@ function PlanScreen({ appState, updateAppState, navigate }) {
               style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14 }}
             />
             <input
-              type="text" placeholder="Date (e.g. Day 3)" value={manualDate}
+              type="date" placeholder="Date" value={manualDate}
               onChange={e => setManualDate(e.target.value)}
+              style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14 }}
+            />
+            <input
+              type="time" placeholder="Time" value={manualTime}
+              onChange={e => setManualTime(e.target.value)}
+              style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14 }}
+            />
+            <input
+              type="number" min="0" step="0.25" placeholder="Duration (hours)" value={manualDuration}
+              onChange={e => setManualDuration(e.target.value)}
               style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14 }}
             />
             <input
@@ -2827,15 +3067,68 @@ function PlanScreen({ appState, updateAppState, navigate }) {
               style={{ padding:"10px 14px", borderRadius:10, border:"1.5px solid #e2e8f0", fontSize:14, resize:"vertical" }}
             />
             <div style={{ display:"flex", gap:8 }}>
-              <button className="btn btn-primary" style={{ flex:2 }} onClick={handleAddManual}>Save Excursion</button>
-              <button className="btn btn-outline" style={{ flex:1 }} onClick={() => setShowManualForm(false)}>Cancel</button>
+              <button className="btn btn-primary" style={{ flex:2 }} onClick={handleAddManual}>{editingItemId ? "Save Changes" : `Save ${manualCategory === "dining" ? "Dining Reservation" : "Excursion"}`}</button>
+              <button className="btn btn-outline" style={{ flex:1 }} onClick={() => { clearManualForm(); setShowManualForm(false); }}>Cancel</button>
             </div>
           </div>
         </div>
       )}
 
       {/* My Booked Excursions */}
-      {bookedItems.length > 0 && (
+      {viewMode === "cruise" && (
+        <div className="section-card" style={{ marginBottom:"1rem" }}>
+          <div className="section-header"><span>🛳️</span><span className="section-title">Cruise itinerary overview</span></div>
+          <div style={{ padding:"0.75rem 1.25rem", display:"flex", flexDirection:"column", gap:12 }}>
+            {cruisePlanByPort.map(({ port, items }) => {
+              const portWindow = (!port.sea_day && !["Embarkation","Disembarkation"].includes(port.arrival) && !["Embarkation","Disembarkation"].includes(port.departure))
+                ? getPortWindow(port)
+                : null;
+              return (
+                <div key={port.port} style={{ padding:12, borderRadius:14, background:"#f8fafb", border:"1px solid #e2e8f0" }}>
+                  <div style={{ display:"flex", justifyContent:"space-between", gap:10, flexWrap:"wrap" }}>
+                    <div>
+                      <div style={{ fontSize:14, fontWeight:700 }}>{port.port}</div>
+                      <div style={{ fontSize:12, color:"#64748b" }}>{port.date}</div>
+                    </div>
+                    <div style={{ textAlign:"right" }}>
+                      <div style={{ fontSize:12, color:"#334155" }}>Arrive {port.arrival}</div>
+                      <div style={{ fontSize:12, color:"#334155" }}>Depart {port.departure}</div>
+                    </div>
+                  </div>
+                  {portWindow && (
+                    <div style={{ marginTop:10, display:"flex", gap:8, flexWrap:"wrap" }}>
+                      <span className="time-badge">🕒 {portWindow.start} – {portWindow.end}</span>
+                      <span className="time-badge">⏱️ ~{portWindow.hours} hrs</span>
+                      {port.timezone && <span className="time-badge">🌍 {port.timezone}</span>}
+                    </div>
+                  )}
+                  <div style={{ marginTop:12, display:"grid", gap:10 }}>
+                    {(items.length > 0 ? items : [{ id: `${port.port}-empty`, title: "No saved items for this port yet.", isEmpty: true }]).map(item => (
+                      <div key={item.id} style={{ padding:12, borderRadius:12, background:item.isEmpty?"#f8fafb":"#fff", border:item.isEmpty?"1px dashed #cbd5e1":"1px solid #e2e8f0" }}>
+                        {item.isEmpty ? (
+                          <div style={{ fontSize:13, color:"#64748b" }}>{item.title}</div>
+                        ) : (
+                          <>
+                            <div style={{ fontSize:14, fontWeight:700, marginBottom:4 }}>{item.title}</div>
+                            <div style={{ fontSize:12, color:"#64748b", marginBottom:6 }}>
+                              {[item.time, item.duration ? `${item.duration} hrs` : null, item.operator, item.confirmationNumber ? `Conf: ${item.confirmationNumber}` : null]
+                                .filter(Boolean)
+                                .join(" · ")}
+                            </div>
+                            {item.notes && <div style={{ fontSize:12, color:"#475569" }}>{item.notes}</div>}
+                          </>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {viewMode !== "cruise" && bookedItems.length > 0 && (
         <div className="section-card" style={{ marginBottom:"1rem" }}>
           <div className="section-header" style={{ justifyContent:"space-between" }}>
             <div style={{ display:"flex", gap:8, alignItems:"center" }}>
@@ -2865,8 +3158,17 @@ function PlanScreen({ appState, updateAppState, navigate }) {
                     <span style={{ background:"#dcfce7", color:"#166534", fontWeight:700, fontSize:11, borderRadius:6, padding:"2px 8px" }}>
                       ✓ Confirmed
                     </span>
+                    {item.isManual && (
+                      <button
+                        className="btn btn-outline"
+                        style={{ fontSize:11, padding:"4px 10px", minHeight:28, marginLeft:4 }}
+                        onClick={() => handleEditManual(item)}
+                      >
+                        Edit
+                      </button>
+                    )}
                   </div>
-                  {item.port && <div style={{ fontSize:12, color:"#64748b" }}>📍 {item.port}{item.date ? ` · ${item.date}` : ""}</div>}
+                  {item.port && <div style={{ fontSize:12, color:"#64748b" }}>📍 {item.port}{item.date ? ` · ${item.date}` : ""}{item.time ? ` · ${item.time}` : ""}</div>}
                   {item.operator && <div style={{ fontSize:12, color:"#64748b" }}>🏢 {item.operator}</div>}
                   {item.confirmationNumber && <div style={{ fontSize:12, color:"#334155", fontWeight:600 }}>Conf #: {item.confirmationNumber}</div>}
                   {item.notes && <div style={{ fontSize:12, color:"#475569", marginTop:4, fontStyle:"italic" }}>{item.notes}</div>}
@@ -2923,13 +3225,17 @@ function PlanScreen({ appState, updateAppState, navigate }) {
 
       {/* Selected items summary */}
       <div className="section-card" style={{ marginBottom:"1rem" }}>
-        <div className="section-header"><span>📋</span><span className="section-title">Selected Items ({appPlan.length})</span></div>
-        {appPlan.map(item => (
+        <div className="section-header"><span>📋</span><span className="section-title">Selected Items ({currentPortPlan.length})</span></div>
+        {currentPortPlan.map(item => (
           <div key={item.id} style={{ padding:"0.75rem 1.25rem", borderBottom:"1px solid #f1f5f9", display:"flex", gap:10, alignItems:"center" }}>
             <span style={{ fontSize:24, flexShrink:0 }}>{item.emoji}</span>
             <div style={{ flex:1 }}>
               <div style={{ fontSize:14, fontWeight:600 }}>{item.title}</div>
-              <div style={{ fontSize:12, color:"#64748b" }}>{item.distance} · ⭐ {item.rating.toFixed(1)}</div>
+              {(item.distance || item.rating) && (
+                <div style={{ fontSize:12, color:"#64748b" }}>
+                  {[item.distance, item.rating ? `⭐ ${item.rating.toFixed(1)}` : null].filter(Boolean).join(" · ")}
+                </div>
+              )}
             </div>
             <div style={{ display:"flex", flexDirection:"column", gap:4, alignItems:"flex-end" }}>
               <span className={`cat-pill ${
@@ -2960,10 +3266,10 @@ function PlanScreen({ appState, updateAppState, navigate }) {
         <div style={{ padding:"0.875rem 1.25rem" }}>
           {[
             selectedPort?.tender ? "🚢 Tender port — water taxi to shore, ~20–30 min each way. Check tender schedule on the ship." : null,
-            appPlan.some(p => p.transport?.includes("boat")) ? "⛵ One or more excursions require a boat transfer. Confirm meeting point with operator." : null,
-            appPlan.some(p => p.transport?.includes("shuttle")) ? "🚐 Shuttle/van transport needed for some excursions. Confirm pickup location at the pier." : null,
-            appPlan.some(p => p.distance?.includes("taxi")) ? "🚕 Taxis needed — agree on fare before departing. Only use official port taxis." : null,
-            appPlan.some(p => p.transport?.includes("walking") || p.distance?.includes("walk")) ? "🚶 Some options are walkable from the pier — easy and free." : null,
+            currentPortPlan.some(p => p.transport?.includes("boat")) ? "⛵ One or more excursions require a boat transfer. Confirm meeting point with operator." : null,
+            currentPortPlan.some(p => p.transport?.includes("shuttle")) ? "🚐 Shuttle/van transport needed for some excursions. Confirm pickup location at the pier." : null,
+            currentPortPlan.some(p => p.distance?.includes("taxi")) ? "🚕 Taxis needed — agree on fare before departing. Only use official port taxis." : null,
+            currentPortPlan.some(p => p.transport?.includes("walking") || p.distance?.includes("walk")) ? "🚶 Some options are walkable from the pier — easy and free." : null,
             "⏱️ Always allow at least 60 minutes to return to the ship before departure.",
           ].filter(Boolean).map((note, i) => (
             <div key={i} style={{ display:"flex", gap:8, marginBottom:8, fontSize:13, color:"#334155", lineHeight:1.5 }}>
